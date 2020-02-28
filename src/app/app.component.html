@@ -1,4 +1,10 @@
-<div class="container">
-  <!-- <app-home></app-home> -->
-  <app-map></app-map>
-</div>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="side" (opened)="log('Opened')" (closed)="log('Closed')" [(opened)]="opened"></mat-sidenav>
+  <mat-sidenav-content>
+    <button mat-raised-button (click)="sidenav.toggle()">{{toggleBtnMsg}}</button>
+      <app-home (type)="getUserType($event)"></app-home>
+      <app-map *ngIf="userType == 'DE';"></app-map>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<router-outlet></router-outlet>

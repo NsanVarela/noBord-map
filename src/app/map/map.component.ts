@@ -42,7 +42,7 @@ export class MapComponent implements AfterViewInit {
     stateLayer.bringToBack()
   }
 
-  private highlightFeature(e)  {
+  protected highlightFeature(e)  {
     const layer = e.target
     layer.setStyle({
       weight: 3,
