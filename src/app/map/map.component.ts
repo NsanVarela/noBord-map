@@ -75,8 +75,7 @@ export class MapComponent implements AfterViewInit {
     const tiles = L.tileLayer(environment.tilesLayer2, {
       attribution: "Map",
       minZoom: 3,
-      maxZoom: 8,
-      ext: "png"
+      maxZoom: 8
     })
 
     tiles.addTo(this.map)
