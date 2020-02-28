@@ -1,0 +1,223 @@
+{
+  "countries": [
+    {
+      "name": "Afghanistan",
+      "iso": "",
+      "languages": [
+        { "code": "", "long": 68.2470703125, "lat": 35.42486791930558, "name": "dari" },
+        { "code": "", "long": 64.2919921875, "lat": 34.74161249883172, "name": "farsi" },
+        { "code": "ps", "long": 64.951171875, "lat": 32.10118973232094, "name": "pachto" }
+      ]
+    },
+    {
+      "name": "Angola",
+      "iso": "",
+      "languages": [
+        { "code": "", "long": 16.3916015625, "lat": -10.09867012060338, "name": "portuguais" },
+        { "code": "", "long": 17.3583984375, "lat": -14.604847155053898, "name": "umbundu" }
+      ]
+    },
+    {
+      "name": "Albania",
+      "iso": "",
+      "languages": [
+        { "code": "", "long": 19.79736328125, "lat": 41.32732632036622, "name": "albanais" }
+      ]
+    },
+    {
+      "name": "Emirats Arabe Unis",
+      "iso": "",
+      "languages": [
+        { "code": "", "long": 55.447998046875, "lat": 25.04081549894912, "name": "arabe" },
+        { "code": "", "long": 55.0579833984375, "lat": 24.427145340082046, "name": "persian" },
+        { "code": "", "long": 54.5965576171875, "lat": 23.92099179936676, "name": "anglais" },
+        { "code": "", "long": 54.327392578125, "lat": 23.311990950585997, "name": "hindi" },
+        { "code": "", "long": 53.4539794921875, "lat": 23.579091596182877, "name": "ourdou" }
+      ]
+    },
+    {
+      "name": "Argentina",
+      "iso": "",
+      "languages": [
+        { "code": "", "long": -63.80859374999999, "lat": -31.653381399663985, "name": "espagnol" },
+        { "code": "", "long": -64.775390625, "lat": -37.020098201368114, "name": "quechua" },
+        { "code": "", "long": -68.203125, "lat": -42.81152174509788, "name": "guarani" }
+      ]
+    },
+    {
+      "name": "Arménia",
+      "iso": "",
+      "languages": [
+        { "code": "", "long": 45.038189, "lat": 40.069099, "name": "armenien" }
+      ]
+    },
+    {
+      "name": "Antarctica",
+      "iso": "",
+      "languages": [
+        { "code": "", "long": -11.6015625, "lat": -77.3895040053973, "name": "anglais" },
+        { "code": "", "long": 23.203125, "lat": -76.26869465080624, "name": "français" },
+        { "code": "", "long": 48.515625, "lat": -72.28906720017673, "name": "russe" },
+        { "code": "", "long": 45, "lat": -75.58493740869223, "name": "espagnol" },
+        { "code": "", "long": 5.625, "lat": -74.49641311694307, "name": "portugais" }
+      ]
+    },
+    {
+      "name": "Australie",
+      "iso": "",
+      "languages": [
+        { "code": "", "long": 135, "lat": -25.799891182088306, "name": "anglais" }
+      ]
+    },
+    {
+      "name": "Autriche",
+      "iso": "",
+      "languages": [
+        { "code": "", "long": 14.5458984375, "lat": 47.59875528481801, "name": "allemand" }
+      ]
+    },
+    {
+      "name": "Azerbaijan",
+      "iso": "",
+      "languages": [
+        { "code": "", "long": 49.8326748, "lat": 40.3754434, "name": "azeri" }
+      ]
+    },
+    {
+      "name": "Burundi",
+      "iso": "",
+      "languages": [
+        { "code": "", "long": 30.333251953124996, "lat": -3.276258782980262, "name": "kirundi" },
+        { "code": "", "long": 29.981689453124996, "lat": -3.0486397870658384, "name": "français" },
+        { "code": "", "long": 29.8443603515625, "lat": -3.284485028061829, "name": "anglais" },
+        { "code": "", "long": 30.05859375, "lat": -3.4188373142463826, "name": "swahili" }
+      ]
+    },
+    {
+      "iso": "Belgium",
+      "languages": [
+        { "code": "fr", "long": 4.416373, "lat": 50.395212, "name": "français" },
+        { "code": "nl", "long": 4.386286, "lat": 51.210497, "name": "Nederlands" },
+        { "code": "de", "long": 6.034900, "lat": 50.628209, "name": "Deutsch" }
+      ]
+    },
+    {
+      "iso": "Benin",
+      "languages": [
+        { "code": "fr", "long": 2.1368408203125, "lat": 10.18518740926906, "name": "français" },
+        { "code": "", "long": 2.4609375, "lat": 9.481572085088517, "name": "fon" },
+        { "code": "", "long": 2.1588134765625, "lat": 8.445205238179888, "name": "gungbe" }
+      ]
+    },
+    {
+      "iso": "Burkina Faso",
+      "languages": [
+        { "code": "fr", "long": -0.9777832031250001, "lat": 13.31479411223821, "name": "français" },
+        { "code": "", "long": -2.6806640625, "lat": 12.811801316582619, "name": "mooréon" },
+        { "code": "", "long": 0.2197265625, "lat": 12.361465967347373, "name": "fulfundé" },
+        { "code": "", "long": -1.60400390625, "lat": 12.071552663274506, "name": "goulmancema" },
+        { "code": "", "long": -3.438720703125, "lat": 11.749058732924906, "name": "dioula" }
+      ]
+    },
+    {
+      "iso": "Bengladesh",
+      "languages": [
+        { "code": "fr", "long": 89.49462890625, "lat": 24.44714958973082, "name": "bengali" },
+        { "code": "nl", "long": 90.626220703125, "lat": 24.347096633808512, "name": "chittagonien" },
+        { "code": "de", "long": 89.637451171875, "lat": 23.443088931121785, "name": "rangpouri" },
+        { "code": "nl", "long": 90.5712890625, "lat": 23.563987128451217, "name": "sylheti" }
+      ]
+    },
+    {
+      "iso": "Bulgaria",
+      "languages": [
+        { "code": "", "long": 24.169921875, "lat": 42.99661231842139, "name": "bulgare" },
+        { "code": "", "long": 26.268310546875, "lat": 42.70665956351041, "name": "turc" },
+        { "code": "", "long": 24.85107421875, "lat": 42.12267315117256, "name": "romani" }
+      ]
+    },
+    {
+      "iso": "Les Bahamas",
+      "languages": [
+        { "code": "en", "long": -77.464599609375, "lat": 25.06569718553588, "name": "anglais" }
+      ]
+    },
+    {
+      "iso": "Bosnia and Herzegovina",
+      "languages": [
+        { "code": "", "long": 17.33642578125, "lat": 44.398467142258504, "name": "bosnien" },
+        { "code": "", "long": 18.4075927734375, "lat": 44.19402066387343, "name": "croate" },
+        { "code": "", "long": 17.7978515625, "lat": 43.78299262890581, "name": "serbe" }
+      ]
+    },
+    {
+      "iso": "Belarus",
+      "languages": [
+        { "code": "", "long": 26.74072265625, "lat": 53.1072166918934, "name": "biélorus" },
+        { "code": "", "long": 29.2236328125, "lat": 53.86548550842127, "name": "russe" }
+      ]
+    },
+    {
+      "iso": "Bélize",
+      "languages": [
+        { "code": "", "long": -88.692626953125, "lat": 16.762467717941604, "name": "espagnol" },
+        { "code": "en", "long": -88.8848876953125, "lat": 17.167034421464095, "name": "anglais" },
+        { "code": "", "long": -88.5882568359375, "lat": 17.43975128454968, "name": "maya" },
+        { "code": "", "long": -88.9178466796875, "lat": 16.351767849269347, "name": "kriol" }
+      ]
+    },
+    {
+      "iso": "Bermuda",
+      "languages": [
+        { "code": "", "long": -64.77770805358885, "lat": 32.29881399228593, "name": "anglais" }
+      ]
+    },
+    {
+      "iso": "Bolivia",
+      "languages": [
+        { "code": "es", "long": -66.2255859375, "lat": -14.817370620155254, "name": "espagnol" },
+        { "code": "", "long": -63.10546874999999, "lat": -17.182779056431826, "name": "quechua" },
+        { "code": "", "long": -66.1376953125, "lat": -18.687878686034182, "name": "aymara" }
+      ]
+    },
+    {
+      "iso": "Brazil",
+      "languages": [
+        { "code": "pt", "long": -48.076171875, "lat": -9.79567758282973, "name": "portuguais brésilien" }
+      ]
+    },
+    {
+      "iso": "Brunei",
+      "languages": [
+        { "code": "", "long": 114.39926147460936, "lat": 4.495654557841738, "name": "malais" },
+        { "code": "en", "long": 114.63409423828125, "lat": 4.609278084409835, "name": "anglais" },
+        { "code": "", "long": 114.68765258789061, "lat": 4.403921416062774, "name": "mandarin" },
+        { "code": "", "long": 114.52285766601562, "lat": 4.34093388932755, "name": "arabe" }
+      ]
+    },
+    {
+      "iso": "Bhutan",
+      "languages": [
+        { "code": "", "long": 89.92584228515625, "lat": 27.67136654093232, "name": "dzongkha" },
+        { "code": "", "long": 90.7305908203125, "lat": 27.70541544816226, "name": "anglais" },
+        { "code": "", "long": 90.00274658203125, "lat": 27.293689224852407, "name": "tshangla" },
+        { "code": "", "long": 90.791015625, "lat": 27.33029517000439, "name": "népalais" }
+      ]
+    },
+    {
+      "iso": "Botswana",
+      "languages": [
+        { "code": "", "long": 25.6201171875, "lat": -22.228090416784486, "name": "anglais" },
+        { "code": "", "long": 23.115234374999996, "lat": -20.591652120829167, "name": "tswana" },
+        { "code": "", "long": 21.665039062499996, "lat": -23.76523688975866, "name": "kalanga" },
+        { "code": "", "long": 24.169921875, "lat": -24.487148563173424, "name": "kgalagadi" }
+      ]
+    },
+    {
+      "iso": "FR",
+      "languages": [
+        { "code": "", "long": 2.900390625, "lat": 47.27922900257082, "name": "Français" }
+      ]
+    }
+  ]
+}
