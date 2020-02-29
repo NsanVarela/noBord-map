@@ -2,6 +2,7 @@ import { Component, AfterViewInit } from '@angular/core'
 import { environment } from 'src/environments/environment'
 import * as L from 'leaflet'
 import { geoData } from '../../assets/data/geoData'
+import { MatSnackBar } from '@angular/material'
 
 @Component({
   selector: 'app-map',
@@ -11,7 +12,9 @@ import { geoData } from '../../assets/data/geoData'
 export class MapComponent implements AfterViewInit {
   private map: L.Map
   private paris: [number, number]  = [environment.gps.parisLatitude, environment.gps.parisLongitude]
+  countryName: string
 
+  constructor(private _snackBar: MatSnackBar) {}
   ngAfterViewInit(): void {
     this.initMap()
     this.initStatesLayer()
@@ -29,7 +32,7 @@ export class MapComponent implements AfterViewInit {
       onEachFeature: (feature, layer) => {
         layer.on({
           mouseover: (e) => {
-            console.log('Country name : ', e.target.feature.properties.name)
+            this.onDisplayInfo(e)
             return this.highlightFeature(e)
           },
           mouseout: (e) => (this.resetFeature(e)),
@@ -47,9 +50,9 @@ export class MapComponent implements AfterViewInit {
     layer.setStyle({
       weight: 3,
       opacity: 0.3,
-      color: '#12d8df',
+      color: '#3e51b5',
       fillOpacity: 1.0,
-      fillColor: '#12d8df'
+      fillColor: '#3e51b5'
     })
   }
 
@@ -79,6 +82,11 @@ export class MapComponent implements AfterViewInit {
     })
 
     tiles.addTo(this.map)
+  }
+
+  private onDisplayInfo(e) {
+    this.countryName = e.target.feature.properties.name
+    this._snackBar.open(this.countryName.toUpperCase())
   }
 
 }

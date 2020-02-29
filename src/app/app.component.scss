@@ -1,3 +1,19 @@
+h1 {
+  font-size: 40px;
+  text-align: center;
+}
+h2 {
+  font-size: 30px;
+  text-align: center;
+  color: whitesmoke;
+  margin-top: 20%;
+}
+.app-info {
+  font-size: 20px;
+  color: whitesmoke;
+  margin: 30% 10% 30% 10%;
+  text-align: justify;
+}
 .container {
   position: absolute;
   top: 0;
@@ -5,6 +21,9 @@
   right: 0;
   bottom: 0;
   margin: 4.5%;
+}
+.toggle-btn {
+  margin-left: 85%;
 }
 mat-sidenav-container {
   height: 100%;
@@ -15,4 +34,17 @@ mat-sidenav, mat-sidenav-content {
 mat-sidenav {
   background-color: lightcoral;
   width: 40%;
+}
+.content {
+  background-image:url(../assets/images/translation.png);
+  background-size: 30%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.logo {
+  height: 15%;
+  background-image:url(../assets/images/logo-pole-emploi.png);
+  background-size: 5%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
 }

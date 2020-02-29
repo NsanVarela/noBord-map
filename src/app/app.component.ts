@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  title: string = `Pe•TRANSLATOR`
   opened = false
   toggleBtnMsg: string = `OUVRIR LE MENU`
   userType: string
