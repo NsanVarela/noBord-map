@@ -1,3 +1,6 @@
+.content {
+  padding-bottom: calc(2 * ((0% - 0.5px) * 1) + 0px + 1px)!important;
+}
 .side-home {
   background-color: lightblue;
 }
@@ -12,4 +15,29 @@
   width: 150px;
   height: 150px;
 }
-
+.type-btn {
+  padding-top: calc((25% - 0.5px) * 1 + 0px)!important;
+  z-index: 10;
+}
+.info-card {
+  margin-top: calc((5% - 0.5px + 1px) * 1)!important;
+}
+.help-card {
+  width: 40%;
+}
+.help-card-title {
+  padding: 20px 20px 20px 20px;
+}
+.separator {
+  margin-bottom: 15px;
+}
+.help-card-user {
+  list-style: none;
+  font-size: 14px;
+}
+.help-card-user li {
+  padding: 10px 40px 15px 10px;
+}
+mat-ion {
+  margin-left: 20px;
+}

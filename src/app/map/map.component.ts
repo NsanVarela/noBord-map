@@ -12,10 +12,11 @@ import { MatSnackBar } from '@angular/material'
 export class MapComponent implements AfterViewInit {
   private map: L.Map
   private paris: [number, number]  = [environment.gps.parisLatitude, environment.gps.parisLongitude]
-  countryName: string
+  protected countryName: string
   @Output() country = new EventEmitter()
 
   constructor(private _snackBar: MatSnackBar) {}
+
   ngAfterViewInit(): void {
     this.initMap()
     this.initStatesLayer()
@@ -75,7 +76,6 @@ export class MapComponent implements AfterViewInit {
   }
 
   private initMap(): void {
-    // this.map = L.map('map').setView([environment.gps.parisLatitude, environment.gps.parisLongitude], 3)
     this.map = L.map('map').setView(this.paris, 2)
 
     const tiles = L.tileLayer(environment.tilesLayer2, {

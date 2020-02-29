@@ -1,11 +1,56 @@
 <mat-grid-list  cols="2" rowHeight="1:1" class="content">
-  <mat-grid-tile>
-      <button mat-fab class="user-type-btn" color="primary" value="PE" (click)="handleClick($event)">PÔLE<br>EMPLOI</button>
+  <mat-grid-tile class="type-btn">
+      <button mat-fab class="user-type-btn" color="primary" value="PE" (click)="handleClick($event)">CONSEILLÉ<br>PÔLE EMPLOI</button>
   </mat-grid-tile>
-  <mat-grid-tile>
+  <mat-grid-tile class="type-btn">
     <button mat-fab class="user-type-btn" value="DE" (click)="handleClick($event)" routerLink="/map">DEMANDEUR<br>D'EMPLOI</button>
   </mat-grid-tile>
+  <mat-grid-tile class="info-card">
+    <mat-card class="help-card">
+      <mat-card-title class="help-card-title">VOS AVANTAGES</mat-card-title>
+      <hr class="separator">
+      <mat-card-content>
+        <ul class="help-card-user">
+          <mat-icon>translate</mat-icon>
+          <li>
+            Envoyez & recevez des messages en français
+          </li>
+          <mat-icon>people</mat-icon>
+          <li>
+            Echangez facilement avec plusieurs demandeurs d'emploi en simultanée
+          </li>
+          <mat-icon>calendar_today</mat-icon>
+          <li>
+            Organisez vos rendez-vous avec les demandeurs d'emploi
+          </li>
+          <mat-icon>history</mat-icon>
+          <li>
+            Gardez un historique de vos conversations
+          </li>
+        </ul>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile class="info-card">
+    <mat-card class="help-card">
+      <mat-card-title class="help-card-title">VOS AVANTAGES</mat-card-title>
+      <hr class="separator">
+      <mat-card-content>
+        <ul class="help-card-user">
+          <mat-icon>touch_app</mat-icon>
+          <li>Sélectionnez votre pays d'origine & votre langue maternelle</li>
+          <mat-icon>translate</mat-icon>
+          <li>Echangez facilement avec votre agent Pôle emploi</li>
+          <mat-icon>calendar_today</mat-icon>
+          <li>Obtenez un RDV avec votre conseillé</li>
+          <mat-icon>history</mat-icon>
+          <li>Gardez un historique de vos conversations</li>
+        </ul>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
 </mat-grid-list>
+
 
 
 
