@@ -28,13 +28,10 @@ export class AppComponent implements OnInit {
 
   getUserType(event) {
     this.userType = event
-    console.log(this.userType)
   }
 
   getCountryName(event) {
-    console.log('INNNN')
     this.countryName = event
-    console.log(' COUNTRY NAME :', this.countryName)
   }
 
 }
