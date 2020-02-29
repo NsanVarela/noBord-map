@@ -2,6 +2,7 @@
 <mat-sidenav-container>
   <mat-sidenav #sidenav mode="side" position="end" (opened)="log('Opened')" (closed)="log('Closed')" [(opened)]="opened">
     <h2>{{title}}</h2>
+    {{countryName | uppercase}}
     <p class="app-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quam nobis consectetur architecto minima possimus suscipit excepturi ipsum laboriosam explicabo necessitatibus perferendis laborum labore, atque ratione maxime provident illo ducimus?</p>
   </mat-sidenav>
   <mat-sidenav-content class="content">
@@ -10,7 +11,7 @@
       <h1>{{title}}</h1>
     </div>
     <app-home (type)="getUserType($event)"></app-home>
-    <app-map *ngIf="userType == 'DE';"></app-map>
+    <app-map *ngIf="userType == 'DE';" (country)="getCountryName($event)"></app-map>
   </mat-sidenav-content>
 </mat-sidenav-container>
 

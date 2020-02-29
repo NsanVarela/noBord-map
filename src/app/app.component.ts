@@ -10,6 +10,7 @@ export class AppComponent implements OnInit {
   opened = false
   toggleBtnMsg: string = `OUVRIR LE MENU`
   userType: string
+  countryName: string
 
   constructor(){
   }
@@ -28,6 +29,12 @@ export class AppComponent implements OnInit {
   getUserType(event) {
     this.userType = event
     console.log(this.userType)
+  }
+
+  getCountryName(event) {
+    console.log('INNNN')
+    this.countryName = event
+    console.log(' COUNTRY NAME :', this.countryName)
   }
 
 }

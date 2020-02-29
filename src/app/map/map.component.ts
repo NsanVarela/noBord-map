@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core'
+import { Component, AfterViewInit, Output, EventEmitter } from '@angular/core';
 import { environment } from 'src/environments/environment'
 import * as L from 'leaflet'
 import { geoData } from '../../assets/data/geoData'
@@ -13,6 +13,7 @@ export class MapComponent implements AfterViewInit {
   private map: L.Map
   private paris: [number, number]  = [environment.gps.parisLatitude, environment.gps.parisLongitude]
   countryName: string
+  @Output() country = new EventEmitter()
 
   constructor(private _snackBar: MatSnackBar) {}
   ngAfterViewInit(): void {
@@ -23,7 +24,7 @@ export class MapComponent implements AfterViewInit {
   private initStatesLayer() {
     const stateLayer = L.geoJSON(geoData, {
       style: (feature) => ({
-        color: "#2262CC",
+        color: "#f07f7f",
         weight: 3,
         opacity: 0.2,
         fillOpacity: 0.1,
@@ -36,7 +37,9 @@ export class MapComponent implements AfterViewInit {
             return this.highlightFeature(e)
           },
           mouseout: (e) => (this.resetFeature(e)),
-          click: (e) => (this.zoomToFeature(e))
+          click: (e) => {
+            (this.zoomToFeature(e))
+          }
         })
       }
     })
@@ -50,9 +53,9 @@ export class MapComponent implements AfterViewInit {
     layer.setStyle({
       weight: 3,
       opacity: 0.3,
-      color: '#3e51b5',
+      color: '#f07f7f',
       fillOpacity: 1.0,
-      fillColor: '#3e51b5'
+      fillColor: '#f07f7f'
     })
   }
 
@@ -86,7 +89,8 @@ export class MapComponent implements AfterViewInit {
 
   private onDisplayInfo(e) {
     this.countryName = e.target.feature.properties.name
-    this._snackBar.open(this.countryName.toUpperCase())
+    this._snackBar.open(this.countryName)
+    this.country.emit(this.countryName)
   }
 
 }
