@@ -1,5 +1,19 @@
-<div class="map-container">
-  <div class="map-frame">
-    <div id="map" (mouseover)="highlightFeature($event)"></div>
-  </div>
-</div>
+
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="side" position="end" (opened)="log('Opened')" (closed)="log('Closed')" [(opened)]="opened">
+    <h2></h2>
+    {{countryName | uppercase}}
+  </mat-sidenav>
+  <mat-sidenav-content class="content">
+    <button class="toggle-btn" mat-raised-button (click)="sidenav.toggle()">{{toggleBtnMsg}}</button>
+    <div class="logo">
+      <h1></h1>
+    </div>
+    <div class="map-container">
+      <div class="map-frame">
+        <div id="map" (mouseover)="highlightFeature($event)"></div>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
