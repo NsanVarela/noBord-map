@@ -6,9 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title: string = `Pe•TRANSLATOR`
-  userType: string
-  countryName: string
+  protected userType: string
+  protected countryName: string
 
   constructor(){
   }
