@@ -4,6 +4,9 @@
   <mat-sidenav #sidenav mode="side" position="end" (opened)="log('Opened')" (closed)="log('Closed')" [(opened)]="opened">
     <h2></h2>
     {{countryName | uppercase}}
+    <ul>
+      <li *ngFor="let language of languages">{{language}}</li>
+    </ul>
   </mat-sidenav>
   <mat-sidenav-content class="content">
     <button class="toggle-btn" mat-raised-button (click)="sidenav.toggle()">{{toggleBtnMsg}}</button>

@@ -1,8 +1,9 @@
 import { Component, AfterViewInit, Output, EventEmitter } from '@angular/core';
+import { MatSnackBar } from '@angular/material'
+
 import { environment } from 'src/environments/environment'
 import * as L from 'leaflet'
 import { geoData } from '../../assets/data/geoData'
-import { MatSnackBar } from '@angular/material'
 
 @Component({
   selector: 'app-map',
@@ -15,6 +16,7 @@ export class MapComponent implements AfterViewInit {
   private map: L.Map
   private paris: [number, number]  = [environment.gps.parisLatitude, environment.gps.parisLongitude]
   protected countryName: string
+  protected languages = []
   @Output() country = new EventEmitter()
 
   constructor(private _snackBar: MatSnackBar) {}
@@ -46,7 +48,6 @@ export class MapComponent implements AfterViewInit {
         })
       }
     })
-
     this.map.addLayer(stateLayer)
     stateLayer.bringToBack()
   }
@@ -74,7 +75,7 @@ export class MapComponent implements AfterViewInit {
   }
 
   private zoomToFeature(e) {
-    this.map.fitBounds(e.target.getBounds());
+    this.map.fitBounds(e.target.getBounds())
   }
 
   private initMap(): void {
@@ -90,9 +91,13 @@ export class MapComponent implements AfterViewInit {
   }
 
   private onDisplayInfo(e) {
+    this.languages = []
     this.countryName = e.target.feature.properties.name
     this._snackBar.open(this.countryName)
     this.country.emit(this.countryName)
+    e.target.feature.properties.language.forEach(element => {
+      this.languages.push(element.name)
+    })
   }
 
   protected log(state) {
