@@ -2,10 +2,10 @@
 
 <mat-sidenav-container>
   <mat-sidenav #sidenav mode="side" position="end" (opened)="log('Opened')" (closed)="log('Closed')" [(opened)]="opened">
-    <h2></h2>
-    {{countryName | uppercase}}
-    <ul>
-      <li *ngFor="let language of languages">{{language}}</li>
+    <h2>{{countryName | uppercase}}</h2>
+    <hr *ngIf="countryName" class="sidenav-separator">
+    <ul class="languages-list">
+      <li class="language" *ngFor="let language of languages"><mat-icon class="icon-list">language</mat-icon>{{language}}</li>
     </ul>
   </mat-sidenav>
   <mat-sidenav-content class="content">

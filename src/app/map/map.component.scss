@@ -26,3 +26,20 @@ mat-sidenav {
   background-color: lightcoral;
   width: 40%;
 }
+.sidenav-separator {
+  margin: 40px 0 50px 0;
+}
+.languages-list {
+  list-style: none;
+}
+.language {
+  font-size: 25px;
+  margin-bottom: 30px;
+  color: lightgray;
+
+}
+.icon-list {
+  margin-right: 3%;
+  vertical-align: middle;
+  color: lightgray;
+}
