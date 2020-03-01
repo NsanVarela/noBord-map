@@ -1,0 +1,34 @@
+<div class="medium-list">
+  <div class="list-view-wrapper">
+    <div class="list-header-title">REGISTER</div>
+
+    <form [formGroup]="registerForm" (ngSubmit)="registerForm.valid && onRegisterSubmit()" novalidate>
+      <div class="form-container">
+        <mat-form-field>
+          <input id="username" matInput formControlName="username" [(ngModel)]="user.username"
+            placeholder="Saisissez votre nom" />
+        </mat-form-field>
+
+        <mat-form-field>
+          <input id="password" matInput formControlName="password" [(ngModel)]="user.password"
+            placeholder="Saisissez votre mot de passe" [type]="hide ? 'password': 'text'" />
+            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input id="language" matInput formControlName="language" [(ngModel)]="user.language"
+            placeholder="Saisissez votre langue" />
+        </mat-form-field>
+
+        <mat-form-field>
+          <input id="userType" matInput formControlName="userType" [(ngModel)]="user.userType"
+            placeholder="Saisissez votre type" />
+        </mat-form-field>
+
+        <button mat-button type="submit" class="mat-raised-button mat-primary"
+          [disabled]="!registerForm.valid">Register</button>
+        <button mat-button routerLink="/login" class="divider">Login</button>
+      </div>
+    </form>
+  </div>
+</div>

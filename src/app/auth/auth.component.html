@@ -1,0 +1,16 @@
+<p>auth works!</p>
+<mat-card class="user-forms">
+  <mat-card-title>
+    <button mat-button (click)="toRgister()">Register</button>
+    <button mat-button (click)="toLogin()">Login</button>
+  </mat-card-title>
+  <mat-card-content>
+    <ng-container *ngIf="show">
+      <app-register></app-register>
+    </ng-container>
+    <ng-container *ngIf="!show">
+      <app-login></app-login>
+    </ng-container>
+  </mat-card-content>
+</mat-card>
+

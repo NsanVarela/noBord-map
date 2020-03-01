@@ -5,8 +5,15 @@
     <h2>{{countryName | uppercase}}</h2>
     <hr *ngIf="countryName" class="sidenav-separator">
     <ul class="languages-list">
-      <li class="language" *ngFor="let language of languages"><mat-icon class="icon-list">language</mat-icon>{{language}}</li>
+      <li class="language" *ngFor="let language of languages">
+        <mat-icon class="icon-list">language</mat-icon>
+        {{language}}
+        <mat-slide-toggle>activer !</mat-slide-toggle>
+      </li>
     </ul>
+    <!-- <mat-radio-group  aria-label="Select an option">
+      <mat-radio-button *ngFor="let language of languages" value="language">{{language}}</mat-radio-button>
+    </mat-radio-group> -->
   </mat-sidenav>
   <mat-sidenav-content class="content">
     <button class="toggle-btn" mat-raised-button (click)="sidenav.toggle()">{{toggleBtnMsg}}</button>

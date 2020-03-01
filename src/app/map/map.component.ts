@@ -1,9 +1,10 @@
-import { Component, AfterViewInit, Output, EventEmitter } from '@angular/core';
+import { Component, AfterViewInit, Output, EventEmitter, Input } from '@angular/core';
 import { MatSnackBar } from '@angular/material'
 
 import { environment } from 'src/environments/environment'
 import * as L from 'leaflet'
 import { geoData } from '../../assets/data/geoData'
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-map',
@@ -17,6 +18,7 @@ export class MapComponent implements AfterViewInit {
   private paris: [number, number]  = [environment.gps.parisLatitude, environment.gps.parisLongitude]
   protected countryName: string
   protected languages = []
+
   @Output() country = new EventEmitter()
 
   constructor(private _snackBar: MatSnackBar) {}
