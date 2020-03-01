@@ -9,9 +9,10 @@
             placeholder="Saisissez votre nom" />
         </mat-form-field>
 
-        <mat-form-field>
-          <input id="password" matInput formControlName="password" [(ngModel)]="user.password"
+        <mat-form-field hintLabel="8 caractères minimum" appearance="fill">
+          <input id="password" matInput #input minlength="8" formControlName="password" [(ngModel)]="user.password"
             placeholder="Saisissez votre mot de passe" [type]="hide ? 'password': 'text'" />
+            <mat-hint align="end">{{input.value?.length || 0}}/8</mat-hint>
             <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
         </mat-form-field>
 
@@ -26,8 +27,8 @@
         </mat-form-field>
 
         <button mat-button type="submit" class="mat-raised-button mat-primary"
-          [disabled]="!registerForm.valid">Register</button>
-        <button mat-button routerLink="/login" class="divider">Login</button>
+          [disabled]="!registerForm.valid">Valider</button>
+        <!-- <button mat-button routerLink="/login" class="divider">Login</button> -->
       </div>
     </form>
   </div>
