@@ -3,8 +3,10 @@
   "compilerOptions": {
     "outDir": "./out-tsc/app",
     "types": [
-      "leaflet"
-    ]
+      "leaflet",
+      "node"
+    ],
+    "typeRoots": [ "../node_modules/@types" ]
   },
   "files": [
     "src/main.ts",
