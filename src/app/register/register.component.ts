@@ -14,6 +14,7 @@ import { Router } from '@angular/router';
 export class RegisterComponent implements OnInit {
 
   user: UserModel = new UserModel()
+  newUser
   registerForm: FormGroup
   hide: boolean = true
 
@@ -47,6 +48,7 @@ export class RegisterComponent implements OnInit {
     .pipe(first())
     .subscribe(
       data => {
+        this.newUser = data
         this.router.navigate([`/auth`])
       },
       error => {

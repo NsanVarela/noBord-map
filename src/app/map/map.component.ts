@@ -40,8 +40,8 @@ export class MapComponent implements AfterViewInit {
       onEachFeature: (feature, layer) => {
         layer.on({
           mouseover: (e) => {
+            this.highlightFeature(e)
             this.onDisplayInfo(e)
-            return this.highlightFeature(e)
           },
           mouseout: (e) => (this.resetFeature(e)),
           click: (e) => {
@@ -55,6 +55,7 @@ export class MapComponent implements AfterViewInit {
   }
 
   protected highlightFeature(e)  {
+    console.log('e', e)
     const layer = e.target
     layer.setStyle({
       weight: 3,
@@ -63,6 +64,9 @@ export class MapComponent implements AfterViewInit {
       fillOpacity: 1.0,
       fillColor: '#f07f7f'
     })
+    if (!L.Browser.ie && !L.Browser.opera) {
+      layer.bringToFront();
+    }
   }
 
   private resetFeature(e)  {
