@@ -4,6 +4,7 @@ import { first } from 'rxjs/operators';
 
 import { UserModel } from '../model/user.model';
 import { UserService } from '../services/user.service';
+import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -17,8 +18,12 @@ export class RegisterComponent implements OnInit {
   newUser
   registerForm: FormGroup
   hide: boolean = true
+  isSuccessful = false;
+  isSignUpFailed = false;
+  errorMessage = '';
+  
 
-  constructor( private formBuilder: FormBuilder, private router: Router, private userService: UserService ) { }
+  constructor( private formBuilder: FormBuilder, private router: Router, private userService: UserService, private authService: AuthService ) { }
 
   ngOnInit() {
     this.registerForm = this.formBuilder.group({
@@ -44,15 +49,20 @@ export class RegisterComponent implements OnInit {
     // + this.user.password + ' '
     // + this.user.language + ' '
     // + this.user.type)
-    this.userService.register(this.registerForm.value)
-    .pipe(first())
+    this.authService.register(this.registerForm.value)
+    // .pipe(first())
     .subscribe(
       data => {
-        this.newUser = data
-        this.router.navigate([`/auth`])
+        console.log(data);
+        this.isSuccessful = true;
+        this.isSignUpFailed = false;
+        this.newUser = data;
+        this.router.navigate([`/auth`]);
       },
       error => {
-        console.log('error', error)
+        console.log('error', error);
+        this.errorMessage = error.error.message;
+        this.isSignUpFailed = true;
       }
     )
   }

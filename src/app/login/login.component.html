@@ -2,7 +2,7 @@
   <div class="list-view-wrapper">
     <div class="list-header-title">LOGIN</div>
 
-    <form [formGroup]="loginForm" (ngSubmit)="loginForm.valid && onLoginSubmit()" novalidate>
+    <form [formGroup]="loginForm" *ngIf="!isLoggedIn" (ngSubmit)="loginForm.valid && onLoginSubmit()" #f="ngForm" novalidate>
       <div class="form-container">
         <mat-form-field>
           <input id="username" matInput formControlName="username" [(ngModel)]="user.username"
@@ -19,7 +19,20 @@
         <button mat-button type="submit" class="mat-raised-button mat-primary"
           [disabled]="!loginForm.valid">Valider</button>
         <!-- <button mat-button routerLink="/register" class="divider">Register</button> -->
+        <div class="form-group">
+          <div
+            class="alert alert-danger"
+            role="alert"
+            *ngIf="f.submitted && isLoginFailed"
+          >
+            Login failed: {{ errorMessage }}
+          </div>
+        </div>
       </div>
     </form>
+
+    <div class="alert alert-success" *ngIf="isLoggedIn">
+      Logged in as {{ user.username }}.
+    </div>
   </div>
 </div>

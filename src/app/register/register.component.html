@@ -2,7 +2,7 @@
   <div class="list-view-wrapper">
     <div class="list-header-title">REGISTER</div>
 
-    <form [formGroup]="registerForm" (ngSubmit)="registerForm.valid && onRegisterSubmit()" novalidate>
+    <form [formGroup]="registerForm" *ngIf="!isSuccessful" (ngSubmit)="registerForm.valid && onRegisterSubmit()" #f="ngForm" novalidate>
       <div class="form-container">
         <mat-form-field>
           <input id="username" matInput formControlName="username" [(ngModel)]="user.username"
@@ -30,7 +30,14 @@
           [disabled]="!registerForm.valid">Valider</button>
         <!-- <button mat-button routerLink="/login" class="divider">Login</button> -->
       </div>
+      <div class="alert alert-warning" *ngIf="f.valid && isSignUpFailed">
+        Signup failed!<br />{{ errorMessage }}
+      </div>
     </form>
+
+    <div class="alert alert-success" *ngIf="isSuccessful">
+      <p *ngIf="newUser">Well done {{ newUser.username }}, your registration is successful!</p> 
+    </div>
   </div>
 </div>
-<p *ngIf="newUser">{{ newUser.username }}</p>
+

@@ -2,4 +2,9 @@
   width: 60%;
   margin: auto;
   margin-top: 5%;
+  mat-card-content {
+    border-radius: 5px;
+    border: none;
+    box-shadow: 2px 2px 2px 2px gray;
+  }
 }
