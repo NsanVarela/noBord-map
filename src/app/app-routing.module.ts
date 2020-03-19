@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { MapComponent } from './map/map.component';
-import { RegisterComponent } from './register/register.component';
-import { LoginComponent } from './login/login.component';
-import { AuthComponent } from './auth/auth.component';
+import { HomeComponent } from './components/home/home.component';
+import { MapComponent } from './components/map/map.component';
+import { AuthComponent } from './components/auth/auth.component';
+import { ChatViewComponent } from './components/chat-view/chat-view.component';
 
 export const appRouteList: Routes = [
   {
@@ -23,10 +22,11 @@ export const appRouteList: Routes = [
     path: `auth`,
     component: AuthComponent
   },
-  // {
-  //   path: `register`,
-  //   component: RegisterComponent
-  // },
+  {
+    path: `chat`,
+    component: ChatViewComponent
+  }
+
   // {
   //   path: `login`,
   //   component: LoginComponent

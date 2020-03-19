@@ -1,14 +1,15 @@
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { UserModel } from '../model/user.model';
-import * as env from '../../environments/environment'
+import { UserModel } from '../models/user.model';
+
+import { environment } from 'src/environments/environment'
 
 @Injectable({
   providedIn: "root"
 })
 export class UserService {
 
+  private DB_URL = environment.noBordBddUrl;
   private httpOptions: any = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
@@ -16,12 +17,9 @@ export class UserService {
     })
   };
 
-
-
   constructor(private http: HttpClient) {}
 
-  register(user: UserModel) {
-    console.log('user', user)
-    return this.http.post(env.environment.noBordBddUrl + 'add/user', user);
+  public register(user: UserModel) {
+    return this.http.post(this.DB_URL + 'add/user', user, this.httpOptions);
   }
 }

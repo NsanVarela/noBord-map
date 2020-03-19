@@ -5,30 +5,35 @@
     <form [formGroup]="registerForm" *ngIf="!isSuccessful" (ngSubmit)="registerForm.valid && onRegisterSubmit()" #f="ngForm" novalidate>
       <div class="form-container">
         <mat-form-field>
-          <input id="username" matInput formControlName="username" [(ngModel)]="user.username"
-            placeholder="Saisissez votre nom" />
+          <input id="username" matInput formControlName="username" placeholder="Saisissez votre nom" />
         </mat-form-field>
 
         <mat-form-field hintLabel="8 caractères minimum" appearance="fill">
-          <input id="password" matInput #input minlength="8" formControlName="password" [(ngModel)]="user.password"
-            placeholder="Saisissez votre mot de passe" [type]="hide ? 'password': 'text'" />
+          <input id="password" matInput #input minlength="8" formControlName="password" placeholder="Saisissez votre mot de passe" [type]="hide ? 'password': 'text'" />
             <mat-hint align="end">{{input.value?.length || 0}}/8</mat-hint>
             <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
         </mat-form-field>
 
         <mat-form-field>
-          <input id="language" matInput formControlName="language" [(ngModel)]="user.language"
-            placeholder="Saisissez votre langue" />
+            <mat-label>Language favorite</mat-label>
+            <mat-select matNativeControl formControlName="language">
+              <mat-option *ngFor="let target of targets" [value]="target.name">
+                {{target.name}}
+              </mat-option>
+            </mat-select>
         </mat-form-field>
 
         <mat-form-field>
-          <input id="userType" matInput formControlName="type" [(ngModel)]="user.type"
-            placeholder="Saisissez votre type" />
+          <mat-label>Type utilisateur</mat-label>
+          <mat-select matNativeControl formControlName="type">
+            <mat-option *ngFor="let userType of userType" [value]="userType.value">
+              {{userType.viewValue}}
+            </mat-option>
+          </mat-select>
         </mat-form-field>
 
         <button mat-button type="submit" class="mat-raised-button mat-primary"
           [disabled]="!registerForm.valid">Valider</button>
-        <!-- <button mat-button routerLink="/login" class="divider">Login</button> -->
       </div>
       <div class="alert alert-warning" *ngIf="f.valid && isSignUpFailed">
         Signup failed!<br />{{ errorMessage }}
@@ -36,7 +41,7 @@
     </form>
 
     <div class="alert alert-success" *ngIf="isSuccessful">
-      <p *ngIf="newUser">Well done {{ newUser.username }}, your registration is successful!</p> 
+      <p *ngIf="newUser">Well done {{ newUser.username }}, your registration is successful!</p>
     </div>
   </div>
 </div>

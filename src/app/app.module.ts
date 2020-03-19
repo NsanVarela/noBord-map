@@ -9,14 +9,15 @@ import { MaterialModule } from "./material/material.module";
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from "./app.component";
-import { MapComponent } from "./map/map.component";
-import { HomeComponent } from "./home/home.component";
-import { RegisterComponent } from './register/register.component';
-import { LoginComponent } from './login/login.component';
-import { AuthComponent } from './auth/auth.component';
+import { MapComponent } from "./components/map/map.component";
+import { HomeComponent } from "./components/home/home.component";
+import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
+import { AuthComponent } from './components/auth/auth.component';
+import { ChatViewComponent } from './components/chat-view/chat-view.component';
 
 @NgModule({
-  declarations: [AppComponent, MapComponent, HomeComponent, RegisterComponent, LoginComponent, AuthComponent],
+  declarations: [AppComponent, MapComponent, HomeComponent, RegisterComponent, LoginComponent, AuthComponent, ChatViewComponent],
   imports: [
     AppRoutingModule,
     BrowserModule,

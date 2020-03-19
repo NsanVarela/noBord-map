@@ -3,7 +3,7 @@ import { MatSnackBar } from '@angular/material'
 
 import { environment } from 'src/environments/environment'
 import * as L from 'leaflet'
-import { geoData } from '../../assets/data/geoData'
+import { geoData } from '../../../assets/data/geoData'
 import { FormControl } from '@angular/forms';
 
 @Component({
