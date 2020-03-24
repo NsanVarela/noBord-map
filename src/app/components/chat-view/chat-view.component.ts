@@ -1,10 +1,10 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
-import { LanguageService } from '../../services/language.service';
-import { WebsocketService } from "../../services/websocket.service";
 import { FormBuilder } from "@angular/forms";
-import ILanguages from "../../models/ILanguages";
-import { NewMessage } from "../../models/NewMessage";
+import { LanguageService } from '../../_services/language.service';
+import { WebsocketService } from "../../_services/websocket.service";
+import ILanguages from "../../_models/ILanguages";
+import { NewMessage } from "../../_models/NewMessage";
 
 @Component({
   selector: `app-chat-view`,

@@ -1,3 +1,4 @@
+<p>Chat works!</p>
 <div id="chat-container">
   <div #scroller id="chat-message-list" class="feedWrapper">
     <ul class="msg">
@@ -16,7 +17,7 @@
             <div class="row message-option">
               <span>{{ translationButton }}</span>
               <div class="change-target">
-                <!-- <app-changeTarget title={{message.text}}></app-changeTarget> -->
+                <app-changeTarget title={{message.text}}></app-changeTarget>
               </div>
             </div>
           </div>
@@ -26,7 +27,7 @@
   </div>
 
   <div id="chat-form">
-    <!-- <app-getMessage></app-getMessage> -->
+    <app-messageSender></app-messageSender>
   </div>
 
 </div>

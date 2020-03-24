@@ -1,67 +1,73 @@
-<div class="logo">
+<div class="home-header">
+  <div class="logo"></div>
   <h1>{{title}}</h1>
 </div>
-<mat-grid-list  cols="2" rowHeight="1:1" class="content">
-  <mat-grid-tile class="type-btn">
-      <button mat-fab class="user-type-btn" color="primary" value="PE" (click)="handleClick($event)" routerLink="/auth">CONSEILLÉ<br>PÔLE EMPLOI</button>
-  </mat-grid-tile>
-  <mat-grid-tile class="type-btn">
-    <button mat-fab class="user-type-btn de-icon" value="DE" (click)="handleClick($event)" routerLink="/map">DEMANDEUR<br>D'EMPLOI</button>
-  </mat-grid-tile>
-  <mat-grid-tile class="info-card">
-    <mat-card class="help-card">
-      <mat-card-title class="help-card-title">VOS AVANTAGES</mat-card-title>
-      <hr class="separator">
-      <mat-card-content>
-        <ul class="help-card-user">
-          <li>
-            <mat-icon class="icon-list">translate</mat-icon>
-            Envoyez & recevez des messages en français
-          </li>
-          <li>
-            <mat-icon class="icon-list">people</mat-icon>
-            Echangez facilement avec plusieurs demandeurs d'emploi en simultanée
-          </li>
-          <li>
-            <mat-icon class="icon-list">calendar_today</mat-icon>
-            Organisez vos rendez-vous avec les demandeurs d'emploi
-          </li>
-          <li>
-            <mat-icon class="icon-list">history</mat-icon>
-            Gardez un historique de vos conversations
-          </li>
-        </ul>
-      </mat-card-content>
-    </mat-card>
-  </mat-grid-tile>
-  <mat-grid-tile class="info-card">
-    <mat-card class="help-card">
-      <mat-card-title class="help-card-title">VOS AVANTAGES</mat-card-title>
-      <hr class="separator">
-      <mat-card-content>
-        <ul class="help-card-user">
-          <li>
-            <mat-icon class="icon-list">touch_app</mat-icon>
-            Sélectionnez votre pays d'origine & votre langue maternelle
-          </li>
-          <li>
-            <mat-icon class="icon-list">translate</mat-icon>
-            Echangez facilement avec votre agent Pôle emploi
-          </li>
-          <li>
-            <mat-icon class="icon-list">calendar_today</mat-icon>
-            Obtenez un RDV avec votre conseillé
-          </li>
-          <li>
-            <mat-icon class="icon-list">history</mat-icon>
-            Gardez un historique de vos conversations
-          </li>
-        </ul>
-      </mat-card-content>
-    </mat-card>
-  </mat-grid-tile>
-</mat-grid-list>
-
-
+<div class="home-content">
+  <div class="pe">
+    <div class="pe-nav">
+      <button mat-fab color="primary" value="PE" (click)="handleClick($event)" routerLink="/auth">CONSEILLER</button>
+    </div>
+  </div>
+  <div class="picture"></div>
+  <div class="de">
+    <div class="de-nav">
+      <button mat-fab value="DE" (click)="handleClick($event)" routerLink="/map">CANDIDAT</button>
+    </div>
+  </div>
+</div>
+    <div class="advantages">
+      <div class="pe-advantages">
+        <mat-card>
+          <h3>AVANTAGES CONSEILLER</h3>
+          <hr>
+          <mat-card-content>
+            <ul>
+              <li>
+                <mat-icon>translate</mat-icon>
+                Envoyez & recevez des messages en français
+              </li>
+              <li>
+                <mat-icon>people</mat-icon>
+                Discutez simultanément avec des candidats
+              </li>
+              <li>
+                <mat-icon>calendar_today</mat-icon>
+                Organisez vos rendez-vous avec les candidats
+              </li>
+              <li>
+                <mat-icon>history</mat-icon>
+                Gardez un historique de vos conversations
+              </li>
+            </ul>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div class="de-advantages">
+        <mat-card>
+          <h3>AVANTAGES CANDIDAT</h3>
+          <hr>
+          <mat-card-content>
+            <ul>
+              <li>
+                <mat-icon>translate</mat-icon>
+                Envoyez & recevez des messages en plusieurs langues
+              </li>
+              <li>
+                <mat-icon>people</mat-icon>
+                Discutez simultanément avec d'autres candidats
+              </li>
+              <li>
+                <mat-icon>calendar_today</mat-icon>
+                Visualisez vos rendez-vous planifiés
+              </li>
+              <li>
+                <mat-icon>history</mat-icon>
+                Gardez un historique de vos conversations
+              </li>
+            </ul>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
 
 

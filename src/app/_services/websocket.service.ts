@@ -1,9 +1,9 @@
 import { Injectable, OnInit, OnDestroy } from '@angular/core'
 import { webSocket } from 'rxjs/webSocket'
-import { environment } from '../../environments/environment'
 import { takeUntil } from 'rxjs/operators'
 import { Subject, Observable } from 'rxjs'
 import * as jwt from 'jsonwebtoken'
+import { environment } from '../../environments/environment'
 
 interface token {
   outgoingMsg: {
@@ -54,6 +54,7 @@ export class WebsocketService implements OnInit, OnDestroy {
   }
 
   submitWS(msgToSend: string) {
+    console.log('details : ', msgToSend)
     const idSession: string = sessionStorage.getItem(`id`)
     const nameSession: string = sessionStorage.getItem(`name`)
     const languageSession: string = sessionStorage.getItem(`language`)

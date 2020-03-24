@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { UserModel } from '../models/user.model';
-
 import { environment } from 'src/environments/environment';
+import { UserModel } from '../_models/user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +18,7 @@ export class AuthService {
   };
 
   public login(user): Observable<any> {
+    console.log('user : ', user)
     return this.http.post(this.DB_URL + 'find/user', user, this.httpOptions);
   }
 

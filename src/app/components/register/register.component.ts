@@ -2,10 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import { UserModel } from '../../models/user.model';
-import { UserService } from '../../services/user.service';
-import { AuthService } from '../../services/auth.service';
-import { LanguageService } from '../../services/language.service';
+import { UserModel } from '../../_models/user.model';
+import { AuthService } from '../../_services/auth.service';
+import { LanguageService } from '../../_services/language.service';
 
 @Component({
   selector: 'app-register',
@@ -33,7 +32,6 @@ export class RegisterComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
-    private userService: UserService,
     private authService: AuthService,
     private languageService: LanguageService ) { }
 
@@ -77,7 +75,7 @@ export class RegisterComponent implements OnInit {
     this.authService.register(this.registerForm.value)
     .subscribe(
       data => {
-        console.log(data);
+        console.log('data user : ',data);
         this.isSuccessful = true;
         this.isSignUpFailed = false;
         this.newUser = data;

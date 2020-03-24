@@ -6,7 +6,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  title: string = `Pe•TRANSLATOR`
+  title: string = `Pe • TRANSLATOR`
   userType: string
   @Output() type = new EventEmitter<string>()
 

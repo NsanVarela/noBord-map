@@ -1,0 +1,26 @@
+@import 'styles';
+
+.select-language {
+  margin-left: 10px;
+  margin-bottom: 10px;
+  font-size: 10px;
+  background-color: lightgrey;
+  border-bottom-color: darkgrey!important;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-radius: 0px;
+  max-width: 40%;
+}
+.info-new-translation {
+  font-size: 12px;
+  margin-left: 20px;
+  color: $info-silver;
+  #change-trad {
+    font-size: 12px;
+    font-style: italic;
+    color: burlywood;
+    margin-left: 20px;
+  }
+}
+

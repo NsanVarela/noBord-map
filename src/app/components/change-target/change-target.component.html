@@ -1,0 +1,9 @@
+<select (change)="getTranslation($event, 'ALL')" class="form-control form-control-sm select-language" >
+  <option disabled>
+    {{ selectOption }} :
+  </option>
+  <option *ngFor="let target of targets">{{ target.name }}</option>
+</select>
+<p class="info-new-translation" *ngIf="changeTrad">Traduction en {{ selectedLanguage | lowercase }} :
+  <span id="change-trad">{{ changeTrad }}</span>
+</p>

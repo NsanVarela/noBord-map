@@ -1,66 +1,177 @@
-h1 {
-  font-size: 40px;
-  text-align: center;
-  margin-bottom: 3px;
+@import 'styles';
+.home-header {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  .logo {
+    height: 95px;
+    background-image:url(../../../assets/images/logo-pole-emploi.png);
+    background-size: 8%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+  }
+  h1 {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    color: white;
+  }
 }
-.logo {
-  height: 18%;
-  background-image:url(../../../assets/images/logo-pole-emploi.png);
-  background-size: 5%;
-  background-repeat: no-repeat;
-  background-position: center bottom;
+.home-content {
+  display: flex;
+  flex-direction: row;
+  // margin-bottom: 30px;
+  .pe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    width: 33%;
+    .pe-nav {
+      margin-bottom: 50px;
+      button {
+        width: 150px;
+        height: 150px;
+      }
+    }
+  }
+  .picture {
+    width: 33%;
+    height: 260px;
+    background-image:url(../../../assets/images/translation.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .de {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    width: 33%;
+    .de-nav {
+      margin-bottom: 50px;
+      button {
+        background-color: #f08080;
+        width: 150px;
+        height: 150px;
+      }
+    }
+  }
 }
-.de-icon {
-  background-color: #f08080;
+.advantages {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  margin-bottom: 50px;
+  .pe-advantages {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    mat-card {
+      max-width: 80%;
+      margin-top: 20px;
+      background-color: transparent;
+      h3 {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+        color: white;
+      }
+      hr {
+        max-width: 80%;
+        margin-bottom: 30px;
+        border-top: 0.5px solid white;
+      }
+      mat-card-content {
+        height: auto;
+        background-color: white;
+        border-radius: 10px;
+        background-color: transparent;
+        ul {
+          list-style: none;
+          font-size: 14px;
+          li {
+            padding: 10px 40px 15px 10px;
+            color: white;
+            mat-icon {
+              margin-right: 30px;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+  .de-advantages {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    mat-card {
+      max-width: 80%;
+      margin-top: 20px;
+      background-color: transparent;
+      h3 {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+        color: white;
+      }
+      hr {
+        max-width: 80%;
+        margin-bottom: 30px;
+        border-top: 0.5px solid white;
+      }
+      mat-card-content {
+        height: auto;
+        background-color: white;
+        border-radius: 10px;
+        background-color: transparent;
+        ul {
+          list-style: none;
+          font-size: 14px;
+          li {
+            padding: 10px 40px 15px 10px;
+            color: white;
+            mat-icon {
+              margin-right: 30px;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
 }
-.content {
-  padding-bottom: calc(2 * ((0% - 0.5px) * 1) + 0px + 1px)!important;
-}
-.side-home {
-  background-color: lightblue;
-}
-.app-title {
-  width: 100%
-}
-.app-info {
-  margin: 10%;
-  width: 100%;
-}
-.user-type-btn {
-  width: 150px;
-  height: 150px;
-}
-.type-btn {
-  padding-top: calc((15% - 0.5px) * 1 + 0px)!important;
-  z-index: 10;
-}
-.info-card {
-  margin-top: calc((5% - 0.5px + 1px) * 1)!important;
-}
-.help-card {
-  width: 40%;
-}
-.help-card-title {
-  padding: 20px 20px 20px 20px;
-}
-.separator {
-  margin-bottom: 15px;
-}
-.help-card-user {
-  list-style: none;
-  font-size: 14px;
-}
-.help-card-user li {
-  padding: 10px 40px 15px 10px;
-}
-.icon-list {
-  margin-right: 5%;
-  vertical-align: middle;
-}
-.content {
-  height: 50%;
-  background-image:url(../../../assets/images/translation.png);
-  background-size: 30%;
-  background-repeat: no-repeat;
-  background-position: center;
+
+@media screen and (max-width: 800px) {
+  .home-header {
+    margin-bottom: 20px;
+    h1 {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+    .logo {
+      height: 100px;
+      background-size: 12%;
+    }
+  }
+  .home-content {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+    .pe {
+      width: 50%;
+    }
+    .picture {
+      display: none;
+    }
+    .de {
+      width: 50%;
+    }
+  }
 }

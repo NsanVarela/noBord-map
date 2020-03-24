@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
-import { LoginModel } from '../../models/login.model';
-import { AuthService } from '../../services/auth.service';
-import { TokenStorageService } from '../../services/token-storage.service';
+import { LoginModel } from '../../_models/login.model';
+import { AuthService } from '../../_services/auth.service';
+import { TokenStorageService } from '../../_services/token-storage.service';
+import { AuthentificationService } from '../../_services/authentification.service';
 
 @Component({
   selector: 'app-login',
@@ -19,7 +20,7 @@ export class LoginComponent implements OnInit {
   isLoginFailed = false;
   errorMessage = '';
 
-  constructor( private formBuilder: FormBuilder, private authService: AuthService, private tokenStorage: TokenStorageService) { }
+  constructor( private formBuilder: FormBuilder, private authentificationService: AuthentificationService, private authService: AuthService, private tokenStorage: TokenStorageService) { }
 
   ngOnInit() {
     if (this.tokenStorage.getToken()) {
@@ -39,18 +40,18 @@ export class LoginComponent implements OnInit {
 
   onLoginSubmit() {
     this.authService.login(this.loginForm.value).subscribe(
-      data => {
-        this.tokenStorage.saveToken(data.accessToken);
+        data => {
+          this.tokenStorage.saveToken(data.accessToken);
         this.tokenStorage.saveUser(data);
         this.isLoginFailed = false;
         this.isLoggedIn = true;
         // this.reloadPage();
       },
-      err => {
-        this.errorMessage = err.error.message;
-        this.isLoginFailed = true;
-      }
-    )
+        err => {
+          this.errorMessage = err.error.message;
+          this.isLoginFailed = true;
+        }
+      )
   }
 
   reloadPage() {

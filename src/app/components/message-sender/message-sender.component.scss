@@ -1,0 +1,17 @@
+@import 'styles';
+
+.messageSender_container {
+  textarea {
+    margin: auto;
+    max-width: 60%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .messageSender_container {
+    textarea {
+      min-width: 100%;
+      align-items: flex-end;
+    }
+  }
+}

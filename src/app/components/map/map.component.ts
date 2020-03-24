@@ -1,10 +1,10 @@
 import { Component, AfterViewInit, Output, EventEmitter, Input } from '@angular/core';
 import { MatSnackBar } from '@angular/material'
+import { FormControl } from '@angular/forms';
 
 import { environment } from 'src/environments/environment'
 import * as L from 'leaflet'
 import { geoData } from '../../../assets/data/geoData'
-import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-map',

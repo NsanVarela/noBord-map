@@ -13,7 +13,7 @@ export class AuthComponent implements OnInit {
   ngOnInit() {
   }
 
-  toRgister() {
+  toRegister() {
     this.show = true
   }
   toLogin() {
