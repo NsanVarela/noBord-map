@@ -1,6 +1,7 @@
-export class User {
-    username: string;
-    language: string;
-    userType: string;
-    password: string;
+export class UserModel {
+  id: number
+  first_name: string
+  last_name: string
+  email: string
+  password: string
 }

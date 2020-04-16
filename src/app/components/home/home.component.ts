@@ -1,20 +1,35 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
+import { NavbarItem } from 'src/app/_models/navbar-item';
+import { AuthenticationService } from '../../_services/authentication.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
-  title: string = `Pe • TRANSLATOR`
-  userType: string
+export class HomeComponent {
   @Output() type = new EventEmitter<string>()
 
-  constructor() { }
+  public title: string = `Pe • TRANSLATOR`
+  public userType: string
+  public navBarItems: NavbarItem[] = []
 
-  ngOnInit() { }
+  constructor(public auth: AuthenticationService) {
+    this.setNavBar()
+  }
 
-  handleClick(event: any) {
+  public setNavBar(): void {
+    this.navBarItems = [
+      {
+        icon: `assets/icons/settings.svg`,
+        infoTitle: `PARAMÈTRES`,
+        link: `profile`,
+        isDisplayed: true
+      }
+    ]
+  }
+
+  public handleClick(event: any) {
     this.userType = event.currentTarget.value
     this.type.emit(this.userType)
   }

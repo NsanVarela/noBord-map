@@ -3,8 +3,10 @@ import { Router } from "@angular/router";
 import { FormBuilder } from "@angular/forms";
 import { LanguageService } from '../../_services/language.service';
 import { WebsocketService } from "../../_services/websocket.service";
-import ILanguages from "../../_models/ILanguages";
-import { NewMessage } from "../../_models/NewMessage";
+import { Languages } from "../../_models/languages";
+import { NewMessage } from "../../_models/new-message";
+import { NavbarItem } from 'src/app/_models/navbar-item';
+import { AuthenticationService } from '../../_services/authentication.service';
 
 @Component({
   selector: `app-chat-view`,
@@ -12,28 +14,32 @@ import { NewMessage } from "../../_models/NewMessage";
   styleUrls: [`./chat-view.component.scss`]
 })
 export class ChatViewComponent implements OnInit {
-  protected selectedLanguage: string;
-  protected translationButton: string = `Tranduire en...`;
-  protected languages: ILanguages[];
-  protected sender: string;
-  protected message: string;
-  protected receivedMsg: string;
-  protected date = new Date();
-  protected target: string = `es`;
-  protected provider: string = `GOOGLE`; // `GOOGLE`, `MICROSOFT` or `ALL`
-  protected changeTrad;
-  protected selectOption: string = `Sélectionnez une langue`;
-  protected newLanguage: string;
-  protected userLanguage: string = `french`;
-  public messages = [];
-  public users = [];
+  protected selectedLanguage: string
+  protected translationButton: string = `Tranduire en...`
+  protected languages: Languages[]
+  protected sender: string
+  protected message: string
+  protected receivedMsg: string
+  protected date = new Date()
+  protected target: string = `es`
+  protected provider: string = `GOOGLE` // `GOOGLE`, `MICROSOFT` or `ALL`
+  protected changeTrad
+  protected selectOption: string = `Sélectionnez une langue`
+  protected newLanguage: string
+  protected userLanguage: string = `french`
+  public messages = []
+  public users = []
+  public navBarItems: NavbarItem[] = []
 
   constructor(
     private router: Router,
     private languageService: LanguageService,
     private websocketService: WebsocketService,
-    public formBuilder: FormBuilder
-  ) {}
+    public formBuilder: FormBuilder,
+    public auth: AuthenticationService
+  ) {
+    this.setNavBar()
+  }
 
   ngOnInit() {
     const id: string = sessionStorage.getItem("id");
@@ -52,7 +58,59 @@ export class ChatViewComponent implements OnInit {
     });
   }
 
-  getTranslation(text, target, provider) {
+  public setNavBar(): void {
+    if(!this.auth.isLoggedIn()) {
+      this.navBarItems = [
+        {
+          icon: `assets/icons/home_app.svg`,
+          infoTitle: `HOME`,
+          link: `home`,
+          isDisplayed: true
+        },
+        {
+          icon: `assets/icons/settings.svg`,
+          infoTitle: `PARAMÈTRES`,
+          link: `profile`,
+          isDisplayed: true
+        }
+      ]
+    } else {
+      this.navBarItems = [
+        {
+          icon: `assets/icons/home_app.svg`,
+          infoTitle: `HOME`,
+          link: `home`,
+          isDisplayed: true
+        },
+        {
+          icon: `assets/icons/language.svg`,
+          infoTitle: `MAP`,
+          link: `map`,
+          isDisplayed: true
+        },
+        {
+          icon: `assets/icons/translate.svg`,
+          infoTitle: `CHAT`,
+          link: `chat`,
+          isDisplayed: true
+        },
+        {
+          icon: `assets/icons/settings.svg`,
+          infoTitle: `PARAMÈTRES`,
+          link: `profile`,
+          isDisplayed: true
+        },
+        {
+          icon: `assets/icons/exit_app.svg`,
+          infoTitle: `DECONNEXION`,
+          link: `logout`,
+          isDisplayed: true
+        }
+      ]
+    }
+  }
+
+  public getTranslation(text, target, provider) {
     this.languageService.getTranslation(text, target, provider).subscribe({
       next: data => {
         this.receivedMsg = data.data.translate[0].text;
@@ -69,7 +127,7 @@ export class ChatViewComponent implements OnInit {
     });
   }
 
-  onSignOut() {
+  public onSignOut() {
     sessionStorage.removeItem(`id`);
     sessionStorage.removeItem(`name`);
     sessionStorage.removeItem(`password`);

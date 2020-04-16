@@ -4,6 +4,8 @@ import { HomeComponent } from './components/home/home.component';
 import { MapComponent } from './components/map/map.component';
 import { AuthComponent } from './components/auth/auth.component';
 import { ChatViewComponent } from './components/chat-view/chat-view.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { AuthGuardService } from './_services/auth-guard.service';
 
 export const appRouteList: Routes = [
   {
@@ -24,13 +26,14 @@ export const appRouteList: Routes = [
   },
   {
     path: `chat`,
-    component: ChatViewComponent
+    component: ChatViewComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: `profile`,
+    component: ProfileComponent,
+    canActivate: [AuthGuardService]
   }
-
-  // {
-  //   path: `login`,
-  //   component: LoginComponent
-  // }
 ];
 
 @NgModule({

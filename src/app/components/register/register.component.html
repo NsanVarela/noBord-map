@@ -1,4 +1,4 @@
-<div class="medium-list">
+<!-- <div class="medium-list">
   <div class="list-view-wrapper">
     <div class="list-header-title">REGISTER</div>
 
@@ -44,5 +44,42 @@
       <p *ngIf="newUser">Well done {{ newUser.username }}, your registration is successful!</p>
     </div>
   </div>
+</div> -->
+<div class="form-container">
+  <h1>S'INSCRIRE</h1>
+  <form [formGroup]="registerForm" (ngSubmit)="registerForm.valid && register()" #f="ngForm" novalidate>
+    <mat-form-field>
+      <mat-label>Prénom</mat-label>
+      <input id="first_name" matInput placeholder="Saisissez votre prénom"
+      formControlName="first_name" />
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <mat-label>Nom</mat-label>
+      <input id="last_name" matInput placeholder="Saisissez votre nom"
+      formControlName="last_name" />
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <mat-label>Adresse email</mat-label>
+      <input id="email" matInput placeholder="Saisissez votre email"
+      formControlName="email" />
+    </mat-form-field>
+    <br>
+    <mat-form-field hintLabel="8 caractères minimum">
+      <input id="password" matInput #input minlength="8" placeholder="Saisissez votre mot de passe" [type]="hide ? 'password': 'text'"
+      formControlName="password" />
+        <mat-hint align="end">{{input.value?.length || 0}}/8</mat-hint>
+        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+    </mat-form-field>
+    <br>
+    <button mat-button type="submit" class="mat-raised-button mat-primary" [disabled]="!registerForm.valid">
+      VALIDER
+    </button>
+    <!-- <div class="form-group"> -->
+      <!-- <div class="alert alert-danger" role="alert" *ngIf="f.submitted && isLoginFailed">
+        Login failed: {{ errorMessage }}
+      </div> -->
+    <!-- </div> -->
+  </form>
 </div>
-

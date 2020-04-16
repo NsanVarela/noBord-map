@@ -1,0 +1,60 @@
+nav {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  height: 20px;
+  .logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 200px;
+    img {
+      width: 50px;
+      margin-right: 30px;
+    }
+    .title {
+      font-size: 22px;
+      font-weight: bold;
+      color: #e8414e;
+    }
+  }
+  .buttons {
+    display: flex;
+    justify-content: flex-end;
+    button {
+      border: none;
+      display: flex;
+      margin: 0 5px;
+      background: transparent;
+      align-items: center;
+      margin-right: 20px;
+      cursor: pointer;
+      &:focus {
+        outline: 0;
+      }
+      &:active {
+        outline: 0;
+      }
+
+      img {
+        width: 24px;
+      }
+      
+      .name {
+        color: #93908f;
+        font-size: 14px;
+        margin-left: 10px;
+        &:hover {
+          // color: rgba(62, 153, 202, 1);
+          font-weight: bold;
+        }
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

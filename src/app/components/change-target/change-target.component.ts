@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from "@angular/core";
 import { LanguageService } from '../../_services/language.service';
-import ILanguages from "../../_models/ILanguages";
+import { Languages } from "../../_models/languages";
 
 @Component({
   selector: "app-changeTarget",
@@ -11,7 +11,7 @@ export class ChangeTargetComponent implements OnInit {
   public targets;
   public selectOption: string = `Sélectionnez une langue`;
   public changeTrad: string;
-  protected languages: ILanguages;
+  protected languages: Languages;
   protected selectedLanguage: string;
   protected newLanguage: string;
 

@@ -1,26 +1,19 @@
-
-
+<navbar [items]="navBarItems"></navbar>
 <mat-sidenav-container>
   <mat-sidenav #sidenav mode="side" position="end" (opened)="log('Opened')" (closed)="log('Closed')" [(opened)]="opened">
     <h2>{{countryName | uppercase}}</h2>
-    <hr *ngIf="countryName" class="sidenav-separator">
-    <ul class="languages-list">
-      <li class="language" *ngFor="let language of languages">
-        <mat-icon class="icon-list">language</mat-icon>
-        {{language}}
+    <hr *ngIf="countryName">
+    <ul>
+      <li *ngFor="let language of languages">
+        <mat-icon>translate</mat-icon>
+        <span class="language-name">{{language | uppercase }}</span>
         <mat-slide-toggle>activer !</mat-slide-toggle>
       </li>
     </ul>
-    <!-- <mat-radio-group  aria-label="Select an option">
-      <mat-radio-button *ngFor="let language of languages" value="language">{{language}}</mat-radio-button>
-    </mat-radio-group> -->
   </mat-sidenav>
-  <mat-sidenav-content class="content">
-    <button class="toggle-btn" mat-raised-button (click)="sidenav.toggle()">{{toggleBtnMsg}}</button>
-    <div class="logo">
-      <h1></h1>
-    </div>
+  <mat-sidenav-content>
     <div class="map-container">
+      <button mat-raised-button (click)="sidenav.toggle()">{{toggleBtnMsg}}</button>
       <div class="map-frame">
         <div id="map" (mouseover)="highlightFeature($event)"></div>
       </div>

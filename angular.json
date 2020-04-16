@@ -72,8 +72,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "translatorMap:build",
-            "disableHostCheck": true
+            "browserTarget": "translatorMap:build"
           },
           "configurations": {
             "production": {

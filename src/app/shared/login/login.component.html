@@ -1,4 +1,4 @@
-<div class="medium-list">
+<!-- <div class="medium-list">
   <div class="list-view-wrapper">
     <div class="list-header-title">LOGIN</div>
 
@@ -16,7 +16,6 @@
 
         <button mat-button type="submit" class="mat-raised-button mat-primary"
           [disabled]="!loginForm.valid">Valider</button>
-        <!-- <button mat-button routerLink="/register" class="divider">Register</button> -->
         <div class="form-group">
           <div
             class="alert alert-danger"
@@ -33,4 +32,30 @@
       Logged in as {{ user.username }}
     </div>
   </div>
+</div> -->
+<div class="form-container">
+  <h1>SE CONNECTER</h1>
+  <form [formGroup]="loginForm" *ngIf="!isLoggedIn" (ngSubmit)="loginForm.valid && login()" #f="ngForm" novalidate>
+    <mat-form-field>
+      <mat-label>Adresse email</mat-label>
+      <input id="email" matInput placeholder="Saisissez votre email"
+      formControlName="email" />
+    </mat-form-field>
+    <br>
+    <mat-form-field hintLabel="8 caractères minimum">
+      <input id="password" matInput #input minlength="8" placeholder="Saisissez votre mot de passe" [type]="hide ? 'password': 'text'"
+      formControlName="password" />
+        <mat-hint align="end">{{input.value?.length || 0}}/8</mat-hint>
+        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+    </mat-form-field>
+    <br>
+    <button mat-button type="submit" class="mat-raised-button mat-primary" [disabled]="!loginForm.valid">
+      VALIDER
+    </button>
+    <!-- <div class="form-group"> -->
+      <!-- <div class="alert alert-danger" role="alert" *ngIf="f.submitted && isLoginFailed">
+        Login failed: {{ errorMessage }}
+      </div> -->
+    <!-- </div> -->
+  </form>
 </div>

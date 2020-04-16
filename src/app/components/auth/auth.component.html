@@ -1,15 +1,20 @@
-<mat-card class="user-forms">
-  <mat-card-title>
-    <button mat-button (click)="toRegister()">REGISTER</button>
-    <button mat-button (click)="toLogin()">LOGIN</button>
-  </mat-card-title>
-  <mat-card-content>
-    <ng-container *ngIf="show">
-      <app-register></app-register>
-    </ng-container>
-    <ng-container *ngIf="!show">
-      <app-login></app-login>
-    </ng-container>
-  </mat-card-content>
+<navbar [items]="navBarItems"></navbar>
+<mat-card>
+  <div class="register" *ngIf="!show">
+    <h3>VOUS N'AVEZ PAS DE COMPTE ?</h3>
+    <p>Cliquez sur le bouton ci-dessous pour accéder au formulaire d'inscription et créer votre compte utilisateur.</p>
+    <button mat-button (click)="toRegister()">S'INSCRIRE</button>
+  </div>
+  <ng-container *ngIf="show">
+    <app-register></app-register>
+  </ng-container>
+  <div class="login" *ngIf="show">
+    <h3>VOUS ÊTES DÉJA INSCRIT !</h3>
+    <p>Cliquez sur le bouton ci-dessous pour renseigner les champs du formulaire de connexion et accéder à la messagerie instantanée.</p>
+    <button mat-button (click)="toLogin()">SE CONNECTER</button>
+  </div>
+  <ng-container *ngIf="!show">
+    <app-login></app-login>
+  </ng-container>
 </mat-card>
 

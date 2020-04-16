@@ -1,10 +1,41 @@
-.user-forms {
+mat-card {
   width: 60%;
   margin: auto;
-  margin-top: 5%;
-  mat-card-content {
-    border-radius: 5px;
-    border: none;
-    box-shadow: 2px 2px 2px 2px gray;
+  margin-top: 120px;
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  height: 400px;
+  opacity: 0.7;
+  .register {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    color: white;
+    h3 {}
+    p {
+      padding: 30px;
+      text-align: justify;
+    }
+    button {}
   }
+  .toto {
+    background-color: red;
+  }
+  .login {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    color: white;
+    h3 {}
+    p {
+      padding: 30px;
+      text-align: justify;
+    }
+  }
+  // mat-card-content {
+  //   border-radius: 5px;
+  //   border: none;
+  //   box-shadow: 2px 2px 2px 2px gray;
+  // }
 }

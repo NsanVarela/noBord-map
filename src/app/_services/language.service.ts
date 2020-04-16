@@ -3,14 +3,14 @@ import { Observable } from 'rxjs';
 import axios from 'axios'
 
 import { environment } from '../../environments/environment';
-import ILanguages from '../_models/ILanguages';
+import { Languages } from '../_models/languages';
 
 @Injectable({
   providedIn: "root"
 })
 export class LanguageService {
 
-  protected languages: ILanguages;
+  protected languages: Languages;
 
   public changeTranslation(text: string, target: string, provider: string) {
     const data = {

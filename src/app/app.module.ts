@@ -1,23 +1,28 @@
-import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { HttpClientModule } from "@angular/common/http";
-import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+import { BrowserModule } from "@angular/platform-browser";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 import { MaterialModule } from "./_material/material.module";
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from "./app-routing.module";
 
-import { UserService } from './_services/user.service'
+import { AuthenticationService } from "./_services/authentication.service";
+import { AuthGuardService } from "./_services/auth-guard.service";
 
 import { AppComponent } from "./app.component";
 import { MapComponent } from "./components/map/map.component";
+import { LoginComponent } from "./shared/login/login.component";
 import { HomeComponent } from "./components/home/home.component";
-import { RegisterComponent } from './components/register/register.component';
-import { LoginComponent } from './components/login/login.component';
-import { AuthComponent } from './components/auth/auth.component';
-import { ChatViewComponent } from './components/chat-view/chat-view.component';
-import { MessageSenderComponent } from './components/message-sender/message-sender.component';
-import { ChangeTargetComponent } from './components/change-target/change-target.component';
+import { AuthComponent } from "./components/auth/auth.component";
+import { NavbarComponent } from "./shared/navbar/navbar.component";
+import { LogoutComponent } from "./shared/logout/logout.component";
+import { ProfileComponent } from "./components/profile/profile.component";
+import { RegisterComponent } from "./components/register/register.component";
+import { ChatViewComponent } from "./components/chat-view/chat-view.component";
+import { ChangeTargetComponent } from "./components/change-target/change-target.component";
+import { MessageSenderComponent } from "./components/message-sender/message-sender.component";
+
 
 @NgModule({
   declarations: [
@@ -29,7 +34,14 @@ import { ChangeTargetComponent } from './components/change-target/change-target.
     AuthComponent,
     ChatViewComponent,
     MessageSenderComponent,
-    ChangeTargetComponent],
+    ChangeTargetComponent,
+    ProfileComponent,
+    NavbarComponent,
+    LogoutComponent
+  ],
+  entryComponents: [
+    LogoutComponent
+  ],
   imports: [
     AppRoutingModule,
     BrowserModule,
@@ -39,7 +51,7 @@ import { ChangeTargetComponent } from './components/change-target/change-target.
     ReactiveFormsModule,
     MaterialModule
   ],
-  providers: [UserService],
+  providers: [AuthenticationService, AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

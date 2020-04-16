@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import { UserModel } from '../../_models/user.model';
-import { AuthService } from '../../_services/auth.service';
+import { UserModel } from '../../_models/user';
 import { LanguageService } from '../../_services/language.service';
+import { AuthenticationService } from '../../_services/authentication.service';
 
 @Component({
   selector: 'app-register',
@@ -13,7 +13,7 @@ import { LanguageService } from '../../_services/language.service';
 })
 export class RegisterComponent implements OnInit {
 
-  protected user: UserModel = new UserModel();
+  protected user: UserModel = new UserModel()
   protected newUser;
   protected registerForm: FormGroup
   protected hide: boolean = true
@@ -24,7 +24,7 @@ export class RegisterComponent implements OnInit {
   protected selectedLanguage: string;
   protected chosenLanguage: string;
   public selectOption: string = `Sélectionnez une langue`;
-  public userType: IUserType[] = [
+  public userType: UserType[] = [
     {value: 'D.E.', viewValue: `Demandeur d'emploi`},
     {value: 'P.E.', viewValue: 'Agent Pôle emploi'}
   ];
@@ -32,32 +32,33 @@ export class RegisterComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
-    private authService: AuthService,
-    private languageService: LanguageService ) { }
+    private auth: AuthenticationService,
+    private languageService: LanguageService
+  ) { }
 
   ngOnInit() {
     this.registerForm = this.formBuilder.group({
-      'username' : [this.user.username, [
+      'first_name' : [this.user.first_name, [
         Validators.required,
         Validators.minLength(2)
       ]],
-      'password' : [this.user.password, [
+      'last_name' : [this.user.last_name, [
         Validators.required,
         Validators.minLength(8)
       ]],
-      'language' : [this.user.language, [
+      'email' : [this.user.email, [
         Validators.required
       ]],
-      'type' : [this.user.type, [
+      'password' : [this.user.password, [
         Validators.required
       ]],
-    });
-    this.languageService.getLanguages().subscribe({
-      next: data => {
-        this.targets = data;
-        // console.log('data', data)
-      }
-    });
+    })
+    // this.languageService.getLanguages().subscribe({
+    //   next: data => {
+    //     this.targets = data;
+    //     // console.log('data', data)
+    //   }
+    // });
   };
 
   selectLanguage(e) {
@@ -71,22 +72,21 @@ export class RegisterComponent implements OnInit {
       });
   }
 
-  onRegisterSubmit() {
-    this.authService.register(this.registerForm.value)
-    .subscribe(
+  public register() {
+    this.auth.register(this.registerForm.value).subscribe(
       data => {
-        console.log('data user : ',data);
-        this.isSuccessful = true;
-        this.isSignUpFailed = false;
-        this.newUser = data;
-        this.router.navigate([`/auth`]);
+        console.log('data user : ', data)
+        this.isSuccessful = true
+        this.isSignUpFailed = false
+        this.newUser = data
+        this.router.navigate([`profile`])
       },
       error => {
-        console.log('error', error);
-        this.errorMessage = error.error.message;
-        this.isSignUpFailed = true;
+        console.log('error', error)
+        this.errorMessage = error.error.message
+        this.isSignUpFailed = true
       }
-    );
-  };
+    )
+  }
 
 }

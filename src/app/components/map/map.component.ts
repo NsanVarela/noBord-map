@@ -1,10 +1,12 @@
 import { Component, AfterViewInit, Output, EventEmitter, Input } from '@angular/core';
 import { MatSnackBar } from '@angular/material'
 import { FormControl } from '@angular/forms';
+import { NavbarItem } from 'src/app/_models/navbar-item';
 
 import { environment } from 'src/environments/environment'
 import * as L from 'leaflet'
 import { geoData } from '../../../assets/data/geoData'
+import { AuthenticationService } from '../../_services/authentication.service';
 
 @Component({
   selector: 'app-map',
@@ -18,14 +20,72 @@ export class MapComponent implements AfterViewInit {
   private paris: [number, number]  = [environment.gps.parisLatitude, environment.gps.parisLongitude]
   protected countryName: string
   protected languages = []
+  public navBarItems: NavbarItem[] = []
 
   @Output() country = new EventEmitter()
 
-  constructor(private _snackBar: MatSnackBar) {}
+  constructor(
+    private _snackBar: MatSnackBar,
+    public auth: AuthenticationService
+  ) {
+    this.setNavBar()
+  }
 
   ngAfterViewInit(): void {
     this.initMap()
     this.initStatesLayer()
+  }
+
+  public setNavBar(): void {
+    if(!this.auth.isLoggedIn()) {
+      this.navBarItems = [
+        {
+          icon: `assets/icons/home_app.svg`,
+          infoTitle: `HOME`,
+          link: `home`,
+          isDisplayed: true
+        },
+        {
+          icon: `assets/icons/settings.svg`,
+          infoTitle: `PARAMÈTRES`,
+          link: `profile`,
+          isDisplayed: true
+        }
+      ]
+    } else {
+      this.navBarItems = [
+        {
+          icon: `assets/icons/home_app.svg`,
+          infoTitle: `HOME`,
+          link: `home`,
+          isDisplayed: true
+        },
+        {
+          icon: `assets/icons/language.svg`,
+          infoTitle: `MAP`,
+          link: `map`,
+          isDisplayed: true
+        },
+        {
+          icon: `assets/icons/translate.svg`,
+          infoTitle: `CHAT`,
+          link: `chat`,
+          isDisplayed: true
+        },
+        {
+          icon: `assets/icons/settings.svg`,
+          infoTitle: `PARAMÈTRES`,
+          link: `profile`,
+          isDisplayed: true
+        },
+        {
+          icon: `assets/icons/exit_app.svg`,
+          infoTitle: `DECONNEXION`,
+          link: `logout`,
+          isDisplayed: true
+        }
+      ]
+    }
   }
 
   private initStatesLayer() {
@@ -107,7 +167,6 @@ export class MapComponent implements AfterViewInit {
   }
 
   protected log(state) {
-    console.log(state)
     if(state == `Opened`)
       this.toggleBtnMsg = `FERMER LE MENU`
     else if(state == `Closed`)

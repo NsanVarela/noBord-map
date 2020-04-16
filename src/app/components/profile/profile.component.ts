@@ -1,22 +1,35 @@
-import { Component, OnInit } from '@angular/core';
-import { NavbarItem } from 'src/app/_models/navbar-item';
-import { AuthenticationService } from '../../_services/authentication.service';
+import { Component, OnInit } from '@angular/core'
+import { Router } from '@angular/router'
+
+import { AuthenticationService, UserDetails } from '../../_services/authentication.service';
+import { NavbarItem } from 'src/app/_models/navbar-item'
 
 @Component({
-  selector: 'app-auth',
-  templateUrl: './auth.component.html',
-  styleUrls: ['./auth.component.scss']
+  selector: 'app-profile',
+  templateUrl: './profile.component.html',
+  styleUrls: ['./profile.component.scss']
 })
-export class AuthComponent implements OnInit {
-  protected show: boolean
-  public navBarItems: NavbarItem[] = []
+export class ProfileComponent {
 
-  constructor(public auth: AuthenticationService) {
+  public navBarItems: NavbarItem[] = []
+  public details: UserDetails
+
+  constructor(
+    private auth: AuthenticationService
+  ) {
     this.setNavBar()
   }
 
   ngOnInit() {
-    this.show = true
+    this.auth.profile().subscribe(
+      user => {
+        this.details = user
+        console.log('details : ', this.details)
+      },
+      err => {
+        console.log(err)
+      }
+    )
   }
 
   public setNavBar(): void {
@@ -26,12 +39,6 @@ export class AuthComponent implements OnInit {
           icon: `assets/icons/home_app.svg`,
           infoTitle: `HOME`,
           link: `home`,
-          isDisplayed: true
-        },
-        {
-          icon: `assets/icons/settings.svg`,
-          infoTitle: `PARAMÈTRES`,
-          link: `profile`,
           isDisplayed: true
         }
       ]
@@ -69,14 +76,6 @@ export class AuthComponent implements OnInit {
         }
       ]
     }
-  }
-
-  public toRegister(): boolean {
-    return this.show = true
-  }
-
-  public toLogin(): boolean {
-    return this.show = false
   }
 
 }
