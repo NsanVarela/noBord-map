@@ -1,8 +1,9 @@
 @import 'styles';
+
 .home-header {
   display: flex;
   flex-direction: column;
-  margin-top: 30px;
+  margin-top: 20px;
   margin-bottom: 30px;
   .logo {
     height: 95px;
@@ -22,7 +23,6 @@
 .home-content {
   display: flex;
   flex-direction: row;
-  // margin-bottom: 30px;
   .pe {
     display: flex;
     flex-direction: column;
@@ -80,6 +80,7 @@
         padding-bottom: 20px;
         text-align: center;
         color: white;
+        margin-bottom: 0px;
       }
       hr {
         max-width: 80%;
@@ -95,7 +96,7 @@
           list-style: none;
           font-size: 14px;
           li {
-            padding: 10px 40px 15px 10px;
+            padding: 10px 20px 10px 10px;
             color: white;
             mat-icon {
               margin-right: 30px;
@@ -135,7 +136,7 @@
           list-style: none;
           font-size: 14px;
           li {
-            padding: 10px 40px 15px 10px;
+            padding: 10px 20px 10px 10px;
             color: white;
             mat-icon {
               margin-right: 30px;

@@ -1,3 +1,5 @@
+@import 'styles';
+
 nav {
   display: flex;
   padding: 20px;
@@ -41,13 +43,12 @@ nav {
       img {
         width: 24px;
       }
-      
+
       .name {
         color: #93908f;
         font-size: 14px;
         margin-left: 10px;
         &:hover {
-          // color: rgba(62, 153, 202, 1);
           font-weight: bold;
         }
       }
