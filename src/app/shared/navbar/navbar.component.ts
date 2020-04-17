@@ -49,7 +49,7 @@ export class NavbarComponent {
           panelClass: `customDialog`,
         })
       } else if (item.link === `profile`) {
-        console.log('details profile : ', this.auth.getUserDetails().first_name)
+        // console.log('details profile : ', this.auth.getUserDetails().username)
       } else {
         this.goTo(item.link);
       }

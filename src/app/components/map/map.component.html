@@ -1,13 +1,13 @@
 <navbar [items]="navBarItems"></navbar>
 <mat-sidenav-container>
   <mat-sidenav #sidenav mode="side" position="end" (opened)="log('Opened')" (closed)="log('Closed')" [(opened)]="opened">
-    <h2>{{countryName | uppercase}}</h2>
+    <h2>{{ countryName | uppercase}}</h2>
     <hr *ngIf="countryName">
     <ul>
       <li *ngFor="let language of languages">
         <mat-icon>translate</mat-icon>
-        <span class="language-name">{{language | uppercase }}</span>
-        <mat-slide-toggle>activer !</mat-slide-toggle>
+        <!-- <span class="language-name">{{ language | uppercase }}</span> &nbsp; -->
+        <mat-slide-toggle>{{ language | uppercase }}</mat-slide-toggle>
       </li>
     </ul>
   </mat-sidenav>

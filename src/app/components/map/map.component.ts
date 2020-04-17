@@ -1,6 +1,5 @@
-import { Component, AfterViewInit, Output, EventEmitter, Input } from '@angular/core';
+import { Component, AfterViewInit, Output, EventEmitter } from '@angular/core';
 import { MatSnackBar } from '@angular/material'
-import { FormControl } from '@angular/forms';
 import { NavbarItem } from 'src/app/_models/navbar-item';
 
 import { environment } from 'src/environments/environment'
@@ -91,11 +90,11 @@ export class MapComponent implements AfterViewInit {
   private initStatesLayer() {
     const stateLayer = L.geoJSON(geoData, {
       style: (feature) => ({
-        color: "#f07f7f",
+        color: "#FFFFFF",
         weight: 3,
         opacity: 0.2,
         fillOpacity: 0.1,
-        fillColor: "#2262CC"
+        fillColor: "#FFFFFF"
       }),
       onEachFeature: (feature, layer) => {
         layer.on({
@@ -103,9 +102,13 @@ export class MapComponent implements AfterViewInit {
             this.highlightFeature(e)
             this.onDisplayInfo(e)
           },
-          mouseout: (e) => (this.resetFeature(e)),
+          mouseout: (e) => {
+            this.resetFeature(e)
+          },
           click: (e) => {
-            (this.zoomToFeature(e))
+            this.highlightFeature(e)
+            this.onDisplayInfo(e)
+            // this.zoomToFeature(e)
           }
         })
       }
@@ -115,12 +118,12 @@ export class MapComponent implements AfterViewInit {
   }
 
   protected highlightFeature(e)  {
-    console.log('e', e)
+    // console.log('e', e)
     const layer = e.target
     layer.setStyle({
       weight: 3,
       opacity: 0.3,
-      color: '#f07f7f',
+      color: '#FFFFFF',
       fillOpacity: 1.0,
       fillColor: '#f07f7f'
     })
@@ -134,10 +137,11 @@ export class MapComponent implements AfterViewInit {
     layer.setStyle({
       weight: 3,
       opacity: 0.2,
-      color: '#2262CC',
+      color: '#FFFFFF',
       fillOpacity: 0.1,
-      fillColor: '#2262CC'
+      fillColor: '#FFFFFF'
     })
+    this._snackBar.dismiss()
   }
 
   private zoomToFeature(e) {
@@ -162,7 +166,7 @@ export class MapComponent implements AfterViewInit {
     this._snackBar.open(this.countryName)
     this.country.emit(this.countryName)
     e.target.feature.properties.language.forEach(element => {
-      this.languages.push(element.name)
+      this.languages.push(element.frenchName)
     })
   }
 

@@ -13,11 +13,11 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
   user: UserModel = new UserModel();
-  private loginForm: FormGroup;
+  public loginForm: FormGroup;
   hide: boolean = true;
   isLoggedIn = false;
   isLoginFailed = false;
-  errorMessage = '';
+  errorMessage = ``;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
       ]],
       'password' : [this.user.password, [
         Validators.required,
-        Validators.minLength(8)
+        Validators.minLength(4)
       ]]
     })
   }

@@ -7,8 +7,7 @@ import { environment } from 'src/environments/environment';
 
 export interface UserDetails {
   id: number
-  first_name: string
-  last_name: string
+  username: string
   email: string
   password: string
   language: string
@@ -23,8 +22,7 @@ interface TokenResponse {
 
 export interface TokenPayload {
   id: number
-  first_name: string
-  last_name: string
+  username: string
   email: string
   password: string
   language: string

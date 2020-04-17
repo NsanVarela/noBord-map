@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core'
-import { Router } from '@angular/router'
 
 import { AuthenticationService, UserDetails } from '../../_services/authentication.service';
 import { NavbarItem } from 'src/app/_models/navbar-item'
@@ -24,7 +23,6 @@ export class ProfileComponent {
     this.auth.profile().subscribe(
       user => {
         this.details = user
-        console.log('details : ', this.details)
       },
       err => {
         console.log(err)
@@ -63,16 +61,10 @@ export class ProfileComponent {
           isDisplayed: true
         },
         {
-          icon: `assets/icons/settings.svg`,
-          infoTitle: `PARAMÈTRES`,
-          link: `profile`,
-          isDisplayed: true
-        },
-        {
           icon: `assets/icons/exit_app.svg`,
           infoTitle: `DECONNEXION`,
           link: `logout`,
-          isDisplayed: true
+          isDisplayed: false
         }
       ]
     }

@@ -1,63 +1,10 @@
-<!-- <div class="medium-list">
-  <div class="list-view-wrapper">
-    <div class="list-header-title">REGISTER</div>
-
-    <form [formGroup]="registerForm" *ngIf="!isSuccessful" (ngSubmit)="registerForm.valid && onRegisterSubmit()" #f="ngForm" novalidate>
-      <div class="form-container">
-        <mat-form-field>
-          <input id="username" matInput formControlName="username" placeholder="Saisissez votre nom" />
-        </mat-form-field>
-
-        <mat-form-field hintLabel="8 caractères minimum" appearance="fill">
-          <input id="password" matInput #input minlength="8" formControlName="password" placeholder="Saisissez votre mot de passe" [type]="hide ? 'password': 'text'" />
-            <mat-hint align="end">{{input.value?.length || 0}}/8</mat-hint>
-            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
-        </mat-form-field>
-
-        <mat-form-field>
-            <mat-label>Language favorite</mat-label>
-            <mat-select matNativeControl formControlName="language">
-              <mat-option *ngFor="let target of targets" [value]="target.name">
-                {{target.name}}
-              </mat-option>
-            </mat-select>
-        </mat-form-field>
-
-        <mat-form-field>
-          <mat-label>Type utilisateur</mat-label>
-          <mat-select matNativeControl formControlName="type">
-            <mat-option *ngFor="let userType of userType" [value]="userType.value">
-              {{userType.viewValue}}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
-
-        <button mat-button type="submit" class="mat-raised-button mat-primary"
-          [disabled]="!registerForm.valid">Valider</button>
-      </div>
-      <div class="alert alert-warning" *ngIf="f.valid && isSignUpFailed">
-        Signup failed!<br />{{ errorMessage }}
-      </div>
-    </form>
-
-    <div class="alert alert-success" *ngIf="isSuccessful">
-      <p *ngIf="newUser">Well done {{ newUser.username }}, your registration is successful!</p>
-    </div>
-  </div>
-</div> -->
 <div class="form-container">
   <h1>S'INSCRIRE</h1>
   <form [formGroup]="registerForm" (ngSubmit)="registerForm.valid && register()" #f="ngForm" novalidate>
     <mat-form-field>
-      <mat-label>Prénom</mat-label>
-      <input id="first_name" matInput placeholder="Saisissez votre prénom"
-      formControlName="first_name" />
-    </mat-form-field>
-    <br>
-    <mat-form-field>
-      <mat-label>Nom</mat-label>
-      <input id="last_name" matInput placeholder="Saisissez votre nom"
-      formControlName="last_name" />
+      <mat-label>Pseudo</mat-label>
+      <input id="username" matInput placeholder="Saisissez votre pseudo"
+      formControlName="username" />
     </mat-form-field>
     <br>
     <mat-form-field>
