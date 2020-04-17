@@ -1,101 +1,92 @@
 <navbar [items]="navBarItems"></navbar>
 <div class="home-container">
-<div class="home-header">
-  <div class="sphere">
-    <div class="container">
-      <div class="globe__placeholder">
-        <div class="globe__container">
-          <div class="globe">
-            <div class="globe__sphere"></div>
-            <div class="globe__outer_shadow"></div>
-            <div class="globe__reflections__bottom"></div>
-            <div class="globe__worldmap">
-              <div class="globe__worldmap__back backimg4"></div>
-              <div class="globe__worldmap__front backimg4"></div>
+  <div class="home-header">
+    <div class="sphere">
+      <div class="container">
+        <div class="globe__placeholder">
+          <div class="globe__container">
+            <div class="globe">
+              <div class="globe__sphere"></div>
+              <div class="globe__outer_shadow"></div>
+              <div class="globe__reflections__bottom"></div>
+              <div class="globe__worldmap">
+                <div class="globe__worldmap__back backimg"></div>
+                <div class="globe__worldmap__front backimg"></div>
+              </div>
+              <div class="globe__inner_shadow"></div>
+              <div class="globe__reflections__top"></div>
             </div>
-            <div class="globe__inner_shadow"></div>
-            <div class="globe__reflections__top"></div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="baseline">
-  
-  </div>
-</div>
-<div class="home-content">
-  <div class="pe">
-    <div class="pe-nav">
-      <button mat-fab color="primary" value="PE" (click)="handleClick($event)" routerLink="/auth">CONSEILLER</button>
+    <div class="baseline">
+      <h2><span class="begin-h2">Pe</span><span class="middle-h2"> • </span><span class="end-h2">TRANSLATOR</span></h2>
+      <p>Pas de frontière pour discuter !</p>
     </div>
   </div>
-  <!-- <div class="picture"></div> -->
-  
-
-  
-  <div class="de">
-    <div class="de-nav">
-      <button mat-fab value="DE" (click)="handleClick($event)" routerLink="/map">CANDIDAT</button>
-    </div>
-  </div>
-</div>
-    <div class="advantages">
-      <div class="pe-advantages">
-        <mat-card>
-          <h3>AVANTAGES CONSEILLER</h3>
-          <hr>
-          <mat-card-content>
-            <ul>
-              <li>
-                <mat-icon>translate</mat-icon>
-                Envoyez & recevez des messages en français
-              </li>
-              <li>
-                <mat-icon>people</mat-icon>
-                Discutez simultanément avec des candidats
-              </li>
-              <li>
-                <mat-icon>calendar_today</mat-icon>
-                Organisez vos rendez-vous avec les candidats
-              </li>
-              <li>
-                <mat-icon>history</mat-icon>
-                Gardez un historique de vos conversations
-              </li>
-            </ul>
-          </mat-card-content>
-        </mat-card>
-      </div>
-
-  
-      <div class="de-advantages">
-        <mat-card>
-          <h3>AVANTAGES CANDIDAT</h3>
-          <hr>
-          <mat-card-content>
-            <ul>
-              <li>
-                <mat-icon>translate</mat-icon>
-                Choisissez votre langue de discussion
-              </li>
-              <li>
-                <mat-icon>people</mat-icon>
-                Discutez simultanément avec d'autres candidats
-              </li>
-              <li>
-                <mat-icon>calendar_today</mat-icon>
-                Visualisez vos rendez-vous planifiés
-              </li>
-              <li>
-                <mat-icon>history</mat-icon>
-                Gardez un historique de vos conversations
-              </li>
-            </ul>
-          </mat-card-content>
-        </mat-card>
+  <div class="home-content">
+    <div class="pe">
+      <div class="pe-nav">
+        <button mat-fab color="primary" value="PE" (click)="handleClick($event)" routerLink="/auth">CONSEILLER</button>
+        <div class="pe-advantages">
+          <mat-card>
+            <h3>AVANTAGES CONSEILLER</h3>
+            <hr>
+            <mat-card-content>
+              <ul>
+                <li>
+                  <mat-icon>translate</mat-icon>
+                  Envoyez & recevez des messages en français
+                </li>
+                <li>
+                  <mat-icon>people</mat-icon>
+                  Discutez simultanément avec des candidats
+                </li>
+                <li>
+                  <mat-icon>calendar_today</mat-icon>
+                  Organisez vos rendez-vous avec les candidats
+                </li>
+                <li>
+                  <mat-icon>history</mat-icon>
+                  Gardez un historique de vos conversations
+                </li>
+              </ul>
+            </mat-card-content>
+          </mat-card>
+        </div>
       </div>
     </div>
+    <div class="de">
+      <div class="de-nav">
+        <button mat-fab value="DE" (click)="handleClick($event)" routerLink="/map">CANDIDAT</button>
+        <div class="de-advantages">
+          <mat-card>
+            <h3>AVANTAGES CANDIDAT</h3>
+            <hr>
+            <mat-card-content>
+              <ul>
+                <li>
+                  <mat-icon>translate</mat-icon>
+                  Choisissez votre langue de discussion
+                </li>
+                <li>
+                  <mat-icon>people</mat-icon>
+                  Discutez simultanément avec d'autres candidats
+                </li>
+                <li>
+                  <mat-icon>calendar_today</mat-icon>
+                  Visualisez vos rendez-vous planifiés
+                </li>
+                <li>
+                  <mat-icon>history</mat-icon>
+                  Gardez un historique de vos conversations
+                </li>
+              </ul>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-
-
