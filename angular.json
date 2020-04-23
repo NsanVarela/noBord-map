@@ -28,9 +28,10 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/sass/styles.scss",
-              "./node_modules/leaflet/dist/leaflet.css"
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "./node_modules/leaflet/dist/leaflet.css",
+              "node_modules/flag-icon-css/css/flag-icon.min.css"
             ],
             "stylePreprocessorOptions": {
               "includePaths": ["src/sass"]

@@ -1,4 +1,5 @@
 import { Component, AfterViewInit, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material'
 import { NavbarItem } from 'src/app/_models/navbar-item';
 
@@ -20,10 +21,13 @@ export class MapComponent implements AfterViewInit {
   protected countryName: string
   protected languages = []
   public navBarItems: NavbarItem[] = []
+  private languageSelected: string
+  public showConfirm: boolean = false
 
   @Output() country = new EventEmitter()
 
   constructor(
+    private router: Router,
     private _snackBar: MatSnackBar,
     public auth: AuthenticationService
   ) {
@@ -76,12 +80,6 @@ export class MapComponent implements AfterViewInit {
           infoTitle: `PARAMÈTRES`,
           link: `profile`,
           isDisplayed: true
-        },
-        {
-          icon: `assets/icons/exit_app.svg`,
-          infoTitle: `DECONNEXION`,
-          link: `logout`,
-          isDisplayed: true
         }
       ]
     }
@@ -100,7 +98,7 @@ export class MapComponent implements AfterViewInit {
         layer.on({
           mouseover: (e) => {
             this.highlightFeature(e)
-            this.onDisplayInfo(e)
+          // //   this.onDisplayInfo(e)
           },
           mouseout: (e) => {
             this.resetFeature(e)
@@ -118,13 +116,12 @@ export class MapComponent implements AfterViewInit {
   }
 
   protected highlightFeature(e)  {
-    // console.log('e', e)
     const layer = e.target
     layer.setStyle({
       weight: 3,
       opacity: 0.3,
       color: '#FFFFFF',
-      fillOpacity: 1.0,
+      fillOpacity: 1,
       fillColor: '#f07f7f'
     })
     if (!L.Browser.ie && !L.Browser.opera) {
@@ -151,7 +148,7 @@ export class MapComponent implements AfterViewInit {
   private initMap(): void {
     this.map = L.map('map').setView(this.paris, 2)
 
-    const tiles = L.tileLayer(environment.tilesLayer2, {
+    const tiles = L.tileLayer(environment.tilesLayer1, {
       attribution: "Map",
       minZoom: 3,
       maxZoom: 8
@@ -175,6 +172,18 @@ export class MapComponent implements AfterViewInit {
       this.toggleBtnMsg = `FERMER LE MENU`
     else if(state == `Closed`)
       this.toggleBtnMsg = `OUVRIR LE MENU`
+  }
+
+  public onChangeItem(value) {
+    this.languageSelected = value
+    this.showConfirm = !this.showConfirm
+  }
+
+  public confirm() {
+    if (this.languageSelected !== undefined && this.languageSelected !== null) {
+      const url = `auth?language=${this.languageSelected}`;
+      this.router.navigateByUrl(url);
+    }
   }
 
 }

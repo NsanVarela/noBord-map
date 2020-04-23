@@ -7,9 +7,11 @@
       <li *ngFor="let language of languages">
         <mat-icon>translate</mat-icon>
         <!-- <span class="language-name">{{ language | uppercase }}</span> &nbsp; -->
-        <mat-slide-toggle>{{ language | uppercase }}</mat-slide-toggle>
+        <input type="radio" name="language" value="{{language}}" (change)="onChangeItem($event.target.value)">
+        <label class="language-name" for="lang">{{language }}</label>
       </li>
     </ul>
+    <button mat-raised-button *ngIf="showConfirm" (click)="confirm()">VALIDER</button>
   </mat-sidenav>
   <mat-sidenav-content>
     <div class="map-container">

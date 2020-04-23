@@ -26,10 +26,23 @@
     </div>
   </div>
   <div class="home-content">
+    <img
+    [ngStyle]="{opacity: hover==true  ? '0' : '0.2' }"
+    class="translate-icon"
+    src="assets/icons/translate.svg"/>
     <div class="pe">
       <div class="pe-nav">
-        <button mat-fab color="primary" value="PE" (click)="handleClick($event)" routerLink="/auth">CONSEILLER</button>
-        <div class="pe-advantages">
+        <button
+        mat-fab id="pe-btn"
+        color="primary"
+        value="PE"
+        (click)="handleClick($event)"
+        routerLink="/auth"
+        (mouseover)="hover = true; btnDe = true; peAdvantages = true"
+        (mouseleave)="hover = false; btnDe = false; peAdvantages = false"
+        [ngStyle]="{opacity: btnPe==true  ? '0' : '1' }"
+        >{{ advisorBtnValue | uppercase }}</button>
+        <div class="pe-advantages" [ngStyle]="{display: peAdvantages==true  ? 'flex' : 'none' }">
           <mat-card>
             <h3>AVANTAGES CONSEILLER</h3>
             <hr>
@@ -59,8 +72,16 @@
     </div>
     <div class="de">
       <div class="de-nav">
-        <button mat-fab value="DE" (click)="handleClick($event)" routerLink="/map">CANDIDAT</button>
-        <div class="de-advantages">
+        <button
+        mat-fab id="de-btn"
+        value="DE"
+        (click)="handleClick($event)"
+        routerLink="/map"
+        (mouseover)="hover = true; btnPe = true; deAdvantages = true"
+        (mouseleave)="hover = false; btnPe = false; deAdvantages = false"
+        [ngStyle]="{opacity: btnDe==true  ? '0' : '1' }"
+        >CANDIDAT</button>
+        <div class="de-advantages" [ngStyle]="{display: deAdvantages==true  ? 'flex' : 'none' }">
           <mat-card>
             <h3>AVANTAGES CANDIDAT</h3>
             <hr>

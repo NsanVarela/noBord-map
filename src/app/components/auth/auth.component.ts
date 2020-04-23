@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavbarItem } from 'src/app/_models/navbar-item';
 import { AuthenticationService } from '../../_services/authentication.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-auth',
@@ -11,12 +12,14 @@ export class AuthComponent implements OnInit {
   protected show: boolean
   public navBarItems: NavbarItem[] = []
 
-  constructor(public auth: AuthenticationService) {
+  constructor(public auth: AuthenticationService, private route: ActivatedRoute) {
     this.setNavBar()
   }
 
   ngOnInit() {
     this.show = true
+    const language = this.route.snapshot.params.language
+    console.log('language get : ', language)
   }
 
   public setNavBar(): void {
@@ -73,6 +76,7 @@ export class AuthComponent implements OnInit {
 
   public toRegister(): boolean {
     return this.show = true
+
   }
 
   public toLogin(): boolean {

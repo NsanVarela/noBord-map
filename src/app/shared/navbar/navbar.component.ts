@@ -1,10 +1,13 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { NavbarItem } from '../../_models/navbar-item';
-import { MatDialog } from '@angular/material';
-import { LogoutComponent } from '../logout/logout.component';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { ActivatedRoute, Router } from '@angular/router';
+import { MatDialog } from '@angular/material';
+
+import { NavbarItem } from '../../_models/navbar-item';
 import { AuthenticationService } from '../../_services/authentication.service';
+
+import { LogoutComponent } from '../logout/logout.component';
+import { LanguageComponent } from '../language/language.component';
 
 @Component({
   selector: 'navbar',
@@ -37,6 +40,13 @@ export class NavbarComponent {
         link: `logout`,
         isDisplayed: true
       })
+    } else {
+      this.items.push({
+        icon: `assets/icons/translate.svg`,
+        infoTitle: `LANGUE`,
+        link: `translate`,
+        isDisplayed: true
+      })
     }
   }
 
@@ -44,6 +54,12 @@ export class NavbarComponent {
     if (item.link !== undefined) {
       if (item.link === `logout`) {
         this.dialog.open(LogoutComponent, {
+          width: this.isMobile ? `90%` : `800px`,
+          height: this.isMobile ? `100%` : `300px`,
+          panelClass: `customDialog`,
+        })
+      } else if (item.link === `translate`) {
+        this.dialog.open(LanguageComponent, {
           width: this.isMobile ? `90%` : `800px`,
           height: this.isMobile ? `100%` : `300px`,
           panelClass: `customDialog`,

@@ -17,6 +17,7 @@ import { HomeComponent } from "./components/home/home.component";
 import { AuthComponent } from "./components/auth/auth.component";
 import { NavbarComponent } from "./shared/navbar/navbar.component";
 import { LogoutComponent } from "./shared/logout/logout.component";
+import { LanguageComponent } from './shared/language/language.component';
 import { ProfileComponent } from "./components/profile/profile.component";
 import { RegisterComponent } from "./components/register/register.component";
 import { ChatViewComponent } from "./components/chat-view/chat-view.component";
@@ -37,10 +38,12 @@ import { MessageSenderComponent } from "./components/message-sender/message-send
     ChangeTargetComponent,
     ProfileComponent,
     NavbarComponent,
-    LogoutComponent
+    LogoutComponent,
+    LanguageComponent
   ],
   entryComponents: [
-    LogoutComponent
+    LogoutComponent,
+    LanguageComponent
   ],
   imports: [
     AppRoutingModule,

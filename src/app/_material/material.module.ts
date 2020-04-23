@@ -14,7 +14,8 @@ import {
   MatSelectModule,
   MatMenuModule,
   MatDialogModule,
-  MatTableModule
+  MatTableModule,
+  MatAutocompleteModule
 } from "@angular/material";
 
 
@@ -33,7 +34,8 @@ const MaterialComponents = [
   MatSelectModule,
   MatMenuModule,
   MatDialogModule,
-  MatTableModule
+  MatTableModule,
+  MatAutocompleteModule
 ];
 
 @NgModule({

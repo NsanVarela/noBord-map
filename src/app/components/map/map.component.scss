@@ -3,13 +3,16 @@
 mat-sidenav-container {
   height: 100%;
   mat-sidenav {
+    display: flex;
     padding: 16px;
     width: 20%;
     border: none;
-    background: linear-gradient(
-      to right, #57c1eb 0%, #246fa8 100%
-    );
-    h2 {}
+    // background: linear-gradient(
+    //   to right, #57c1eb 0%, #246fa8 100%
+    // );
+    background: #076585; /* fallback for old browsers */
+    // background: -webkit-linear-gradient(to right, #fff, #076585 ); /* Chrome 10-25, Safari 5.1-6 */
+    // background: linear-gradient(to right, #fff, #076585); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     hr {
       margin: 40px 0 50px 0;
     }
@@ -24,21 +27,25 @@ mat-sidenav-container {
           vertical-align: middle;
           color: lightgray;
         }
-        .language-name {}
-        mat-slide-toggle {}
+        .language-name {
+          font-size: 18px;
+        }
       }
+    }
+    button {
     }
   }
   mat-sidenav-content {
     padding: 16px;
     background: white;
     .map-container {
+      // background: pink;
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
-      margin-top: 20px;
+      margin-top: 40px;
       margin-right: 150px;
       margin-left: 150px;
       height: 600px;
@@ -57,6 +64,9 @@ mat-sidenav-container {
         border-radius: 10px;
         height: 100%;
         #map {
+          // background: #003973; /* fallback for old browsers */
+          // background: -webkit-linear-gradient(to right, #003973, #e5e5be); /* Chrome 10-25, Safari 5.1-6 */
+          // background: linear-gradient(to right, #003973, #e5e5be); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
           height: 100%;
           border: 1px solid white;
           border-radius: 10px;
