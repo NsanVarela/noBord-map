@@ -12,14 +12,14 @@ import { AuthGuardService } from "./_services/auth-guard.service";
 
 import { AppComponent } from "./app.component";
 import { MapComponent } from "./components/map/map.component";
-import { LoginComponent } from "./shared/components/login/login.component";
+import { LoginComponent } from "./components/auth/login/login.component";
 import { HomeComponent } from "./components/home/home.component";
 import { AuthComponent } from "./components/auth/auth.component";
 import { NavbarComponent } from "./shared/components/navbar/navbar.component";
 import { LogoutComponent } from "./shared/components/logout/logout.component";
 import { LanguageComponent } from './shared/components/language/language.component';
 import { ProfileComponent } from "./components/profile/profile.component";
-import { RegisterComponent } from "./components/register/register.component";
+import { RegisterComponent } from "./components/auth/register/register.component";
 import { ChatViewComponent } from "./components/chat-view/chat-view.component";
 import { ChangeTargetComponent } from "./components/change-target/change-target.component";
 import { MessageSenderComponent } from "./components/message-sender/message-sender.component";

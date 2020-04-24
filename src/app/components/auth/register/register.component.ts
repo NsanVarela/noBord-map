@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import { UserModel } from '../../_models/user';
-import { LanguageService } from '../../_services/language.service';
-import { AuthenticationService } from '../../_services/authentication.service';
+import { UserModel } from '../../../_models/user';
+import { LanguageService } from '../../../_services/language.service';
+import { AuthenticationService } from '../../../_services/authentication.service';
 import { SharedService } from 'src/app/shared/common/shared-service';
 import { VOCABULARY } from 'src/assets/data/vocabulary';
 
