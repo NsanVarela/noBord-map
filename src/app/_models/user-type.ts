@@ -1,4 +1,4 @@
 interface UserType {
-  value: string;
-  viewValue: string;
+  value: string
+  viewValue: string
 }
