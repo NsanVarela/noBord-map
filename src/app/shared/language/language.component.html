@@ -4,14 +4,18 @@
   <span class="en-title">Available languages</span>
 </h1>
 <div mat-dialog-content>
-  <form>
+  <form >
     <mat-form-field>
       <input matInput type="text" placeholder="Recherchez votre pays // Search for your country"
         [matAutocomplete]="auto" [formControl]="myCtrl" />
       <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
         <mat-option *ngFor="let country of filteredCountries | async" [value]="country">
           <div class="flag">
-            <span class="flag-icon flag-icon-{{ country.flag | lowercase }}"><span > {{ country.countryNameFr }} / {{ country.countryNameNative }}</span></span>
+            <span class="flag-icon flag-icon-{{ country.flag | lowercase }}">
+              <span class="country-name-native">{{ country.countryNameNative }}</span>
+              <span class="middle-language"> • </span>
+              <span class="country-name-fr">{{ country.countryNameFr }}</span>
+            </span>
           </div>
           <div class="country-name">
             <span></span>
@@ -19,10 +23,10 @@
         </mat-option>
       </mat-autocomplete>
     </mat-form-field>
+    <div mat-dialog-actions>
+      <button class="cancel-btn" (click)="cancel()">ANNULER</button>
+      <button class="logout-btn" type="submit" (click)="confirm()">CONFIRMER</button>
+    </div>
   </form>
 </div>
 
-<div mat-dialog-actions>
-  <button class="cancel-btn" (click)="cancel()">ANNULER</button>
-  <button class="logout-btn" (click)="confirm()">CONFIRMER</button>
-</div>

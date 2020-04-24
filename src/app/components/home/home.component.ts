@@ -20,6 +20,7 @@ export class HomeComponent {
   public peAdvantages: boolean = false
   public deAdvantages: boolean = false
   public advisorBtnValue: string
+  // public isoCode = `fr-FR`
 
   constructor(public auth: AuthenticationService) {
     this.setNavBar()
@@ -27,8 +28,11 @@ export class HomeComponent {
 
   ngOnInit() {
     this.setNavBar()
-    this.advisorBtnValue = VOCABULARY.find((v) => v.isoCode === `en-GB`).sentences.advisorName
+    // this.advisorBtnValue = VOCABULARY.find((v) => v.isoCode === `en-GB`).sentences.advisorName
 
+    // if (this.isoCode === this.isoCode) {
+    //   console.log('isoCode : ', this.isoCode)
+    // }
   }
 
   public setNavBar(): void {

@@ -55,8 +55,17 @@
     border-radius: 5px;
     background-size: cover;
     margin: auto 10px;
-    span {
+    .country-name-native {
       margin-left: 50px;
+      font-weight: bold;
+      color: #3f4fb5;
+    }
+    .middle-language {
+      color: #f08080;
+      font-size: 20px;
+    }
+    .country-name-fr {
+      color: #3f4fb5;
     }
   }
 
