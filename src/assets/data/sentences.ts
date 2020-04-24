@@ -48,6 +48,11 @@ export const FRENCH: Sentence = {
   loginInstructionTitle: `vous êtes déjà inscrit !`,
   loginInstruction: `Cliquez sur le bouton ci-dessous pour renseigner les champs du formulaire de connexion et accéder à la messagerie instantanée.`,
   loginInstructionButton: `se connecter`,
+  // LANGUAGE
+  languageTitle: `Langues disponibles`,
+  languagePlaceholderInput: `Recherchez votre pays`,
+  languageCancelBtn: `annuler`,
+  languageSubmitBtn: `confirmer`
 };
 
 export const ENGLISH: Sentence = {
@@ -98,6 +103,12 @@ export const ENGLISH: Sentence = {
   loginInstructionTitle: `you are already registered!`,
   loginInstruction: `Click on the button below to fill in the fields of the login form and access the instant messenger.`,
   loginInstructionButton: `sign in`,
+  // LANGUAGE
+  languageTitle: `Available languages`,
+  // languagePlaceholderInput: ``,
+  translatedLanguagePlaceholder: `Search for your country`,
+  languageCancelBtn: `cancel`,
+  languageSubmitBtn: `confirm`
 };
 
 export const SPANISH: Sentence = {
@@ -148,6 +159,12 @@ export const SPANISH: Sentence = {
   loginInstructionTitle: `ya está registrado!`,
   loginInstruction: `Haga clic en el botón de abajo para rellenar los campos del formulario de acceso y acceder a la mensajería instantánea.`,
   loginInstructionButton: `Firme aquí`,
+  // LANGUAGE
+  languageTitle: `Idiomas disponibles`,
+  // languagePlaceholderInput: ``,
+  translatedLanguagePlaceholder: `Busca tu país`,
+  languageCancelBtn: `cancelar`,
+  languageSubmitBtn: `confirmar`
 };
 
 export const ARABIC: Sentence = {
@@ -198,6 +215,12 @@ export const ARABIC: Sentence = {
   loginInstructionTitle: `أنت مسجل بالفعل!`,
   loginInstruction: `انقر فوق الزر أدناه لإكمال الحقول في نموذج تسجيل الدخول والوصول إلى الرسائل الفورية.`,
   loginInstructionButton: `يتصل`,
+  // LANGUAGE
+  languageTitle: `اللغات المتوفرة`,
+  // languagePlaceholderInput: ``,
+  translatedLanguagePlaceholder: `ابحث عن بلدك`,
+  languageCancelBtn: `الغاء`,
+  languageSubmitBtn: `أكد`
 };
 
 export const PORTUGUESE: Sentence = {
@@ -248,6 +271,12 @@ export const PORTUGUESE: Sentence = {
   loginInstructionTitle: `já está registado!`,
   loginInstruction: `Clique no botão abaixo para preencher os campos do formulário de login e acessar o serviço de mensagens instantâneas.`,
   loginInstructionButton: `iniciar sessão`,
+  // LANGUAGE
+  languageTitle: `Línguas disponíveis`,
+  // languagePlaceholderInput: ``,
+  translatedLanguagePlaceholder: `Pesquise o seu país`,
+  languageCancelBtn: `cancelar`,
+  languageSubmitBtn: `confirmar`
 };
 
 export const RUSSIAN: Sentence = {
@@ -298,6 +327,12 @@ export const RUSSIAN: Sentence = {
   loginInstructionTitle: `Вы уже зарегистрированы!`,
   loginInstruction: `Нажмите на кнопку ниже, чтобы заполнить поля формы входа и получить доступ к обмену мгновенными сообщениями.`,
   loginInstructionButton: `входить в систему`,
+  // LANGUAGE
+  languageTitle: `Доступные языки`,
+  // languagePlaceholderInput: ``,
+  translatedLanguagePlaceholder: `Поиск вашей страны`,
+  languageCancelBtn: `отменять`,
+  languageSubmitBtn: `подтвердить`
 };
 
 export const MANDARIN: Sentence = {
@@ -348,6 +383,12 @@ export const MANDARIN: Sentence = {
   loginInstructionTitle: `你已经注册了！`,
   loginInstruction: `点击下面的按钮，填写登录表格的字段，即可进入即时通讯。`,
   loginInstructionButton: `签到`,
+  // LANGUAGE
+  languageTitle: `可用语言`,
+  // languagePlaceholderInput: ``,
+  translatedLanguagePlaceholder: `搜索您的国家`,
+  languageCancelBtn: `取消`,
+  languageSubmitBtn: `证实`
 };
 
 // export const GERMAN: Sentence {}

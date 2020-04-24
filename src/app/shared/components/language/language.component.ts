@@ -16,13 +16,17 @@ import { SharedService } from '../../common/shared-service';
 })
 export class LanguageComponent implements OnInit {
 
-  @Output() isoCode = new EventEmitter()
+  private languageChoice: string
 
   public myCtrl = new FormControl()
   public filteredCountries: Observable<Vocabulary[]>
   public countries: Vocabulary[] = VOCABULARY
-
-  private languageChoice: string
+  public languageTitle: string
+  public nativeLanguageTitle: string
+  public languagePlaceholderInput: string
+  public translatedLanguagePlaceholder: string
+  public languageCancelBtn: string
+  public languageSubmitBtn: string
 
   constructor (
     private dialogRef: MatDialogRef<LanguageComponent>,
@@ -36,6 +40,23 @@ export class LanguageComponent implements OnInit {
       startWith(''),
       map(value => this._filter(value))
       )
+    this.languageTitle = VOCABULARY.find( (v) => v.isoCode === `fr-FR` ).sentences.languageTitle
+    this.nativeLanguageTitle = VOCABULARY.find( (v) => v.isoCode === `en-GB` ).sentences.languageTitle
+    this.languagePlaceholderInput = VOCABULARY.find( (v) => v.isoCode === `fr-FR` ).sentences.languagePlaceholderInput
+    this.translatedLanguagePlaceholder = VOCABULARY.find( (v) => v.isoCode === `en-GB` ).sentences.translatedLanguagePlaceholder
+    this.languageCancelBtn = VOCABULARY.find( (v) => v.isoCode === `fr-FR` ).sentences.languageCancelBtn
+    this.languageSubmitBtn = VOCABULARY.find( (v) => v.isoCode === `fr-FR` ).sentences.languageSubmitBtn
+  }
+
+  ngAfterContentChecked() {
+    this.languageChoice = this.sharedService.languageChoice
+    if (this.languageChoice !== undefined) {
+      const changeWording = VOCABULARY.find( (v) => v.isoCode === this.languageChoice )
+      this.nativeLanguageTitle = changeWording.sentences.languageTitle
+      this.translatedLanguagePlaceholder = changeWording.sentences.translatedLanguagePlaceholder
+      this.languageCancelBtn = changeWording.sentences.languageCancelBtn
+      this.languageSubmitBtn = changeWording.sentences.languageSubmitBtn
+    }
   }
 
   private _filter(value): Vocabulary[] {

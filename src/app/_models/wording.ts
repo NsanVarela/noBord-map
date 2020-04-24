@@ -57,4 +57,10 @@ export interface Sentence {
   loginInstructionTitle: string;
   loginInstruction: string;
   loginInstructionButton: string;
+  // LANGUAGE
+  languageTitle: string,
+  languagePlaceholderInput?: string,
+  translatedLanguagePlaceholder?: string,
+  languageCancelBtn: string,
+  languageSubmitBtn: string
 }
