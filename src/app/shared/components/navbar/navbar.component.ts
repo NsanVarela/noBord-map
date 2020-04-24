@@ -3,11 +3,13 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatDialog } from '@angular/material';
 
-import { NavbarItem } from '../../../_models/navbar-item';
-import { AuthenticationService } from '../../../_services/authentication.service';
+import { NavbarItem } from 'src/app/_models/navbar-item';
+import { AuthenticationService } from 'src/app/_services/authentication.service';
 
 import { LogoutComponent } from '../logout/logout.component';
 import { LanguageComponent } from '../language/language.component';
+import { SharedService } from 'src/app/shared/common/shared-service';
+import { VOCABULARY } from 'src/assets/data/vocabulary';
 
 @Component({
   selector: 'navbar',
@@ -15,21 +17,35 @@ import { LanguageComponent } from '../language/language.component';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
-  @Input() items: NavbarItem[];
-  @Output() perform: EventEmitter<any> = new EventEmitter<any>();
-  public title: string = `TRANSLATOR`
-  private isMobile: boolean = false
 
-  constructor(
-    private route: ActivatedRoute,
-    private breakpointObserver: BreakpointObserver,
-    public router: Router,
-    public dialog: MatDialog,
-    public auth: AuthenticationService
-  ) {
+  @Input() items: NavbarItem[]
+  @Output() perform: EventEmitter<any> = new EventEmitter<any>()
+
+  private isMobile: boolean = false
+  private languageChoice: string
+
+  public title: string
+  // private languageNav: string
+
+  constructor( private route: ActivatedRoute, private breakpointObserver: BreakpointObserver,
+    public router: Router, public dialog: MatDialog, public auth: AuthenticationService, private sharedService: SharedService ) {
     this.breakpointObserver.observe([Breakpoints.Handset]).subscribe((result) => {
       this.isMobile = result.matches;
     });
+  }
+
+  ngOnInit() {
+    this.title = VOCABULARY.find( (v) => v.isoCode === `fr-FR` ).sentences.appNameNav
+    // this.languageNav = VOCABULARY.find( (v) => v.isoCode === `fr-FR` ).sentences.languageNav
+  }
+
+  ngAfterContentChecked() {
+    this.languageChoice = this.sharedService.languageChoice
+    if (this.languageChoice !== undefined) {
+      const changeWording = VOCABULARY.find( (v) => v.isoCode === this.languageChoice )
+      this.title = changeWording.sentences.appNameNav
+      // this.languageNav = changeWording.sentences.languageNav
+    }
   }
 
   ngAfterContentInit() {
@@ -43,7 +59,7 @@ export class NavbarComponent {
     } else {
       this.items.push({
         icon: `assets/icons/translate.svg`,
-        infoTitle: `LANGUE`,
+        // infoTitle: this.languageNav,
         link: `translate`,
         isDisplayed: true
       })

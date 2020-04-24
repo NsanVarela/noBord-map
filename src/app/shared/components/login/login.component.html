@@ -1,21 +1,22 @@
 <div class="form-container">
-  <h1>SE CONNECTER</h1>
+  <h1>{{ loginTitle | uppercase}}</h1>
   <form [formGroup]="loginForm" *ngIf="!isLoggedIn" (ngSubmit)="loginForm.valid && login()" #f="ngForm" novalidate>
     <mat-form-field>
-      <mat-label>Adresse email</mat-label>
-      <input id="email" matInput placeholder="Saisissez votre email"
+      <mat-label>{{ emailInputTitle }}</mat-label>
+      <input id="email" matInput placeholder="{{ emailPlaceholder }}"
       formControlName="email" />
     </mat-form-field>
     <br>
-    <mat-form-field hintLabel="8 caractères minimum">
-      <input id="password" matInput #input minlength="8" placeholder="Saisissez votre mot de passe" [type]="hide ? 'password': 'text'"
+    <mat-form-field hintLabel="{{ passwordInputControl }}">
+      <mat-label>{{ passwordInputTitle }}</mat-label>
+      <input id="password" matInput #input minlength="8" placeholder="{{ passwordPlaceholder }}" [type]="hide ? 'password': 'text'"
       formControlName="password" />
         <mat-hint align="end">{{input.value?.length || 0}}/8</mat-hint>
         <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
     </mat-form-field>
     <br>
     <button mat-button type="submit" class="mat-raised-button mat-primary" [disabled]="!loginForm.valid">
-      VALIDER
+      {{ loginInstructionButton | uppercase }}
     </button>
     <!-- <div class="form-group"> -->
       <!-- <div class="alert alert-danger" role="alert" *ngIf="f.submitted && isLoginFailed">

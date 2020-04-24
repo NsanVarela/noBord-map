@@ -1,17 +1,17 @@
 <navbar [items]="navBarItems"></navbar>
 <mat-card>
   <div class="register" *ngIf="!show">
-    <h3>VOUS N'AVEZ PAS DE COMPTE ?</h3>
-    <p>Cliquez sur le bouton ci-dessous pour accéder au formulaire d'inscription et créer votre compte utilisateur.</p>
-    <button mat-button (click)="toRegister()">S'INSCRIRE</button>
+    <h3>{{ registerInstructionTitle | uppercase }}</h3>
+    <p> {{ registerInstruction }}</p>
+    <button mat-button (click)="toRegister()">{{ registerInstructionButton | uppercase }}</button>
   </div>
   <ng-container *ngIf="show">
     <app-register></app-register>
   </ng-container>
   <div class="login" *ngIf="show">
-    <h3>VOUS ÊTES DÉJA INSCRIT !</h3>
-    <p>Cliquez sur le bouton ci-dessous pour renseigner les champs du formulaire de connexion et accéder à la messagerie instantanée.</p>
-    <button mat-button (click)="toLogin()">SE CONNECTER</button>
+    <h3>{{ loginInstructionTitle | uppercase }}</h3>
+    <p>{{ loginInstruction }}</p>
+    <button mat-button (click)="toLogin()">{{ loginInstructionButton | uppercase }}</button>
   </div>
   <ng-container *ngIf="!show">
     <app-login></app-login>

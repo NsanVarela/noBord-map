@@ -13,6 +13,8 @@ export class HomeComponent {
 
   @Output() type = new EventEmitter<string>()
 
+  private languageChoice: string
+
   public title: string = `Pe • TRANSLATOR`
   public userType: string
   public navBarItems: NavbarItem[] = []
@@ -22,7 +24,6 @@ export class HomeComponent {
   public peAdvantages: boolean = false
   public deAdvantages: boolean = false
   public advisorBtnValue: string
-  public languageChoice: string
   public baseline: string
   public advisorName: string
   public candidateName: string
@@ -62,7 +63,7 @@ export class HomeComponent {
 
   ngAfterContentChecked() {
     this.languageChoice = this.sharedService.languageChoice
-    
+
     if (this.languageChoice !== undefined) {
       const changeWording = VOCABULARY.find( (v) => v.isoCode === this.languageChoice )
       this.baseline = changeWording.sentences.baseline;
@@ -82,8 +83,8 @@ export class HomeComponent {
   }
 
   public handleClick(event: any) {
-    this.userType = event.currentTarget.value;
-    console.log("userType : ", this.userType);
+    this.userType = event.currentTarget.value
+    console.log("userType : ", this.userType)
     this.type.emit(this.userType);
   }
 }

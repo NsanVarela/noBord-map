@@ -16,6 +16,7 @@ export interface Sentence {
   paramNav: string;
   logoutNav: string;
   appNameNav: string;
+  languageNav: string;
   // HOME
   baseline: string;
   advisorName: string;
@@ -41,7 +42,7 @@ export interface Sentence {
   languagePlaceholder: string;
   userTypeInputTitle: string;
   userTypePlaceholder: string;
-  passwordInputTile: string;
+  passwordInputTitle: string;
   passwordPlaceholder: string;
   passwordInputControl: string;
   // AUTH -> Register

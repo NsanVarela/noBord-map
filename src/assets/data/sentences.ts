@@ -6,7 +6,8 @@ export const FRENCH: Sentence = {
   chatNav: `messagerie instantanée`,
   paramNav: `paramètres`,
   logoutNav: `déconnexion`,
-  appNameNav: `traducteur`,
+  appNameNav: `translator`,
+  languageNav: `langue`,
   // HOME
   baseline: `Pas de frontière pour discuter !`,
   advisorName: `conseiller`,
@@ -27,12 +28,12 @@ export const FRENCH: Sentence = {
   submitSidenavButton: `valider`,
   // AUTH
   emailInputTitle: `email`,
-  emailPlaceholder: `Saisissez votre mot de passe`,
+  emailPlaceholder: `Saisissez votre email`,
   languageInputTitle: `langue`,
   languagePlaceholder: `Saisissez votre langue`,
   userTypeInputTitle: `type utilisateur`,
   userTypePlaceholder: `Saisissez votre type utilisateur`,
-  passwordInputTile: `mot de passe`,
+  passwordInputTitle: `mot de passe`,
   passwordPlaceholder: `Saisissez votre mot de passe`,
   passwordInputControl: `8 caractères minimum`,
   // AUTH -> Register
@@ -56,6 +57,7 @@ export const ENGLISH: Sentence = {
   paramNav: `parameters`,
   logoutNav: `logout`,
   appNameNav: `translator`,
+  languageNav: `language`,
   // HOME
   baseline: `No borders to discuss!`,
   advisorName: `advisor`,
@@ -81,7 +83,7 @@ export const ENGLISH: Sentence = {
   languagePlaceholder: `Enter your language`,
   userTypeInputTitle: `user type`,
   userTypePlaceholder: `Enter your user type`,
-  passwordInputTile: `password`,
+  passwordInputTitle: `password`,
   passwordPlaceholder: `Enter your password`,
   passwordInputControl: `8 characters minimum`,
   // AUTH -> Register
@@ -105,6 +107,7 @@ export const SPANISH: Sentence = {
   paramNav: `parámetros`,
   logoutNav: `desconexión`,
   appNameNav: `traductor`,
+  languageNav: `lengua`,
   // HOME
   baseline: `¡No hay fronteras que discutir!`,
   advisorName: `asesor`,
@@ -130,7 +133,7 @@ export const SPANISH: Sentence = {
   languagePlaceholder: `Introduce tu lengua`,
   userTypeInputTitle: `tipo de usuario`,
   userTypePlaceholder: `Introduzca su tipo de usuario`,
-  passwordInputTile: `contraseña`,
+  passwordInputTitle: `contraseña`,
   passwordPlaceholder: `Introduzca su contraseña`,
   passwordInputControl: `8 caracteres como mínimo`,
   // AUTH -> Register
@@ -154,6 +157,7 @@ export const ARABIC: Sentence = {
   paramNav: `الإعدادات`,
   logoutNav: `تسجيل الخروج`,
   appNameNav: `مترجم`,
+  languageNav: `لغة`,
   // HOME
   baseline: `!لا حدود للمناقشة`,
   advisorName: `مستشار`,
@@ -179,7 +183,7 @@ export const ARABIC: Sentence = {
   languagePlaceholder: `أدخل لغتك`,
   userTypeInputTitle: `نوع المستخدم`,
   userTypePlaceholder: `أدخل نوع المستخدم الخاص بك`,
-  passwordInputTile: `كلمة السر`,
+  passwordInputTitle: `كلمة السر`,
   passwordPlaceholder: `أدخل كلمة المرور الخاصة بك`,
   passwordInputControl: `ثمانية أحرف كحد أدنى`,
   // AUTH -> Register
@@ -203,6 +207,7 @@ export const PORTUGUESE: Sentence = {
   paramNav: `parâmetros`,
   logoutNav: `logout`,
   appNameNav: `traductor`,
+  languageNav: `língua`,
   // HOME
   baseline: `Não há fronteiras a discutir!`,
   advisorName: `conselheiro`,
@@ -228,7 +233,7 @@ export const PORTUGUESE: Sentence = {
   languagePlaceholder: `Introduza o seu língua`,
   userTypeInputTitle: `tipo de utilizador`,
   userTypePlaceholder: `Introduza o seu tipo de utilizador`,
-  passwordInputTile: `senha`,
+  passwordInputTitle: `senha`,
   passwordPlaceholder: `Introduza a sua senha`,
   passwordInputControl: `Mínimo 8 caracteres`,
   // AUTH -> Register
@@ -252,6 +257,7 @@ export const RUSSIAN: Sentence = {
   paramNav: `параметры`,
   logoutNav: `выход из системы`,
   appNameNav: `переводчик`,
+  languageNav: `язык`,
   // HOME
   baseline: `Никаких границ для обсуждения!`,
   advisorName: `консультант`,
@@ -277,7 +283,7 @@ export const RUSSIAN: Sentence = {
   languagePlaceholder: `Введите свой язык`,
   userTypeInputTitle: `тип пользователя`,
   userTypePlaceholder: `Введите ваш тип пользователя`,
-  passwordInputTile: `кодовое слово`,
+  passwordInputTitle: `кодовое слово`,
   passwordPlaceholder: `Введите ваш пароль`,
   passwordInputControl: `минимум 8 символов`,
   // AUTH -> Register
@@ -301,6 +307,7 @@ export const MANDARIN: Sentence = {
   paramNav: `参数`,
   logoutNav: `登出`,
   appNameNav: `译者`,
+  languageNav: `语气`,
   // HOME
   baseline: `没有国界可谈！`,
   advisorName: `顾问`,
@@ -326,7 +333,7 @@ export const MANDARIN: Sentence = {
   languagePlaceholder: `输入你的语言`,
   userTypeInputTitle: `用户类型`,
   userTypePlaceholder: `输入你的用户类型`,
-  passwordInputTile: `码字`,
+  passwordInputTitle: `码字`,
   passwordPlaceholder: `输入你的密码`,
   passwordInputControl: `至少8个字符`,
   // AUTH -> Register
