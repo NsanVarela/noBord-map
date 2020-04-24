@@ -1,4 +1,4 @@
-import { Sentence } from '../../app/_models/wording';
+import { Sentence } from "../../app/_models/wording";
 
 export const FRENCH: Sentence = {
   homeNav: `acceuil`,
@@ -12,15 +12,15 @@ export const FRENCH: Sentence = {
   advisorName: `conseiller`,
   candidateName: `candidat`,
   advPeTitle: `avantages conseiller`,
-  advPeSentnceOne: `Envoyer et recevez des messages dans votre langue`,
-  advPeSentnceTwo: `Discutez simultanément avec des candidats`,
-  advPeSentnceThree: `Organisez vos rendez-vous avec les candidats`,
-  advPeSentnceFour: `Gardez un historique de vos conversations`,
+  advPeSentenceOne: `Envoyer et recevez des messages dans votre langue`,
+  advPeSentenceTwo: `Discutez simultanément avec des candidats`,
+  advPeSentenceThree: `Organisez vos rendez-vous avec les candidats`,
+  advPeSentenceFour: `Gardez un historique de vos conversations`,
   advCandidateTitle: `avantages candidat`,
-  advCandidateSentnceOne: `Choisissez votre langue de discussion`,
-  advCandidateSentnceTwo: `Discutez simultanément avec d'autres candidats`,
-  advCandidateSentnceThree: `Visualisez vos rendez-vous planifiés`,
-  advCandidateSentnceFour: `Gardez un historique de vos conversations`,
+  advCandidateSentenceOne: `Choisissez votre langue de discussion`,
+  advCandidateSentenceTwo: `Discutez simultanément avec d'autres candidats`,
+  advCandidateSentenceThree: `Visualisez vos rendez-vous planifiés`,
+  advCandidateSentenceFour: `Gardez un historique de vos conversations`,
   // MAP
   toggleOpenButton: `ouvrir le menu`,
   toggleCloseButton: `fermer le menu`,
@@ -46,8 +46,8 @@ export const FRENCH: Sentence = {
   loginTitle: `se connecter`,
   loginInstructionTitle: `vous êtes déjà inscrit !`,
   loginInstruction: `Cliquez sur le bouton ci-dessous pour renseigner les champs du formulaire de connexion et accéder à la messagerie instantanée.`,
-  loginInstructionButton: `se connecter`
-}
+  loginInstructionButton: `se connecter`,
+};
 
 export const ENGLISH: Sentence = {
   homeNav: `home`,
@@ -61,15 +61,15 @@ export const ENGLISH: Sentence = {
   advisorName: `advisor`,
   candidateName: `candidate`,
   advPeTitle: `advisory benefits`,
-  advPeSentnceOne: `Send and receive messages in your language`,
-  advPeSentnceTwo: `Discuss simultaneously with candidates`,
-  advPeSentnceThree: `Organize your appointments with candidates`,
-  advPeSentnceFour: `Keep a history of your conversations`,
+  advPeSentenceOne: `Send and receive messages in your language`,
+  advPeSentenceTwo: `Discuss simultaneously with candidates`,
+  advPeSentenceThree: `Organize your appointments with candidates`,
+  advPeSentenceFour: `Keep a history of your conversations`,
   advCandidateTitle: `candidate benefits`,
-  advCandidateSentnceOne: `Choose your discussion language`,
-  advCandidateSentnceTwo: `Discuss simultaneously with other candidates`,
-  advCandidateSentnceThree: `View your scheduled appointments`,
-  advCandidateSentnceFour: `Keep a history of your conversations`,
+  advCandidateSentenceOne: `Choose your discussion language`,
+  advCandidateSentenceTwo: `Discuss simultaneously with other candidates`,
+  advCandidateSentenceThree: `View your scheduled appointments`,
+  advCandidateSentenceFour: `Keep a history of your conversations`,
   // MAP
   toggleOpenButton: `open the menu`,
   toggleCloseButton: `close the menu`,
@@ -96,7 +96,7 @@ export const ENGLISH: Sentence = {
   loginInstructionTitle: `you are already registered!`,
   loginInstruction: `Click on the button below to fill in the fields of the login form and access the instant messenger.`,
   loginInstructionButton: `sign in`,
-}
+};
 
 export const SPANISH: Sentence = {
   homeNav: `inicio`,
@@ -110,15 +110,15 @@ export const SPANISH: Sentence = {
   advisorName: `asesor`,
   candidateName: `candidato`,
   advPeTitle: `beneficios de los asesores`,
-  advPeSentnceOne: `Enviar y recibir mensajes en su idioma`,
-  advPeSentnceTwo: `Discutir simultáneamente con los candidatos`,
-  advPeSentnceThree: `Organice sus citas con los candidatos`,
-  advPeSentnceFour: `Guarda un historial de tus conversaciones`,
+  advPeSentenceOne: `Enviar y recibir mensajes en su idioma`,
+  advPeSentenceTwo: `Discutir simultáneamente con los candidatos`,
+  advPeSentenceThree: `Organice sus citas con los candidatos`,
+  advPeSentenceFour: `Guarda un historial de tus conversaciones`,
   advCandidateTitle: `beneficios para los candidatos`,
-  advCandidateSentnceOne: `Elija su idioma de discusión`,
-  advCandidateSentnceTwo: `Discutir simultáneamente con otros candidatos`,
-  advCandidateSentnceThree: `Vea sus citas programadas`,
-  advCandidateSentnceFour: `Guarda un historial de tus conversaciones`,
+  advCandidateSentenceOne: `Elija su idioma de discusión`,
+  advCandidateSentenceTwo: `Discutir simultáneamente con otros candidatos`,
+  advCandidateSentenceThree: `Vea sus citas programadas`,
+  advCandidateSentenceFour: `Guarda un historial de tus conversaciones`,
   // MAP
   toggleOpenButton: `abrir el menú`,
   toggleCloseButton: `cerrar el menú`,
@@ -144,8 +144,8 @@ export const SPANISH: Sentence = {
   loginTitle: `Firme aquí`,
   loginInstructionTitle: `ya está registrado!`,
   loginInstruction: `Haga clic en el botón de abajo para rellenar los campos del formulario de acceso y acceder a la mensajería instantánea.`,
-  loginInstructionButton: `Firme aquí`
-}
+  loginInstructionButton: `Firme aquí`,
+};
 
 export const ARABIC: Sentence = {
   homeNav: `المنزل`,
@@ -159,15 +159,15 @@ export const ARABIC: Sentence = {
   advisorName: `مستشار`,
   candidateName: `مرشح`,
   advPeTitle: `مزايا تقديم المشورة`,
-  advPeSentnceOne: `إرسال واستقبال الرسائل بلغتك`,
-  advPeSentnceTwo: `الدردشة في وقت واحد مع المرشحين`,
-  advPeSentnceThree: `تنظيم اجتماعاتك مع المرشحين`,
-  advPeSentnceFour: `احتفظ بسجل محادثاتك`,
+  advPeSentenceOne: `إرسال واستقبال الرسائل بلغتك`,
+  advPeSentenceTwo: `الدردشة في وقت واحد مع المرشحين`,
+  advPeSentenceThree: `تنظيم اجتماعاتك مع المرشحين`,
+  advPeSentenceFour: `احتفظ بسجل محادثاتك`,
   advCandidateTitle: `فوائد المرشح`,
-  advCandidateSentnceOne: `اختر لغة المناقشة الخاصة بك`,
-  advCandidateSentnceTwo: `الدردشة في وقت واحد مع المرشحين الآخرين`,
-  advCandidateSentnceThree: `عرض المواعيد المجدولة`,
-  advCandidateSentnceFour: `احتفظ بسجل محادثاتك`,
+  advCandidateSentenceOne: `اختر لغة المناقشة الخاصة بك`,
+  advCandidateSentenceTwo: `الدردشة في وقت واحد مع المرشحين الآخرين`,
+  advCandidateSentenceThree: `عرض المواعيد المجدولة`,
+  advCandidateSentenceFour: `احتفظ بسجل محادثاتك`,
   // MAP
   toggleOpenButton: `قائمة مفتوحة`,
   toggleCloseButton: `إغلاق القائمة`,
@@ -193,8 +193,8 @@ export const ARABIC: Sentence = {
   loginTitle: `يتصل`,
   loginInstructionTitle: `أنت مسجل بالفعل!`,
   loginInstruction: `انقر فوق الزر أدناه لإكمال الحقول في نموذج تسجيل الدخول والوصول إلى الرسائل الفورية.`,
-  loginInstructionButton: `يتصل`
-}
+  loginInstructionButton: `يتصل`,
+};
 
 export const PORTUGUESE: Sentence = {
   homeNav: `início`,
@@ -208,15 +208,15 @@ export const PORTUGUESE: Sentence = {
   advisorName: `conselheiro`,
   candidateName: `candidato`,
   advPeTitle: `benefícios do conselheiro`,
-  advPeSentnceOne: `Enviar e receber mensagens na sua língua`,
-  advPeSentnceTwo: `Discutir simultaneamente com os candidatos`,
-  advPeSentnceThree: `Organize as suas nomeações com os candidatos`,
-  advPeSentnceFour: `Mantenha um histórico das suas conversas`,
+  advPeSentenceOne: `Enviar e receber mensagens na sua língua`,
+  advPeSentenceTwo: `Discutir simultaneamente com os candidatos`,
+  advPeSentenceThree: `Organize as suas nomeações com os candidatos`,
+  advPeSentenceFour: `Mantenha um histórico das suas conversas`,
   advCandidateTitle: `benefícios dos candidatos`,
-  advCandidateSentnceOne: `Escolha a sua língua de discussão`,
-  advCandidateSentnceTwo: `Discutir simultaneamente com outros candidatos`,
-  advCandidateSentnceThree: `Ver as suas marcações programadas`,
-  advCandidateSentnceFour: `Mantenha um histórico das suas conversas`,
+  advCandidateSentenceOne: `Escolha a sua língua de discussão`,
+  advCandidateSentenceTwo: `Discutir simultaneamente com outros candidatos`,
+  advCandidateSentenceThree: `Ver as suas marcações programadas`,
+  advCandidateSentenceFour: `Mantenha um histórico das suas conversas`,
   // MAP
   toggleOpenButton: `abrir o menu`,
   toggleCloseButton: `fechar o menu`,
@@ -242,8 +242,8 @@ export const PORTUGUESE: Sentence = {
   loginTitle: `iniciar sessão`,
   loginInstructionTitle: `já está registado!`,
   loginInstruction: `Clique no botão abaixo para preencher os campos do formulário de login e acessar o serviço de mensagens instantâneas.`,
-  loginInstructionButton: `iniciar sessão`
-}
+  loginInstructionButton: `iniciar sessão`,
+};
 
 export const RUSSIAN: Sentence = {
   homeNav: `пеленки`,
@@ -257,15 +257,15 @@ export const RUSSIAN: Sentence = {
   advisorName: `консультант`,
   candidateName: `кандидат`,
   advPeTitle: `консультационные преимущества`,
-  advPeSentnceOne: `Отправлять и получать сообщения на вашем языке`,
-  advPeSentnceTwo: `Обсуждать одновременно с кандидатами`,
-  advPeSentnceThree: `Организуйте свои встречи с кандидатами`,
-  advPeSentnceFour: `Ведите историю своих разговоров`,
+  advPeSentenceOne: `Отправлять и получать сообщения на вашем языке`,
+  advPeSentenceTwo: `Обсуждать одновременно с кандидатами`,
+  advPeSentenceThree: `Организуйте свои встречи с кандидатами`,
+  advPeSentenceFour: `Ведите историю своих разговоров`,
   advCandidateTitle: `кандидатские льготы`,
-  advCandidateSentnceOne: `Выберите язык обсуждения`,
-  advCandidateSentnceTwo: `Обсуждать одновременно с другими кандидатами`,
-  advCandidateSentnceThree: `Просмотреть запланированные встречи`,
-  advCandidateSentnceFour: `Ведите историю своих разговоров`,
+  advCandidateSentenceOne: `Выберите язык обсуждения`,
+  advCandidateSentenceTwo: `Обсуждать одновременно с другими кандидатами`,
+  advCandidateSentenceThree: `Просмотреть запланированные встречи`,
+  advCandidateSentenceFour: `Ведите историю своих разговоров`,
   // MAP
   toggleOpenButton: `открыть меню`,
   toggleCloseButton: `закрывать меню`,
@@ -291,8 +291,8 @@ export const RUSSIAN: Sentence = {
   loginTitle: `входить в систему`,
   loginInstructionTitle: `Вы уже зарегистрированы!`,
   loginInstruction: `Нажмите на кнопку ниже, чтобы заполнить поля формы входа и получить доступ к обмену мгновенными сообщениями.`,
-  loginInstructionButton: `входить в систему`
-}
+  loginInstructionButton: `входить в систему`,
+};
 
 export const MANDARIN: Sentence = {
   homeNav: `稽查员`,
@@ -306,15 +306,15 @@ export const MANDARIN: Sentence = {
   advisorName: `顾问`,
   candidateName: `候选人`,
   advPeTitle: `顾问福利`,
-  advPeSentnceOne: `用您的语言发送和接收信息`,
-  advPeSentnceTwo: `与候选人同时进行讨论`,
-  advPeSentnceThree: `组织你与候选人的约会`,
-  advPeSentnceFour: `保存你的对话记录`,
+  advPeSentenceOne: `用您的语言发送和接收信息`,
+  advPeSentenceTwo: `与候选人同时进行讨论`,
+  advPeSentenceThree: `组织你与候选人的约会`,
+  advPeSentenceFour: `保存你的对话记录`,
   advCandidateTitle: `候选人福利`,
-  advCandidateSentnceOne: `选择你的讨论语言`,
-  advCandidateSentnceTwo: `与其他考生同时讨论`,
-  advCandidateSentnceThree: `查看您的预约`,
-  advCandidateSentnceFour: `保存你的对话记录`,
+  advCandidateSentenceOne: `选择你的讨论语言`,
+  advCandidateSentenceTwo: `与其他考生同时讨论`,
+  advCandidateSentenceThree: `查看您的预约`,
+  advCandidateSentenceFour: `保存你的对话记录`,
   // MAP
   toggleOpenButton: `点开菜单`,
   toggleCloseButton: `关闭菜单`,
@@ -340,8 +340,8 @@ export const MANDARIN: Sentence = {
   loginTitle: `签到`,
   loginInstructionTitle: `你已经注册了！`,
   loginInstruction: `点击下面的按钮，填写登录表格的字段，即可进入即时通讯。`,
-  loginInstructionButton: `签到`
-}
+  loginInstructionButton: `签到`,
+};
 
 // export const GERMAN: Sentence {}
 
@@ -350,4 +350,3 @@ export const MANDARIN: Sentence = {
 // export const TAMOUL: Sentence {}
 
 // export const PACHTO: Sentence {}
-

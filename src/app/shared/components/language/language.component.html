@@ -7,18 +7,15 @@
   <form >
     <mat-form-field>
       <input matInput type="text" placeholder="Recherchez votre pays // Search for your country"
-        [matAutocomplete]="auto" [formControl]="myCtrl" />
+        [matAutocomplete]="auto" [formControl]="myCtrl"/>
       <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
-        <mat-option *ngFor="let country of filteredCountries | async" [value]="country">
+        <mat-option *ngFor="let country of filteredCountries | async" [value]="country" >
           <div class="flag">
             <span class="flag-icon flag-icon-{{ country.flag | lowercase }}">
               <span class="country-name-native">{{ country.countryNameNative }}</span>
               <span class="middle-language"> • </span>
               <span class="country-name-fr">{{ country.countryNameFr }}</span>
             </span>
-          </div>
-          <div class="country-name">
-            <span></span>
           </div>
         </mat-option>
       </mat-autocomplete>

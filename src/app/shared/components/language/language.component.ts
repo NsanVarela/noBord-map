@@ -5,8 +5,9 @@ import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { startWith, map } from 'rxjs/operators';
 
-import { VOCABULARY } from '../../../assets/data/vocabulary';
-import { Vocabulary } from '../../_models/wording';
+import { VOCABULARY } from '../../../../assets/data/vocabulary';
+import { Vocabulary } from '../../../_models/wording';
+import { SharedService } from '../../common/shared-service';
 
 @Component({
   selector: 'app-language',
@@ -20,32 +21,33 @@ export class LanguageComponent implements OnInit {
   public myCtrl = new FormControl()
   public filteredCountries: Observable<Vocabulary[]>
   public countries: Vocabulary[] = VOCABULARY
-  public flag: string = 'fr'
 
+  private languageChoice: string
 
   constructor (
-    private dialogRef: MatDialogRef<LanguageComponent>
-  ) {}
+    private dialogRef: MatDialogRef<LanguageComponent>,
+    private sharedService: SharedService
+  ) {
+    this.sharedService.languageChoice
+  }
 
   ngOnInit() {
     this.filteredCountries = this.myCtrl.valueChanges.pipe(
       startWith(''),
       map(value => this._filter(value))
-    )
+      )
   }
 
-  private _filter(value: string): Vocabulary[] {
-    const filterValue = value.toLowerCase()
+  private _filter(value): Vocabulary[] {
+    this.sharedService.updateComp1Val(value.isoCode)
     return this.countries.filter(
-      option => option.countryNameNative.toLowerCase().includes(filterValue)
+      option => option.countryNameNative.toLowerCase().includes(value)
     )
   }
 
   public displayFn(subject) {
     if (subject !== null) {
       subject ? subject.countryNameNative : undefined
-      // console.log('iso : ', subject.isoCode)
-      // this.isoCode.emit(subject.isoCode)
       return subject.countryNameNative
     }
   }

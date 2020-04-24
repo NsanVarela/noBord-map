@@ -21,15 +21,15 @@ export interface Sentence {
   advisorName: string;
   candidateName: string;
   advPeTitle: string;
-  advPeSentnceOne: string;
-  advPeSentnceTwo: string;
-  advPeSentnceThree: string;
-  advPeSentnceFour: string;
+  advPeSentenceOne: string;
+  advPeSentenceTwo: string;
+  advPeSentenceThree: string;
+  advPeSentenceFour: string;
   advCandidateTitle: string;
-  advCandidateSentnceOne: string;
-  advCandidateSentnceTwo: string;
-  advCandidateSentnceThree: string;
-  advCandidateSentnceFour: string;
+  advCandidateSentenceOne: string;
+  advCandidateSentenceTwo: string;
+  advCandidateSentenceThree: string;
+  advCandidateSentenceFour: string;
   // MAP
   toggleOpenButton: string;
   toggleCloseButton: string;

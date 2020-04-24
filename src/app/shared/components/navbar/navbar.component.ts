@@ -3,8 +3,8 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatDialog } from '@angular/material';
 
-import { NavbarItem } from '../../_models/navbar-item';
-import { AuthenticationService } from '../../_services/authentication.service';
+import { NavbarItem } from '../../../_models/navbar-item';
+import { AuthenticationService } from '../../../_services/authentication.service';
 
 import { LogoutComponent } from '../logout/logout.component';
 import { LanguageComponent } from '../language/language.component';

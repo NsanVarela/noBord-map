@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core'
 import { MatDialogRef } from '@angular/material'
 import { Router } from '@angular/router'
 
-import { AuthenticationService } from '../../_services/authentication.service'
+import { AuthenticationService } from '../../../_services/authentication.service'
 
 @Component({
   selector: 'app-logout',
