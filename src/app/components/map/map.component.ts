@@ -7,6 +7,8 @@ import { environment } from 'src/environments/environment'
 import * as L from 'leaflet'
 import { geoData } from '../../../assets/data/geoData'
 import { AuthenticationService } from '../../_services/authentication.service';
+import { SharedService } from 'src/app/shared/common/shared-service';
+import { VOCABULARY } from 'src/assets/data/vocabulary';
 
 @Component({
   selector: 'app-map',
@@ -14,24 +16,48 @@ import { AuthenticationService } from '../../_services/authentication.service';
   styleUrls: ['./map.component.scss']
 })
 export class MapComponent implements AfterViewInit {
-  protected toggleBtnMsg: string = `OUVRIR LE MENU`
-  protected opened = false
-  private map: L.Map
-  private paris: [number, number]  = [environment.gps.parisLatitude, environment.gps.parisLongitude]
-  protected countryName: string
-  protected languages = []
-  public navBarItems: NavbarItem[] = []
-  private languageSelected: string
-  public showConfirm: boolean = false
 
   @Output() country = new EventEmitter()
 
-  constructor(
-    private router: Router,
-    private _snackBar: MatSnackBar,
-    public auth: AuthenticationService
-  ) {
+  private map: L.Map
+  private paris: [number, number]  = [environment.gps.parisLatitude, environment.gps.parisLongitude]
+  private languageSelected: string
+  private languageChoice: string
+
+  public opened = false
+  public countryName: string
+  public languages = []
+  public navBarItems: NavbarItem[] = []
+  public showConfirm: boolean = false
+  public toggleBtnMsg: string
+  public toggleOpenButton: string
+  public toggleCloseButton: string
+  public submitSidenavButton: string
+
+
+  constructor( private router: Router, private _snackBar: MatSnackBar,
+    public auth: AuthenticationService, private sharedService: SharedService )
+  {
     this.setNavBar()
+  }
+
+  ngOnInit() {
+    this.toggleOpenButton = VOCABULARY.find( (v) => v.isoCode === `fr-FR` ).sentences.toggleOpenButton
+    this.toggleCloseButton = VOCABULARY.find( (v) => v.isoCode === `fr-FR` ).sentences.toggleCloseButton
+    this.submitSidenavButton = VOCABULARY.find( (v) => v.isoCode === `fr-FR` ).sentences.submitSidenavButton
+    this.toggleBtnMsg = this.toggleOpenButton.valueOf()
+  }
+
+  ngAfterContentChecked() {
+    this.languageChoice = this.sharedService.languageChoice
+
+    if (this.languageChoice !== undefined) {
+      const changeWording = VOCABULARY.find( (v) => v.isoCode === this.languageChoice )
+      this.toggleOpenButton = changeWording.sentences.toggleOpenButton
+      this.toggleCloseButton = changeWording.sentences.toggleCloseButton
+      this.submitSidenavButton = changeWording.sentences.submitSidenavButton
+      this.toggleBtnMsg = this.toggleOpenButton.valueOf()
+    }
   }
 
   ngAfterViewInit(): void {
@@ -39,18 +65,18 @@ export class MapComponent implements AfterViewInit {
     this.initStatesLayer()
   }
 
-  public setNavBar(): void {
+  private setNavBar(): void {
     if(!this.auth.isLoggedIn()) {
       this.navBarItems = [
         {
           icon: `assets/icons/home_app.svg`,
-          infoTitle: `HOME`,
+          // infoTitle: `HOME`,
           link: `home`,
           isDisplayed: true
         },
         {
           icon: `assets/icons/settings.svg`,
-          infoTitle: `PARAMÈTRES`,
+          // infoTitle: `PARAMÈTRES`,
           link: `profile`,
           isDisplayed: true
         }
@@ -59,25 +85,25 @@ export class MapComponent implements AfterViewInit {
       this.navBarItems = [
         {
           icon: `assets/icons/home_app.svg`,
-          infoTitle: `HOME`,
+          // infoTitle: `HOME`,
           link: `home`,
           isDisplayed: true
         },
         {
           icon: `assets/icons/language.svg`,
-          infoTitle: `MAP`,
+          // infoTitle: `MAP`,
           link: `map`,
           isDisplayed: true
         },
         {
           icon: `assets/icons/translate.svg`,
-          infoTitle: `CHAT`,
+          // infoTitle: `CHAT`,
           link: `chat`,
           isDisplayed: true
         },
         {
           icon: `assets/icons/settings.svg`,
-          infoTitle: `PARAMÈTRES`,
+          // infoTitle: `PARAMÈTRES`,
           link: `profile`,
           isDisplayed: true
         }
@@ -115,7 +141,7 @@ export class MapComponent implements AfterViewInit {
     stateLayer.bringToBack()
   }
 
-  protected highlightFeature(e)  {
+  public highlightFeature(e)  {
     const layer = e.target
     layer.setStyle({
       weight: 3,
@@ -169,9 +195,9 @@ export class MapComponent implements AfterViewInit {
 
   protected log(state) {
     if(state == `Opened`)
-      this.toggleBtnMsg = `FERMER LE MENU`
+      this.toggleBtnMsg = this.toggleCloseButton.valueOf()
     else if(state == `Closed`)
-      this.toggleBtnMsg = `OUVRIR LE MENU`
+      this.toggleBtnMsg = this.toggleOpenButton.valueOf()
   }
 
   public onChangeItem(value) {

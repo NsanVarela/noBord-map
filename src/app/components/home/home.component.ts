@@ -13,7 +13,7 @@ export class HomeComponent {
 
   @Output() type = new EventEmitter<string>()
 
-  private languageChoice: string
+  private languageChoice: string 
 
   public title: string = `Pe • TRANSLATOR`
   public userType: string

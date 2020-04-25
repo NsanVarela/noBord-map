@@ -1,21 +1,20 @@
 <navbar [items]="navBarItems"></navbar>
 <mat-sidenav-container>
   <mat-sidenav #sidenav mode="side" position="end" (opened)="log('Opened')" (closed)="log('Closed')" [(opened)]="opened">
-    <h2>{{ countryName | uppercase}}</h2>
+    <h2>{{ countryName | uppercase }}</h2>
     <hr *ngIf="countryName">
     <ul>
       <li *ngFor="let language of languages">
         <mat-icon>translate</mat-icon>
-        <!-- <span class="language-name">{{ language | uppercase }}</span> &nbsp; -->
         <input type="radio" name="language" value="{{language}}" (change)="onChangeItem($event.target.value)">
-        <label class="language-name" for="lang">{{language }}</label>
+        <label class="language-name" for="lang">{{ language }}</label>
       </li>
     </ul>
-    <button mat-raised-button *ngIf="showConfirm" (click)="confirm()">VALIDER</button>
+    <button mat-raised-button *ngIf="showConfirm" (click)="confirm()">{{ submitSidenavButton | uppercase }}</button>
   </mat-sidenav>
   <mat-sidenav-content>
     <div class="map-container">
-      <button mat-raised-button (click)="sidenav.toggle()">{{toggleBtnMsg}}</button>
+      <button mat-raised-button (click)="sidenav.toggle()">{{ toggleBtnMsg | uppercase }}</button>
       <div class="map-frame">
         <div id="map" (mouseover)="highlightFeature($event)"></div>
       </div>
