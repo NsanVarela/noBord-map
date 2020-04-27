@@ -13,7 +13,7 @@ import { VOCABULARY } from '../../../assets/data/vocabulary';
 export class AuthComponent implements OnInit {
 
   private languageChoice: string
-  
+
   protected show: boolean
 
   public navBarItems: NavbarItem[] = []
@@ -71,7 +71,7 @@ export class AuthComponent implements OnInit {
           isDisplayed: true
         },
         {
-          icon: `assets/icons/translate.svg`,
+          icon: `assets/icons/chat.svg`,
           // infoTitle: `CHAT`,
           link: `chat`,
           isDisplayed: true
@@ -82,12 +82,12 @@ export class AuthComponent implements OnInit {
           link: `profile`,
           isDisplayed: true
         },
-        {
-          icon: `assets/icons/exit_app.svg`,
-          // infoTitle: `DECONNEXION`,
-          link: `logout`,
-          isDisplayed: true
-        }
+        // {
+        //   icon: `assets/icons/exit_app.svg`,
+        //   // infoTitle: `DECONNEXION`,
+        //   link: `logout`,
+        //   isDisplayed: true
+        // }
       ]
     }
   }

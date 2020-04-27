@@ -96,7 +96,7 @@ export class MapComponent implements AfterViewInit {
           isDisplayed: true
         },
         {
-          icon: `assets/icons/translate.svg`,
+          icon: `assets/icons/chat.svg`,
           // infoTitle: `CHAT`,
           link: `chat`,
           isDisplayed: true

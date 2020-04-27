@@ -52,7 +52,7 @@ export class NavbarComponent {
     if(this.auth.isLoggedIn()) {
       this.items.push({
         icon: `assets/icons/exit_app.svg`,
-        infoTitle: `DECONNEXION`,
+        // infoTitle: `DECONNEXION`,
         link: `logout`,
         isDisplayed: true
       })

@@ -63,13 +63,13 @@ export class ChatViewComponent implements OnInit {
       this.navBarItems = [
         {
           icon: `assets/icons/home_app.svg`,
-          infoTitle: `HOME`,
+          // infoTitle: `HOME`,
           link: `home`,
           isDisplayed: true
         },
         {
           icon: `assets/icons/settings.svg`,
-          infoTitle: `PARAMÈTRES`,
+          // infoTitle: `PARAMÈTRES`,
           link: `profile`,
           isDisplayed: true
         }
@@ -78,34 +78,34 @@ export class ChatViewComponent implements OnInit {
       this.navBarItems = [
         {
           icon: `assets/icons/home_app.svg`,
-          infoTitle: `HOME`,
+          // infoTitle: `HOME`,
           link: `home`,
           isDisplayed: true
         },
         {
           icon: `assets/icons/language.svg`,
-          infoTitle: `MAP`,
+          // infoTitle: `MAP`,
           link: `map`,
           isDisplayed: true
         },
         {
-          icon: `assets/icons/translate.svg`,
-          infoTitle: `CHAT`,
+          icon: `assets/icons/chat.svg`,
+          // infoTitle: `CHAT`,
           link: `chat`,
           isDisplayed: true
         },
         {
           icon: `assets/icons/settings.svg`,
-          infoTitle: `PARAMÈTRES`,
+          // infoTitle: `PARAMÈTRES`,
           link: `profile`,
           isDisplayed: true
         },
-        {
-          icon: `assets/icons/exit_app.svg`,
-          infoTitle: `DECONNEXION`,
-          link: `logout`,
-          isDisplayed: true
-        }
+        // {
+        //   icon: `assets/icons/exit_app.svg`,
+        //   infoTitle: `DECONNEXION`,
+        //   link: `logout`,
+        //   isDisplayed: true
+        // }
       ]
     }
   }

@@ -8,12 +8,19 @@ import { environment } from 'src/environments/environment';
 export interface UserDetails {
   id: number
   username: string
+  age?: number
   email: string
   password: string
-  language: string
+  phone?: number
+  language?: string
+  profession?: string
   type: string
-  exp: number
+  experience?: number
+  country?: string
+  description?: string
+  skills?: string
   iat: number
+  exp: number
 }
 
 interface TokenResponse {

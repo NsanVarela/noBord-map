@@ -8,10 +8,21 @@ import { NavbarItem } from 'src/app/_models/navbar-item'
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.scss']
 })
-export class ProfileComponent {
+export class ProfileComponent implements OnInit {
 
   public navBarItems: NavbarItem[] = []
+  public toEdit: boolean = false
   public details: UserDetails
+  public pseudoValue: string = ``
+  public ageValue: number = null
+  public emailValue: string = ``
+  public phoneValue: number = null
+  public languageValue: string = ``
+  public professionValue: string = ``
+  public experienceValue: number = null
+  public countryValue: string = ``
+  public descriptionValue: string = ``
+  public softSkillsValue: string = ``
 
   constructor(
     private auth: AuthenticationService
@@ -23,6 +34,16 @@ export class ProfileComponent {
     this.auth.profile().subscribe(
       user => {
         this.details = user
+        this.pseudoValue = this.details.username
+        this.ageValue = this.details.age
+        this.emailValue = this.details.email
+        this.phoneValue = this.details.phone
+        this.languageValue = this.details.language
+        this.professionValue = this.details.profession
+        this.experienceValue = this.details.experience
+        this.countryValue = this.details.country
+        this.descriptionValue = this.details.description
+        this.softSkillsValue = this.details.skills
       },
       err => {
         console.log(err)
@@ -55,7 +76,7 @@ export class ProfileComponent {
           isDisplayed: true
         },
         {
-          icon: `assets/icons/translate.svg`,
+          icon: `assets/icons/chat.svg`,
           infoTitle: `CHAT`,
           link: `chat`,
           isDisplayed: true
@@ -68,6 +89,16 @@ export class ProfileComponent {
         }
       ]
     }
+  }
+
+  private ngAfterContentChecked() {
+    if(this.details !== undefined) {
+      this.languageValue == this.details.language
+    }
+  }
+
+  public editProfil() {
+    this.toEdit = true
   }
 
 }
