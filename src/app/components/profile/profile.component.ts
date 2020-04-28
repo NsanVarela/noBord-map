@@ -56,7 +56,7 @@ export class ProfileComponent implements OnInit {
       this.navBarItems = [
         {
           icon: `assets/icons/home_app.svg`,
-          infoTitle: `HOME`,
+          // infoTitle: `HOME`,
           link: `home`,
           isDisplayed: true
         }
@@ -65,25 +65,25 @@ export class ProfileComponent implements OnInit {
       this.navBarItems = [
         {
           icon: `assets/icons/home_app.svg`,
-          infoTitle: `HOME`,
+          // infoTitle: `HOME`,
           link: `home`,
           isDisplayed: true
         },
         {
           icon: `assets/icons/language.svg`,
-          infoTitle: `MAP`,
+          // infoTitle: `MAP`,
           link: `map`,
           isDisplayed: true
         },
         {
           icon: `assets/icons/chat.svg`,
-          infoTitle: `CHAT`,
+          // infoTitle: `CHAT`,
           link: `chat`,
           isDisplayed: true
         },
         {
           icon: `assets/icons/exit_app.svg`,
-          infoTitle: `DECONNEXION`,
+          // infoTitle: `DECONNEXION`,
           link: `logout`,
           isDisplayed: false
         }

@@ -15,15 +15,15 @@
               <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
               <path d="M0 0h24v24H0z" fill="none"/>
             </svg>
-            <h1 class="main-heading">{{ details?.username }}</h1>
+            <h1 class="main-heading">{{ pseudoValue }}</h1>
             <span *ngIf="professionValue" class="tag">{{ professionValue }}</span>
             <!-- <span class="tag">Producer</span> -->
             <div class="stats">
               <span class="stat-module">
-                Age <span class="stat-number">{{ details?.age }}</span>
+                Age <span class="stat-number">{{ ageValue }}</span>
               </span>
               <span class="stat-module">
-                Expérience <span class="stat-number">{{ details?.experience }}</span>
+                Expérience <span class="stat-number">{{ experienceValue }}</span>
               </span>
               <span class="stat-module">
                 Langue parlée <span class="stat-number">1</span>
@@ -67,15 +67,15 @@
           <div class="network-content">
             <span class="network-item-content">
               <mat-icon>alternate_email</mat-icon>
-              {{ details?.email }}
+              {{ emailValue }}
             </span>
             <span class="network-item-content">
               <mat-icon>smartphone</mat-icon>
-              <span *ngIf="details?.phone">+33 {{ details?.phone }}</span>
+              <span *ngIf="details?.phone">+33 {{ phoneValue }}</span>
             </span>
             <span class="network-item-content">
               <mat-icon>translate</mat-icon>
-              {{ details?.language }}
+              {{ languageValue }}
             </span>
           </div>
           <div class="footer">
@@ -202,9 +202,13 @@
           <mat-icon>close</mat-icon>
         </button>
       </mat-form-field>
-      <button class="submit-btn" mat-raised-button >VALIDER</button>
+      <button mat-mini-fab disabled class="submit-btn">
+        <mat-icon>done</mat-icon>
+      </button>
+      <button mat-mini-fab disabled class="reset-btn">
+        <mat-icon>clear</mat-icon>
+      </button>
     </form>
 
   </div>
-
 </div>

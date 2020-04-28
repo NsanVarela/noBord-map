@@ -9,7 +9,7 @@
     width: 60%;
     .container {
       box-shadow: 1px 1px 10px 0px rgba(0,0,0,.3);
-      margin: 20px auto;
+      margin: 20px 20px 0 100px;
       overflow: hidden;
       width: 65%;
       border-radius: 5px;
@@ -148,11 +148,11 @@
   }
   .profil-onsite-block {
     width: 100%;
+    margin-right: 10px;
     .profil-onsite-title {
-      background-color: #076585;
+      background-color: #3f51b5;
       color: white;
       border-radius: 5px;
-      // box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.3);
       box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
       margin: 20px 0px 0px 0px;
       overflow: hidden;
@@ -183,7 +183,7 @@
           position: relative;
           .header {
             text-align: center;
-            background-color: #076585;
+            background-color: #3f50b5;
             height: 15%;
             position: absolute;
             top: 0;
@@ -229,7 +229,6 @@
               padding: 0px 3px;
               background-color: gray;
               color: white;
-              opacity: 0.8;
               &:hover {
                 opacity: 1;
                 color: #f7b2b2;
@@ -256,7 +255,7 @@
           position: relative;
           .header {
             text-align: center;
-            background-color: #076585;
+            background-color: #3f51b5;
             height: 15%;
             position: absolute;
             top: 0;
@@ -308,7 +307,7 @@
                 color: white;
                 border: none;
                 box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
-                opacity: 0.8;
+                font-weight: lighter;
                 &:hover {
                   opacity: 1;
                   color: #f7b2b2;
@@ -321,7 +320,6 @@
                 right: 10px;
                 width: 30px;
                 height: 30px;
-                opacity: 0.8;
                 &:hover {
                   opacity: 1;
                   color: #f7b2b2;
@@ -343,7 +341,6 @@
         background-color: #f08080;
         color: white;
         border-radius: 5px 5px 0 0 ;
-        // box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.3);
         box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
         margin: 20px 0px 0px 0px;
         overflow: hidden;
@@ -356,7 +353,7 @@
         }
       }
       .edition-profil-form {
-        width: 90%;
+        width: 94%;
         padding-top: 20px;
         margin: auto;
         font-size: 14px;
@@ -377,15 +374,21 @@
         .submit-btn {
           background-color: #f08080;
           color: white;
+          margin-left: 10px;
+          cursor: pointer;
+          box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+        }
+        .reset-btn {
+          background-color: gray;
+          color: white;
+          margin-left: 10px;
+          cursor: pointer;
+          box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
         }
       }
     }
   }
 }
-
-
-
-
 
 .u-float-right {
   float: right;
@@ -436,83 +439,3 @@
             transform: scale(1.2) translateX(-360px) translateY(-80px);
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// .card {
-//   background: #fff;
-//   border-radius: 2px;
-//   box-shadow: 0 0 5px rgba(0, 0, 0, .15);
-//   margin-top: 15px;
-//   padding: 10px;
-// }
-
-// .card-heading {
-//   font-size: 12px;
-//   text-transform: uppercase;
-// }
-
-// .card-more {
-//   cursor: pointer;
-//   float: right;
-// }
-
-// .card-list {
-//   list-style-type: none;
-//   margin: 10px 0 0;
-//   overflow-x: scroll;
-//   padding: 0;
-//   white-space: nowrap;
-// }
-
-// .card-list::-webkit-scrollbar-track
-// {
-// 	-webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.3);
-// 	border-radius: 2px;
-// 	background-color: #F5F5F5;
-// }
-
-// .card-list::-webkit-scrollbar
-// {
-// 	height: 3px;
-// 	background-color: #F5F5F5;
-// }
-
-// .card-list::-webkit-scrollbar-thumb
-// {
-// 	border-radius: 10px;
-// 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.2);
-// 	background-color: #ddd;
-// }
-
-// .card-list li {
-//   display: inline;
-//   margin-left: 10px;
-// }
-
-// .card-list li:first-child {
-//   margin-left: 0;
-// }
