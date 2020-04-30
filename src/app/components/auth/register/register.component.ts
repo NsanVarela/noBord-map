@@ -123,14 +123,12 @@ export class RegisterComponent implements OnInit {
   public register() {
     this.auth.register(this.registerForm.value).subscribe(
       data => {
-        console.log('data user : ', data)
         this.isSuccessful = true
         this.isSignUpFailed = false
         this.newUser = data
         this.router.navigate([`profile`])
       },
       error => {
-        console.log('error', error)
         this.errorMessage = error.error.message
         this.isSignUpFailed = true
       }

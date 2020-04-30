@@ -1,4 +1,4 @@
-<div class="form-container">
+<div class="form-container"> 
   <h1>{{ loginTitle | uppercase}}</h1>
   <form [formGroup]="loginForm" *ngIf="!isLoggedIn" (ngSubmit)="loginForm.valid && login()" #f="ngForm" novalidate>
     <mat-form-field>

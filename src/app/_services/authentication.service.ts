@@ -56,8 +56,11 @@ export class AuthenticationService {
   }
 
   private httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json',
-    'Access-Control-Allow-Headers': 'Content-Type' })
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Headers': 'Content-Type',
+      'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, PUT, PATCH, DELETE'
+    })
   }
 
   public getUserDetails(): UserDetails {
@@ -82,7 +85,7 @@ export class AuthenticationService {
   }
 
   public register(user: TokenPayload): Observable<any> {
-    const base = this.http.post(this.DB_URL + `users/register`, user, this.httpOptions)
+    const base = this.http.post(this.DB_URL + `api/users`, user, this.httpOptions)
 
     const request = base.pipe(
       map((data: TokenResponse) => {
@@ -95,8 +98,8 @@ export class AuthenticationService {
     return request
   }
 
-  public login(user: TokenPayload): Observable<any> {
-    const base = this.http.post(this.DB_URL + `users/login`, user, this.httpOptions)
+  public login(user): Observable<any> {
+    const base = this.http.post(this.DB_URL + `api/users/login`, user, this.httpOptions)
 
     const request = base.pipe(
       map((data: TokenResponse) => {
@@ -110,10 +113,33 @@ export class AuthenticationService {
     return request
   }
 
-  public profile(): Observable<any> {
-    return this.http.get(this.DB_URL + `users/profile`, {
-      headers: { Authorization: `${this.getToken()}` }
-    })
+  public edit(user): Observable<any> {
+    const base = this.http.patch(this.DB_URL + `api/users`, user, this.httpOptions)
+
+    const request = base.pipe(
+      map((data: TokenResponse) => {
+        if(data.token) {
+          this.saveToken(data.token)
+        }
+        return data
+      })
+    )
+    return request
+  }
+
+  public profile(user): Observable<any> {
+    const id = user.result.id;
+    const base = this.http.get(this.DB_URL + `api/users/${id}`)
+
+    const request = base.pipe(
+      map((data: TokenResponse) => {
+        if(data.token) {
+          this.saveToken(data.token)
+        }
+        return data
+      })
+    )
+    return request
   }
 
   public logout(): void {
@@ -123,4 +149,3 @@ export class AuthenticationService {
   }
 }
 
-// VIDEO : 31 min 55 sec

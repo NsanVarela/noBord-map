@@ -79,7 +79,7 @@
             </span>
           </div>
           <div class="footer">
-            <button mat-mini-fab class="edit-btn" color="primary" (click)="editProfil()">
+            <button mat-mini-fab class="edit-btn" color="primary" (click)="displayProfil()">
               <mat-icon>edit</mat-icon>
             </button>
           </div>
@@ -112,13 +112,13 @@
     <div class="profil-edition-title">
       <h3>mise à jour de mes informations</h3>
     </div>
-    <form class="edition-profil-form">
+    <form class="edition-profil-form" [formGroup]="updateForm" (ngSubmit)="updateForm.valid && editProfil()" #f="ngForm" novalidate>
       <table cellspacing="0">
         <tr>
           <td>
             <mat-form-field class="field">
               <mat-label>Pseudo</mat-label>
-              <input matInput type="text" name="pseudo" placeholder="John" [(ngModel)]="pseudoValue">
+              <input matInput type="text" formControlName="pseudo" placeholder="John" [(ngModel)]="pseudoValue">
               <button mat-button *ngIf="pseudoValue" matSuffix mat-icon-button aria-label="Clear" (click)="pseudoValue=''">
                 <mat-icon>close</mat-icon>
               </button>
@@ -127,15 +127,24 @@
           <td>
             <mat-form-field class="field">
               <mat-label>Age</mat-label>
-              <input matInput #age name="age" maxlength="2" placeholder="35" [(ngModel)]="ageValue">
+              <input matInput #age formControlName="age" maxlength="2" placeholder="35" [(ngModel)]="ageValue">
               <mat-hint align="end">{{age.value.length}} / 2</mat-hint>
             </mat-form-field>
           </td>
           <td>
             <mat-form-field class="field">
               <mat-label>Email</mat-label>
-              <input matInput type="email" name="email" placeholder="john@doe.com" [(ngModel)]="emailValue">
+              <input matInput type="email" formControlName="email" placeholder="john@doe.com" [(ngModel)]="emailValue">
               <button mat-button *ngIf="emailValue" matSuffix mat-icon-button aria-label="Clear" (click)="emailValue=''">
+                <mat-icon>close</mat-icon>
+              </button>
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field class="field">
+              <mat-label>Password</mat-label>
+              <input matInput type="password" formControlName="password" placeholder="1234" [(ngModel)]="passwordValue">
+              <button mat-button *ngIf="passwordValue" matSuffix mat-icon-button aria-label="Clear" (click)="passwordValue=''">
                 <mat-icon>close</mat-icon>
               </button>
             </mat-form-field>
@@ -144,7 +153,7 @@
             <mat-form-field class="field">
               <mat-label>Telephone</mat-label>
               <span matPrefix>+33 &nbsp;</span>
-              <input type="tel" name="phone" matInput maxlength="13" placeholder="6 01 23 45 67" [(ngModel)]="phoneValue">
+              <input type="tel" formControlName="phone" matInput maxlength="13" placeholder="6 01 23 45 67" [(ngModel)]="phoneValue">
               <button mat-button *ngIf="phoneValue" matSuffix mat-icon-button aria-label="Clear" (click)="phoneValue=''">
                 <mat-icon>close</mat-icon>
               </button>
@@ -155,7 +164,7 @@
           <td>
             <mat-form-field class="field">
               <mat-label>Langue</mat-label>
-              <input matInput type="text" name="language" placeholder="Français, portugais, ..." [(ngModel)]="languageValue">
+              <input matInput type="text" formControlName="language" placeholder="Français, portugais, ..." [(ngModel)]="languageValue">
               <button mat-button *ngIf="languageValue" matSuffix mat-icon-button aria-label="Clear" (click)="languageValue=''">
                 <mat-icon>close</mat-icon>
               </button>
@@ -164,7 +173,7 @@
           <td>
             <mat-form-field class="field">
               <mat-label>Profession</mat-label>
-              <input matInput type="text" name="profession" placeholder="Boulanger" [(ngModel)]="professionValue">
+              <input matInput type="text" formControlName="profession" placeholder="Boulanger" [(ngModel)]="professionValue">
               <button mat-button *ngIf="professionValue" matSuffix mat-icon-button aria-label="Clear" (click)="professionValue=''">
                 <mat-icon>close</mat-icon>
               </button>
@@ -173,14 +182,14 @@
           <td>
             <mat-form-field class="field">
               <mat-label>Expérience</mat-label>
-              <input matInput #experience name="experience" maxlength="2" placeholder="4" [(ngModel)]="experienceValue">
+              <input matInput #experience formControlName="experience" maxlength="2" placeholder="4" [(ngModel)]="experienceValue">
               <mat-hint align="end">{{experience.value.length}} / 2</mat-hint>
             </mat-form-field>
           </td>
           <td>
             <mat-form-field class="field">
               <mat-label>Pays</mat-label>
-              <input matInput type="text" name="country" placeholder="Portugal" [(ngModel)]="countryValue">
+              <input matInput type="text" formControlName="country" placeholder="Portugal" [(ngModel)]="countryValue">
               <button mat-button *ngIf="countryValue" matSuffix mat-icon-button aria-label="Clear" (click)="countryValue=''">
                 <mat-icon>close</mat-icon>
               </button>
@@ -190,19 +199,19 @@
       </table>
       <mat-form-field class="field long-field-one">
         <mat-label>Description</mat-label>
-        <textarea matInput name="description" placeholder="Ex. Je suis passionné par..." [(ngModel)]="descriptionValue"></textarea>
+        <textarea matInput formControlName="description" placeholder="Ex. Je suis passionné par..." [(ngModel)]="descriptionValue"></textarea>
         <button mat-button *ngIf="descriptionValue" matSuffix mat-icon-button aria-label="Clear" (click)="descriptionValue=''">
           <mat-icon>close</mat-icon>
         </button>
       </mat-form-field>
       <mat-form-field class="field long-field-two">
         <mat-label>Compétences générales</mat-label>
-        <textarea matInput name="soft-skills" placeholder="Ex. marathonien, permaculture..." [(ngModel)]="softSkillsValue"></textarea>
+        <textarea matInput formControlName="skills" placeholder="Ex. marathonien, permaculture..." [(ngModel)]="softSkillsValue"></textarea>
         <button mat-button *ngIf="softSkillsValue" matSuffix mat-icon-button aria-label="Clear" (click)="softSkillsValue=''">
           <mat-icon>close</mat-icon>
         </button>
       </mat-form-field>
-      <button mat-mini-fab disabled class="submit-btn">
+      <button mat-mini-fab type="submit" class="submit-btn" [disabled]="!updateForm.valid">
         <mat-icon>done</mat-icon>
       </button>
       <button mat-mini-fab disabled class="reset-btn">

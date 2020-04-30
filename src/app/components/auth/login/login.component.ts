@@ -1,11 +1,11 @@
 import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
-
-import { UserModel } from "../../../_models/user";
-import { AuthenticationService } from "../../../_services/authentication.service";
 import { Router } from "@angular/router";
+
+import { AuthenticationService } from "src/app/_services/authentication.service";
 import { SharedService } from "src/app/shared/common/shared-service";
 import { VOCABULARY } from "src/assets/data/vocabulary";
+import { UserModel } from "src/app/_models/user";
 
 @Component({
   selector: "app-login",
@@ -44,10 +44,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
       email: [this.user.email, [Validators.required, Validators.minLength(2)]],
-      password: [
-        this.user.password,
-        [Validators.required, Validators.minLength(4)],
-      ],
+      password: [this.user.password, [Validators.required, Validators.minLength(4)]]
     });
 
     this.loginTitle = VOCABULARY.find((v) => v.isoCode === `fr-FR`).sentences.loginTitle
@@ -86,6 +83,7 @@ export class LoginComponent implements OnInit {
       () => {
         this.user = this.auth.getUserDetails();
         this.router.navigate([`profile`], { queryParams: this.user });
+        this.isLoggedIn = true;
       },
       (err) => {
         console.log(err);
