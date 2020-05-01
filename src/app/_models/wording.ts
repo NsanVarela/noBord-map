@@ -63,4 +63,36 @@ export interface Sentence {
   translatedLanguagePlaceholder?: string
   languageCancelBtn: string
   languageSubmitBtn: string
+  // PROFIL
+  age: string
+  experience: string
+  language: string
+  header1: string
+  header2: string
+  header3: string
+  header4: string
+  advisor: string
+  meeting: string
+  updatePseudo: string
+  updatePseudoPlaceholder: string
+  updateAge: string
+  updateAgePlaceholder: string
+  updateEmail: string
+  updateEmailPlaceholder: string
+  updatePassword: string
+  updatePasswordPlaceholder: string
+  updatePhone: string
+  updatePhonePlaceholder: string
+  updateLanguage: string
+  updateLanguagePlaceholder: string
+  updateProfession: string
+  updateProfessionPlaceholder: string
+  updateExperience: string
+  updateExperiencePlaceholder: string
+  updateCountry: string
+  updateCountryPlaceholder: string
+  updateDescription: string
+  updateDescriptionPlaceholder: string
+  updateSkills: string
+  updateSkillsPlaceholder: string
 }

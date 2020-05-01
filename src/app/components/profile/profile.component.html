@@ -20,13 +20,16 @@
             <!-- <span class="tag">Producer</span> -->
             <div class="stats">
               <span class="stat-module">
-                Age <span class="stat-number">{{ ageValue }}</span>
+                {{ age }}
+                <span class="stat-number">{{ ageValue }}</span>
               </span>
               <span class="stat-module">
-                Expérience <span class="stat-number">{{ experienceValue }}</span>
+                {{ experience }}
+                <span class="stat-number">{{ experienceValue }}</span>
               </span>
               <span class="stat-module">
-                Langue parlée <span class="stat-number">1</span>
+                {{ language }}
+                <span class="stat-number">1</span>
               </span>
             </div>
           </div> <!-- END header -->
@@ -56,13 +59,13 @@
 
   <div class="profil-onsite-block">
     <div class="profil-onsite-title">
-      <h3>mon espace</h3>
+      <h3>{{ header1 }}</h3>
     </div>
     <div class="profil-onsite-block-2">
       <div class="profil-contact">
         <div class="body">
           <div class="header">
-            <span>informations de contact</span>
+            <span>{{ header2 }}</span>
           </div>
           <div class="network-content">
             <span class="network-item-content">
@@ -88,7 +91,7 @@
       <div class="profil-activity">
         <div class="body">
           <div class="header">
-            <span>informations utiles</span>
+            <span>{{ header3 }}</span>
           </div>
           <div class="activity-content">
             <div class="activity-icon">
@@ -96,8 +99,8 @@
             </div>
             <div class="activity-remind">
               <ul>
-                <li>Votre conseillé : John Doh</li>
-                <li>Rdv planifié : 10 mai 2020</li>
+                <li>{{ advisor }} : John Doh</li>
+                <li>{{ meeting }} : 10 mai 2020</li>
             </ul>
             <a mat-stroked-button class="pe-btn" href="https://www.pole-emploi.fr/accueil/" target="_blank" rel="noopener">pole-emploi.fr</a>
             <button mat-mini-fab class="event-btn" color="primary">
@@ -110,15 +113,15 @@
   </div>
   <div class="profil-edition" *ngIf="toEdit">
     <div class="profil-edition-title">
-      <h3>mise à jour de mes informations</h3>
+      <h3>{{ header4 }}</h3>
     </div>
     <form class="edition-profil-form" [formGroup]="updateForm" (ngSubmit)="updateForm.valid && editProfil()" #f="ngForm" novalidate>
       <table cellspacing="0">
         <tr>
           <td>
             <mat-form-field class="field">
-              <mat-label>Pseudo</mat-label>
-              <input matInput type="text" formControlName="pseudo" placeholder="John" [(ngModel)]="pseudoValue">
+              <mat-label>{{ updatePseudo }}</mat-label>
+              <input matInput type="text" formControlName="pseudo" placeholder="{{ updatePseudoPlaceholder }}" [(ngModel)]="pseudoValue">
               <button mat-button *ngIf="pseudoValue" matSuffix mat-icon-button aria-label="Clear" (click)="pseudoValue=''">
                 <mat-icon>close</mat-icon>
               </button>
@@ -126,15 +129,15 @@
           </td>
           <td>
             <mat-form-field class="field">
-              <mat-label>Age</mat-label>
-              <input matInput #age formControlName="age" maxlength="2" placeholder="35" [(ngModel)]="ageValue">
+              <mat-label>{{ updateAge }}</mat-label>
+              <input matInput #age formControlName="age" maxlength="2" placeholder="{{ updateAgePlaceholder }}" [(ngModel)]="ageValue">
               <mat-hint align="end">{{age.value.length}} / 2</mat-hint>
             </mat-form-field>
           </td>
           <td>
             <mat-form-field class="field">
-              <mat-label>Email</mat-label>
-              <input matInput type="email" formControlName="email" placeholder="john@doe.com" [(ngModel)]="emailValue">
+              <mat-label>{{ updateEmail }}</mat-label>
+              <input matInput type="email" formControlName="email" placeholder="{{ updateEmailPlaceholder }}" [(ngModel)]="emailValue">
               <button mat-button *ngIf="emailValue" matSuffix mat-icon-button aria-label="Clear" (click)="emailValue=''">
                 <mat-icon>close</mat-icon>
               </button>
@@ -142,8 +145,8 @@
           </td>
           <td>
             <mat-form-field class="field">
-              <mat-label>Password</mat-label>
-              <input matInput type="password" formControlName="password" placeholder="1234" [(ngModel)]="passwordValue">
+              <mat-label>{{ updatePassword }}</mat-label>
+              <input matInput type="password" formControlName="password" placeholder="{{ updatePasswordPlaceholder }}" [(ngModel)]="passwordValue">
               <button mat-button *ngIf="passwordValue" matSuffix mat-icon-button aria-label="Clear" (click)="passwordValue=''">
                 <mat-icon>close</mat-icon>
               </button>
@@ -151,9 +154,9 @@
           </td>
           <td>
             <mat-form-field class="field">
-              <mat-label>Telephone</mat-label>
+              <mat-label>{{ updatePhone }}</mat-label>
               <span matPrefix>+33 &nbsp;</span>
-              <input type="tel" formControlName="phone" matInput maxlength="13" placeholder="6 01 23 45 67" [(ngModel)]="phoneValue">
+              <input type="tel" formControlName="phone" matInput maxlength="13" placeholder="{{ updatePhonePlaceholder }}" [(ngModel)]="phoneValue">
               <button mat-button *ngIf="phoneValue" matSuffix mat-icon-button aria-label="Clear" (click)="phoneValue=''">
                 <mat-icon>close</mat-icon>
               </button>
@@ -163,8 +166,8 @@
         <tr>
           <td>
             <mat-form-field class="field">
-              <mat-label>Langue</mat-label>
-              <input matInput type="text" formControlName="language" placeholder="Français, portugais, ..." [(ngModel)]="languageValue">
+              <mat-label>{{ updateLanguage }}</mat-label>
+              <input matInput type="text" formControlName="language" placeholder="{{ updateLanguagePlaceholder }}" [(ngModel)]="languageValue">
               <button mat-button *ngIf="languageValue" matSuffix mat-icon-button aria-label="Clear" (click)="languageValue=''">
                 <mat-icon>close</mat-icon>
               </button>
@@ -172,8 +175,8 @@
           </td>
           <td>
             <mat-form-field class="field">
-              <mat-label>Profession</mat-label>
-              <input matInput type="text" formControlName="profession" placeholder="Boulanger" [(ngModel)]="professionValue">
+              <mat-label>{{ updateProfession }}</mat-label>
+              <input matInput type="text" formControlName="profession" placeholder="{{ updateProfessionPlaceholder }}" [(ngModel)]="professionValue">
               <button mat-button *ngIf="professionValue" matSuffix mat-icon-button aria-label="Clear" (click)="professionValue=''">
                 <mat-icon>close</mat-icon>
               </button>
@@ -181,15 +184,15 @@
           </td>
           <td>
             <mat-form-field class="field">
-              <mat-label>Expérience</mat-label>
-              <input matInput #experience formControlName="experience" maxlength="2" placeholder="4" [(ngModel)]="experienceValue">
+              <mat-label>{{ updateExperience }}</mat-label>
+              <input matInput #experience formControlName="experience" maxlength="2" placeholder="{{ updateExperiencePlaceholder }}" [(ngModel)]="experienceValue">
               <mat-hint align="end">{{experience.value.length}} / 2</mat-hint>
             </mat-form-field>
           </td>
           <td>
             <mat-form-field class="field">
-              <mat-label>Pays</mat-label>
-              <input matInput type="text" formControlName="country" placeholder="Portugal" [(ngModel)]="countryValue">
+              <mat-label>{{ updateCountry }}</mat-label>
+              <input matInput type="text" formControlName="country" placeholder="{{ updateCountryPlaceholder }}" [(ngModel)]="countryValue">
               <button mat-button *ngIf="countryValue" matSuffix mat-icon-button aria-label="Clear" (click)="countryValue=''">
                 <mat-icon>close</mat-icon>
               </button>
@@ -198,15 +201,15 @@
         </tr>
       </table>
       <mat-form-field class="field long-field-one">
-        <mat-label>Description</mat-label>
-        <textarea matInput formControlName="description" placeholder="Ex. Je suis passionné par..." [(ngModel)]="descriptionValue"></textarea>
+        <mat-label>{{ updateDescription }}</mat-label>
+        <textarea matInput formControlName="description" placeholder="{{ updateDescriptionPlaceholder }}" [(ngModel)]="descriptionValue"></textarea>
         <button mat-button *ngIf="descriptionValue" matSuffix mat-icon-button aria-label="Clear" (click)="descriptionValue=''">
           <mat-icon>close</mat-icon>
         </button>
       </mat-form-field>
       <mat-form-field class="field long-field-two">
-        <mat-label>Compétences générales</mat-label>
-        <textarea matInput formControlName="skills" placeholder="Ex. marathonien, permaculture..." [(ngModel)]="softSkillsValue"></textarea>
+        <mat-label>{{ updateSkills }}</mat-label>
+        <textarea matInput formControlName="skills" placeholder="{{ updateSkillsPlaceholder }}" [(ngModel)]="softSkillsValue"></textarea>
         <button mat-button *ngIf="softSkillsValue" matSuffix mat-icon-button aria-label="Clear" (click)="softSkillsValue=''">
           <mat-icon>close</mat-icon>
         </button>

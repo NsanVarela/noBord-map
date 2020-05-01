@@ -94,4 +94,5 @@ export class LoginComponent implements OnInit {
   private reloadPage() {
     window.location.reload();
   }
+
 }

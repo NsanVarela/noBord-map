@@ -51,6 +51,12 @@ export class NavbarComponent {
   ngAfterContentInit() {
     if(this.auth.isLoggedIn()) {
       this.items.push({
+        icon: `assets/icons/translate.svg`,
+        // infoTitle: this.languageNav,
+        link: `translate`,
+        isDisplayed: true
+      }),
+      this.items.push({
         icon: `assets/icons/exit_app.svg`,
         // infoTitle: `DECONNEXION`,
         link: `logout`,
