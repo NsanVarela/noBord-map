@@ -129,13 +129,6 @@
           </td>
           <td>
             <mat-form-field class="field">
-              <mat-label>{{ updateAge }}</mat-label>
-              <input matInput #age formControlName="age" maxlength="2" placeholder="{{ updateAgePlaceholder }}" [(ngModel)]="ageValue">
-              <mat-hint align="end">{{age.value.length}} / 2</mat-hint>
-            </mat-form-field>
-          </td>
-          <td>
-            <mat-form-field class="field">
               <mat-label>{{ updateEmail }}</mat-label>
               <input matInput type="email" formControlName="email" placeholder="{{ updateEmailPlaceholder }}" [(ngModel)]="emailValue">
               <button mat-button *ngIf="emailValue" matSuffix mat-icon-button aria-label="Clear" (click)="emailValue=''">
@@ -152,6 +145,8 @@
               </button>
             </mat-form-field>
           </td>
+        </tr>
+        <tr>
           <td>
             <mat-form-field class="field">
               <mat-label>{{ updatePhone }}</mat-label>
@@ -162,8 +157,6 @@
               </button>
             </mat-form-field>
           </td>
-        </tr>
-        <tr>
           <td>
             <mat-form-field class="field">
               <mat-label>{{ updateLanguage }}</mat-label>
@@ -182,11 +175,20 @@
               </button>
             </mat-form-field>
           </td>
+        </tr>
+        <tr>
           <td>
-            <mat-form-field class="field">
+            <mat-form-field class="field number-field">
               <mat-label>{{ updateExperience }}</mat-label>
               <input matInput #experience formControlName="experience" maxlength="2" placeholder="{{ updateExperiencePlaceholder }}" [(ngModel)]="experienceValue">
               <mat-hint align="end">{{experience.value.length}} / 2</mat-hint>
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field class="field number-field">
+              <mat-label>{{ updateAge }}</mat-label>
+              <input matInput #age formControlName="age" maxlength="2" placeholder="{{ updateAgePlaceholder }}" [(ngModel)]="ageValue">
+              <mat-hint align="end">{{age.value.length}} / 2</mat-hint>
             </mat-form-field>
           </td>
           <td>
@@ -199,27 +201,35 @@
             </mat-form-field>
           </td>
         </tr>
+        <tr>
+          <td>
+            <mat-form-field class="field long-field-one">
+              <mat-label>{{ updateDescription }}</mat-label>
+              <textarea matInput formControlName="description" placeholder="{{ updateDescriptionPlaceholder }}" [(ngModel)]="descriptionValue"></textarea>
+              <button mat-button *ngIf="descriptionValue" matSuffix mat-icon-button aria-label="Clear" (click)="descriptionValue=''">
+                <mat-icon>close</mat-icon>
+              </button>
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field class="field long-field-two">
+              <mat-label>{{ updateSkills }}</mat-label>
+              <textarea matInput formControlName="skills" placeholder="{{ updateSkillsPlaceholder }}" [(ngModel)]="softSkillsValue"></textarea>
+              <button mat-button *ngIf="softSkillsValue" matSuffix mat-icon-button aria-label="Clear" (click)="softSkillsValue=''">
+                <mat-icon>close</mat-icon>
+              </button>
+            </mat-form-field>
+          </td>
+          <td class="btn-zone">
+            <button mat-mini-fab type="submit" class="submit-btn" [disabled]="!updateForm.valid">
+              <mat-icon>done</mat-icon>
+            </button>
+            <button mat-mini-fab disabled class="reset-btn" (click)="resetUpdate()">
+              <mat-icon>clear</mat-icon>
+            </button>
+          </td>
+        </tr>
       </table>
-      <mat-form-field class="field long-field-one">
-        <mat-label>{{ updateDescription }}</mat-label>
-        <textarea matInput formControlName="description" placeholder="{{ updateDescriptionPlaceholder }}" [(ngModel)]="descriptionValue"></textarea>
-        <button mat-button *ngIf="descriptionValue" matSuffix mat-icon-button aria-label="Clear" (click)="descriptionValue=''">
-          <mat-icon>close</mat-icon>
-        </button>
-      </mat-form-field>
-      <mat-form-field class="field long-field-two">
-        <mat-label>{{ updateSkills }}</mat-label>
-        <textarea matInput formControlName="skills" placeholder="{{ updateSkillsPlaceholder }}" [(ngModel)]="softSkillsValue"></textarea>
-        <button mat-button *ngIf="softSkillsValue" matSuffix mat-icon-button aria-label="Clear" (click)="softSkillsValue=''">
-          <mat-icon>close</mat-icon>
-        </button>
-      </mat-form-field>
-      <button mat-mini-fab type="submit" class="submit-btn" [disabled]="!updateForm.valid">
-        <mat-icon>done</mat-icon>
-      </button>
-      <button mat-mini-fab disabled class="reset-btn">
-        <mat-icon>clear</mat-icon>
-      </button>
     </form>
 
   </div>

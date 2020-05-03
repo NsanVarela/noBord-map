@@ -257,5 +257,11 @@ export class ProfileComponent implements OnInit {
         console.log(err);
       }
     );
+    this.toEdit = false;
   }
+
+  public resetUpdate() {
+    
+  }
+
 }
