@@ -21,7 +21,11 @@
       </div>
     </div>
     <div class="baseline">
-      <h2><span class="begin-h2">Pe</span><span class="middle-h2"> • </span><span class="end-h2">TRANSLATOR</span></h2>
+      <h2>
+        <span class="begin-h2">Pe</span>
+        <span class="middle-h2"> • </span>
+        <span class="end-h2">TRANSLATOR</span>
+      </h2>
       <p>{{ baseline }}</p>
     </div>
   </div>
@@ -32,13 +36,13 @@
     src="assets/icons/translate.svg"/>
     <div class="pe">
       <div class="pe-nav">
-        <button mat-fab id="pe-btn" color="primary" value="PE" routerLink="/auth"
+        <button mat-fab id="pe-btn" color="primary" value="PE"
           (click)="handleClick($event)"
           (mouseover)="hover = true; btnDe = true; peAdvantages = true"
           (mouseleave)="hover = false; btnDe = false; peAdvantages = false"
           [ngStyle]="{opacity: btnPe==true  ? '0' : '1' }" >
         {{ advisorName | uppercase }}
-      </button>
+        </button>
         <div class="pe-advantages" [ngStyle]="{display: peAdvantages==true  ? 'flex' : 'none' }">
           <mat-card>
             <h3>{{ advPeTitle | uppercase }}</h3>
@@ -69,7 +73,7 @@
     </div>
     <div class="de">
       <div class="de-nav">
-        <button mat-fab id="de-btn" value="DE" routerLink="/map"
+        <button mat-fab id="de-btn" value="DE"
           (click)="handleClick($event)"
           (mouseover)="hover = true; btnPe = true; deAdvantages = true"
           (mouseleave)="hover = false; btnPe = false; deAdvantages = false"

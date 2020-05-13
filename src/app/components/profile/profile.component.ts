@@ -10,7 +10,7 @@ import { UserModel } from "src/app/_models/user";
 import { LanguageComponent } from "../../shared/components/language/language.component";
 import { map } from "rxjs/operators";
 import { SharedService } from "src/app/shared/common/shared-service";
-import { VOCABULARY } from '../../../assets/data/vocabulary';
+import { VOCABULARY } from "../../../assets/data/vocabulary";
 
 @Component({
   selector: "app-profile",
@@ -115,37 +115,85 @@ export class ProfileComponent implements OnInit {
       }
     );
 
-    this.age = VOCABULARY.find((v) => v.isoCode === `fr-FR`).sentences.age
-    this.experience = VOCABULARY.find((v) => v.isoCode === `fr-FR`).sentences.experience
-    this.language = VOCABULARY.find((v) => v.isoCode === `fr-FR`).sentences.language
-    this.header1 = VOCABULARY.find((v) => v.isoCode === `fr-FR`).sentences.header1
-    this.header2 = VOCABULARY.find((v) => v.isoCode === `fr-FR`).sentences.header2
-    this.header3 = VOCABULARY.find((v) => v.isoCode === `fr-FR`).sentences.header3
-    this.header4 = VOCABULARY.find((v) => v.isoCode === `fr-FR`).sentences.header4
-    this.advisor = VOCABULARY.find((v) => v.isoCode === `fr-FR`).sentences.advisor
-    this.meeting = VOCABULARY.find((v) => v.isoCode === `fr-FR`).sentences.meeting
-    this.updatePseudo = VOCABULARY.find((v) => v.isoCode === `fr-FR`).sentences.updatePseudo
-    this.updatePseudoPlaceholder = VOCABULARY.find((v) => v.isoCode === `fr-FR`).sentences.updatePseudoPlaceholder
-    this.updateAge = VOCABULARY.find((v) => v.isoCode === `fr-FR`).sentences.updateAge
-    this.updateAgePlaceholder = VOCABULARY.find((v) => v.isoCode === `fr-FR`).sentences.updateAgePlaceholder
-    this.updateEmail = VOCABULARY.find((v) => v.isoCode === `fr-FR`).sentences.updateEmail
-    this.updateEmailPlaceholder = VOCABULARY.find((v) => v.isoCode === `fr-FR`).sentences.updateEmailPlaceholder
-    this.updatePassword = VOCABULARY.find((v) => v.isoCode === `fr-FR`).sentences.updatePassword
-    this.updatePasswordPlaceholder = VOCABULARY.find((v) => v.isoCode === `fr-FR`).sentences.updatePasswordPlaceholder
-    this.updatePhone = VOCABULARY.find((v) => v.isoCode === `fr-FR`).sentences.updatePhone
-    this.updatePhonePlaceholder = VOCABULARY.find((v) => v.isoCode === `fr-FR`).sentences.updatePhonePlaceholder
-    this.updateLanguage = VOCABULARY.find((v) => v.isoCode === `fr-FR`).sentences.updateLanguage
-    this.updateLanguagePlaceholder = VOCABULARY.find((v) => v.isoCode === `fr-FR`).sentences.updateLanguagePlaceholder
-    this.updateProfession = VOCABULARY.find((v) => v.isoCode === `fr-FR`).sentences.updateProfession
-    this.updateProfessionPlaceholder = VOCABULARY.find((v) => v.isoCode === `fr-FR`).sentences.updateProfessionPlaceholder
-    this.updateExperience = VOCABULARY.find((v) => v.isoCode === `fr-FR`).sentences.updateExperience
-    this.updateExperiencePlaceholder = VOCABULARY.find((v) => v.isoCode === `fr-FR`).sentences.updateExperiencePlaceholder
-    this.updateCountry = VOCABULARY.find((v) => v.isoCode === `fr-FR`).sentences.updateCountry
-    this.updateCountryPlaceholder = VOCABULARY.find((v) => v.isoCode === `fr-FR`).sentences.updateCountryPlaceholder
-    this.updateDescription = VOCABULARY.find((v) => v.isoCode === `fr-FR`).sentences.updateDescription
-    this.updateDescriptionPlaceholder = VOCABULARY.find((v) => v.isoCode === `fr-FR`).sentences.updateDescriptionPlaceholder
-    this.updateSkills = VOCABULARY.find((v) => v.isoCode === `fr-FR`).sentences.updateSkills
-    this.updateSkillsPlaceholder = VOCABULARY.find((v) => v.isoCode === `fr-FR`).sentences.updateSkillsPlaceholder
+    this.age = VOCABULARY.find((v) => v.isoCode === `fr`).sentences.age;
+    this.experience = VOCABULARY.find(
+      (v) => v.isoCode === `fr`
+    ).sentences.experience;
+    this.language = VOCABULARY.find(
+      (v) => v.isoCode === `fr`
+    ).sentences.language;
+    this.header1 = VOCABULARY.find((v) => v.isoCode === `fr`).sentences.header1;
+    this.header2 = VOCABULARY.find((v) => v.isoCode === `fr`).sentences.header2;
+    this.header3 = VOCABULARY.find((v) => v.isoCode === `fr`).sentences.header3;
+    this.header4 = VOCABULARY.find((v) => v.isoCode === `fr`).sentences.header4;
+    this.advisor = VOCABULARY.find((v) => v.isoCode === `fr`).sentences.advisor;
+    this.meeting = VOCABULARY.find((v) => v.isoCode === `fr`).sentences.meeting;
+    this.updatePseudo = VOCABULARY.find(
+      (v) => v.isoCode === `fr`
+    ).sentences.updatePseudo;
+    this.updatePseudoPlaceholder = VOCABULARY.find(
+      (v) => v.isoCode === `fr`
+    ).sentences.updatePseudoPlaceholder;
+    this.updateAge = VOCABULARY.find(
+      (v) => v.isoCode === `fr`
+    ).sentences.updateAge;
+    this.updateAgePlaceholder = VOCABULARY.find(
+      (v) => v.isoCode === `fr`
+    ).sentences.updateAgePlaceholder;
+    this.updateEmail = VOCABULARY.find(
+      (v) => v.isoCode === `fr`
+    ).sentences.updateEmail;
+    this.updateEmailPlaceholder = VOCABULARY.find(
+      (v) => v.isoCode === `fr`
+    ).sentences.updateEmailPlaceholder;
+    this.updatePassword = VOCABULARY.find(
+      (v) => v.isoCode === `fr`
+    ).sentences.updatePassword;
+    this.updatePasswordPlaceholder = VOCABULARY.find(
+      (v) => v.isoCode === `fr`
+    ).sentences.updatePasswordPlaceholder;
+    this.updatePhone = VOCABULARY.find(
+      (v) => v.isoCode === `fr`
+    ).sentences.updatePhone;
+    this.updatePhonePlaceholder = VOCABULARY.find(
+      (v) => v.isoCode === `fr`
+    ).sentences.updatePhonePlaceholder;
+    this.updateLanguage = VOCABULARY.find(
+      (v) => v.isoCode === `fr`
+    ).sentences.updateLanguage;
+    this.updateLanguagePlaceholder = VOCABULARY.find(
+      (v) => v.isoCode === `fr`
+    ).sentences.updateLanguagePlaceholder;
+    this.updateProfession = VOCABULARY.find(
+      (v) => v.isoCode === `fr`
+    ).sentences.updateProfession;
+    this.updateProfessionPlaceholder = VOCABULARY.find(
+      (v) => v.isoCode === `fr`
+    ).sentences.updateProfessionPlaceholder;
+    this.updateExperience = VOCABULARY.find(
+      (v) => v.isoCode === `fr`
+    ).sentences.updateExperience;
+    this.updateExperiencePlaceholder = VOCABULARY.find(
+      (v) => v.isoCode === `fr`
+    ).sentences.updateExperiencePlaceholder;
+    this.updateCountry = VOCABULARY.find(
+      (v) => v.isoCode === `fr`
+    ).sentences.updateCountry;
+    this.updateCountryPlaceholder = VOCABULARY.find(
+      (v) => v.isoCode === `fr`
+    ).sentences.updateCountryPlaceholder;
+    this.updateDescription = VOCABULARY.find(
+      (v) => v.isoCode === `fr`
+    ).sentences.updateDescription;
+    this.updateDescriptionPlaceholder = VOCABULARY.find(
+      (v) => v.isoCode === `fr`
+    ).sentences.updateDescriptionPlaceholder;
+    this.updateSkills = VOCABULARY.find(
+      (v) => v.isoCode === `fr`
+    ).sentences.updateSkills;
+    this.updateSkillsPlaceholder = VOCABULARY.find(
+      (v) => v.isoCode === `fr`
+    ).sentences.updateSkillsPlaceholder;
   }
 
   public setNavBar(): void {
@@ -189,41 +237,53 @@ export class ProfileComponent implements OnInit {
   }
 
   private ngAfterContentChecked() {
-    this.languageChoice = this.sharedService.languageChoice
-    if(this.languageChoice !== undefined) {
+    this.languageChoice = this.sharedService.languageChoice;
+    if (this.languageChoice !== undefined) {
       // this.languageValue == this.details.language;
-      const changeWording = VOCABULARY.find( (v) => v.isoCode === this.languageChoice )
-      this.age = changeWording.sentences.age
-      this.experience = changeWording.sentences.experience
-      this.language = changeWording.sentences.language
-      this.header1 = changeWording.sentences.header1
-      this.header2 = changeWording.sentences.header2
-      this.header3 = changeWording.sentences.header3
-      this.header4 = changeWording.sentences.header4
-      this.advisor = changeWording.sentences.advisor
-      this.meeting = changeWording.sentences.meeting
-      this.updatePseudo = changeWording.sentences.updatePseudo
-      this.updatePseudoPlaceholder = changeWording.sentences.updatePseudoPlaceholder
-      this.updateAge = changeWording.sentences.updateAge
-      this.updateAgePlaceholder = changeWording.sentences.updateAgePlaceholder
-      this.updateEmail = changeWording.sentences.updateEmail
-      this.updateEmailPlaceholder = changeWording.sentences.updateEmailPlaceholder
-      this.updatePassword = changeWording.sentences.updatePassword
-      this.updatePasswordPlaceholder = changeWording.sentences.updatePasswordPlaceholder
-      this.updatePhone = changeWording.sentences.updatePhone
-      this.updatePhonePlaceholder = changeWording.sentences.updatePhonePlaceholder
-      this.updateLanguage = changeWording.sentences.updateLanguage
-      this.updateLanguagePlaceholder = changeWording.sentences.updateLanguagePlaceholder
-      this.updateProfession = changeWording.sentences.updateProfession
-      this.updateProfessionPlaceholder = changeWording.sentences.updateProfessionPlaceholder
-      this.updateExperience = changeWording.sentences.updateExperience
-      this.updateExperiencePlaceholder = changeWording.sentences.updateExperiencePlaceholder
-      this.updateCountry = changeWording.sentences.updateCountry
-      this.updateCountryPlaceholder = changeWording.sentences.updateCountryPlaceholder
-      this.updateDescription = changeWording.sentences.updateDescription
-      this.updateDescriptionPlaceholder = changeWording.sentences.updateDescriptionPlaceholder
-      this.updateSkills = changeWording.sentences.updateSkills
-      this.updateSkillsPlaceholder = changeWording.sentences.updateSkillsPlaceholder
+      const changeWording = VOCABULARY.find(
+        (v) => v.isoCode === this.languageChoice
+      );
+      this.age = changeWording.sentences.age;
+      this.experience = changeWording.sentences.experience;
+      this.language = changeWording.sentences.language;
+      this.header1 = changeWording.sentences.header1;
+      this.header2 = changeWording.sentences.header2;
+      this.header3 = changeWording.sentences.header3;
+      this.header4 = changeWording.sentences.header4;
+      this.advisor = changeWording.sentences.advisor;
+      this.meeting = changeWording.sentences.meeting;
+      this.updatePseudo = changeWording.sentences.updatePseudo;
+      this.updatePseudoPlaceholder =
+        changeWording.sentences.updatePseudoPlaceholder;
+      this.updateAge = changeWording.sentences.updateAge;
+      this.updateAgePlaceholder = changeWording.sentences.updateAgePlaceholder;
+      this.updateEmail = changeWording.sentences.updateEmail;
+      this.updateEmailPlaceholder =
+        changeWording.sentences.updateEmailPlaceholder;
+      this.updatePassword = changeWording.sentences.updatePassword;
+      this.updatePasswordPlaceholder =
+        changeWording.sentences.updatePasswordPlaceholder;
+      this.updatePhone = changeWording.sentences.updatePhone;
+      this.updatePhonePlaceholder =
+        changeWording.sentences.updatePhonePlaceholder;
+      this.updateLanguage = changeWording.sentences.updateLanguage;
+      this.updateLanguagePlaceholder =
+        changeWording.sentences.updateLanguagePlaceholder;
+      this.updateProfession = changeWording.sentences.updateProfession;
+      this.updateProfessionPlaceholder =
+        changeWording.sentences.updateProfessionPlaceholder;
+      this.updateExperience = changeWording.sentences.updateExperience;
+      this.updateExperiencePlaceholder =
+        changeWording.sentences.updateExperiencePlaceholder;
+      this.updateCountry = changeWording.sentences.updateCountry;
+      this.updateCountryPlaceholder =
+        changeWording.sentences.updateCountryPlaceholder;
+      this.updateDescription = changeWording.sentences.updateDescription;
+      this.updateDescriptionPlaceholder =
+        changeWording.sentences.updateDescriptionPlaceholder;
+      this.updateSkills = changeWording.sentences.updateSkills;
+      this.updateSkillsPlaceholder =
+        changeWording.sentences.updateSkillsPlaceholder;
     }
   }
 
@@ -260,8 +320,5 @@ export class ProfileComponent implements OnInit {
     this.toEdit = false;
   }
 
-  public resetUpdate() {
-    
-  }
-
+  public resetUpdate() {}
 }

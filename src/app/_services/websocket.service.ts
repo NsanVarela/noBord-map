@@ -54,15 +54,17 @@ export class WebsocketService implements OnInit, OnDestroy {
   }
 
   submitWS(msgToSend: string) {
-    console.log('details : ', msgToSend)
     const idSession: string = sessionStorage.getItem(`id`)
-    const nameSession: string = sessionStorage.getItem(`name`)
+    const nameSession: string = sessionStorage.getItem(`username`)
+    const userType: string = sessionStorage.getItem(`usertype`)
     const languageSession: string = sessionStorage.getItem(`language`)
     const passwordSession: string = sessionStorage.getItem(`password`)
+    console.log('msg user details :', idSession, nameSession, userType, languageSession, passwordSession)
     const token = jwt.sign(
       {
         id: idSession,
         name: nameSession,
+        usertype: userType,
         language: languageSession,
         password: passwordSession,
         message: msgToSend
@@ -77,6 +79,7 @@ export class WebsocketService implements OnInit, OnDestroy {
   }
 
   onSendToken(outgoingMsg) {
+    console.log('outgoingMsg', outgoingMsg)
     return outgoingMsg
   }
 

@@ -40,25 +40,35 @@ export class LanguageService {
     return observable$
   }
 
-  public getTranslation(text: string, target: string, provider: string) {
+  public getTranslation(text: string, target: string) {
     const correctedText = text.replace(/(\r\n|\n|\r)/gm, "")
+    console.log('correctedText : ', correctedText)
+    // console.log('target : ', target)
+    // target = 'es'
+    target = localStorage.getItem(`isoCode`);
     const data = {
-      query: `
-      {
-        translate(text:"${correctedText}",target:"${target}", provider:${provider}) {
-          text,
-          provider
-        }
-      }`
+      text: correctedText,
+      target: target
     }
+    // const data = {
+    //   query: `
+    //   {
+    //     translate(text:"${correctedText}",target:"${target}", provider:${provider}) {
+    //       text,
+    //       provider
+    //     }
+    //   }`
+    // }
     let observable$ = Observable.create( (observer) => {
-      axios.post( environment.graphQlApi, data, {
+      // axios.post( environment.graphQlApi, data, {
+        axios.get( `${environment.translateApi}?text=${data.text}&target=${data.target}`, {
         auth: {
           username: environment.login,
           password: environment.password
         }
       } )
       .then( ( response ) => {
+        console.log('response API : ', response)
         observer.next( response.data )
         observer.complete()
       } )

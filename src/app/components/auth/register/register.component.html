@@ -13,6 +13,18 @@
       formControlName="email" />
     </mat-form-field>
     <br>
+    <mat-form-field>
+      <mat-label>{{ languageInputTitle }}</mat-label>
+      <input id="language" matInput placeholder="{{ languagePlaceholder }}" value="{{ language }}"
+      formControlName="language" />
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <mat-label>{{ userTypeInputTitle }}</mat-label>
+      <input id="userType" matInput placeholder="{{ userTypePlaceholder }}" value="{{ userType }}"
+      formControlName="type" [readonly]="true"/>
+    </mat-form-field>
+    <br>
     <mat-form-field hintLabel="{{ passwordInputControl }}">
       <mat-label>{{ passwordInputTitle }}</mat-label>
       <input id="password" matInput #input minlength="8" placeholder="{{ passwordPlaceholder }}" [type]="hide ? 'password': 'text'"

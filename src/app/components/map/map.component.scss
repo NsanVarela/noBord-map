@@ -81,3 +81,62 @@ mat-sidenav-container {
   }
 }
 
+// MEDIA QUERIES
+
+@media only screen and (max-width: 600px) {
+  mat-sidenav-container {
+    mat-sidenav {
+      width: 40%;
+      h2 {
+        font-size: 20px;
+        color: white;
+      }
+      ul {
+        padding-left: 0!important;
+        li {
+          mat-icon {}
+          input {}
+          label {}
+        }
+      }
+      button {}
+    }
+    mat-sidenav-content {
+      padding: 0;
+      .map-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-left: 0px;
+        height: 100%;
+        button {}
+        .map-frame {
+          border-radius: 0;
+          #map {
+            border-radius: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

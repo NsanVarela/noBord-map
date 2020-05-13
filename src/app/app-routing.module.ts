@@ -27,7 +27,7 @@ export const appRouteList: Routes = [
   {
     path: `chat`,
     component: ChatViewComponent,
-    canActivate: [AuthGuardService]
+    // canActivate: [AuthGuardService]
   },
   {
     path: `profile`,

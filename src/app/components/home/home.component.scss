@@ -332,7 +332,6 @@ animation: textureSpinreverse 8s linear infinite;
   }
 }
 
-
 @keyframes textureSpinreverse {
   from {
     transform: translateX(-47.5%);
@@ -369,4 +368,277 @@ animation: textureSpinreverse 8s linear infinite;
       width: 50%;
     }
   }
+}
+
+
+
+
+
+// MEDIA QUERIES
+
+
+@media only screen and (max-width: 600px) {
+  .home-container {
+    display: flex;
+    flex-direction: column;
+    .home-header {
+      width: 100%;
+      .sphere {
+        height: 250px;
+        .container {
+          .globe__placeholder {
+            .globe__container {
+              .globe {
+                .globe__sphere {
+                  .globe__outer_shadow {
+                    .globe__reflections__bottom {}
+                    .globe__worldmap {
+                      .globe__worldmap__back {}
+                      .globe__worldmap__front {}
+                    }
+                    .globe__inner_shadow {}
+                    .globe__reflections__top {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .baseline {
+        height: 100px;
+        h2 {
+          font-size: 30px;
+          .begin-h2 {}
+          .middle-h2 {}
+          .end-h2 {}
+        }
+        p {
+          font-size: 20px;
+        }
+      }
+    }
+    .home-content {
+      display: flex;
+      flex-direction: initial;
+      width: 100%;
+      .translate-icon {
+        position: absolute;
+        top: 60px;
+        left: 150px;
+        width: 100px;
+      }
+      .pe {
+        margin-right: 0px;
+        margin-top: 0px;
+        justify-content: center;
+        .pe-nav {
+          margin-bottom: 0px;
+          #pe-btn {
+            width: 100px;
+            height: 100px;
+          }
+          .pe-advantages {
+            top: 90px;
+            left: 10px;
+            width: 350px;
+            mat-card {
+              // width: 300px;
+              h3 {}
+              mat-card-content {
+                ul {
+                  padding-left: 0;
+                  li {
+                    mat-icon {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .de {
+        margin-top: 0px;
+        margin-left: 0px;
+        justify-content: center;
+        .de-nav {
+          #de-btn {
+            width: 100px;
+            height: 100px;
+          }
+          .de-advantages {
+            mat-card {
+              h3 {}
+              mat-card-content {
+                ul {
+                  li {
+                    mat-icon {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .home-container {
+    .home-header {
+      .sphere {
+        .container {
+          .globe__placeholder {
+            .globe__container {
+              .globe {
+                .globe__sphere {
+                  .globe__outer_shadow {
+                    .globe__reflections__bottom {}
+                    .globe__worldmap {
+                      .globe__worldmap__back {}
+                      .globe__worldmap__front {}
+                    }
+                    .globe__inner_shadow {}
+                    .globe__reflections__top {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .baseline {
+        h2 {
+          .begin-h2 {}
+          .middle-h2 {}
+          .end-h2 {}
+        }
+        p {}
+      }
+    }
+    .home-content {
+      .translate-icon {
+        position: absolute;
+        top: 200px;
+        left: 150px;
+        width: 150px;
+      }
+      .pe {
+        .pe-nav {
+          .pe-btn {}
+          .pe-advantages {
+            mat-card {
+              h3 {}
+              mat-card-content {
+                ul {
+                  li {
+                    mat-icon {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .de {
+        .de-nav {
+          .de-btn {}
+          .de-advantages {
+            mat-card {
+              h3 {}
+              mat-card-content {
+                ul {
+                  li {
+                    mat-icon {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .home-container {
+    .home-header {
+      .sphere {
+        .container {
+          .globe__placeholder {
+            .globe__container {
+              .globe {
+                .globe__sphere {
+                  .globe__outer_shadow {
+                    .globe__reflections__bottom {}
+                    .globe__worldmap {
+                      .globe__worldmap__back {}
+                      .globe__worldmap__front {}
+                    }
+                    .globe__inner_shadow {}
+                    .globe__reflections__top {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .baseline {
+        h2 {
+          .begin-h2 {}
+          .middle-h2 {}
+          .end-h2 {}
+        }
+        p {}
+      }
+    }
+    .home-content {
+      img {}
+      .pe {
+        .pe-nav {
+          .pe-btn {}
+          .pe-advantages {
+            mat-card {
+              h3 {}
+              mat-card-content {
+                ul {
+                  li {
+                    mat-icon {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .de {
+        .de-nav {
+          .de-btn {}
+          .de-advantages {
+            mat-card {
+              h3 {}
+              mat-card-content {
+                ul {
+                  li {
+                    mat-icon {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }

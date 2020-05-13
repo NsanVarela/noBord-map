@@ -31,6 +31,8 @@ export class ChatViewComponent implements OnInit {
   public users = []
   public navBarItems: NavbarItem[] = []
 
+  public toto: string
+
   constructor(
     private router: Router,
     private languageService: LanguageService,
@@ -44,6 +46,8 @@ export class ChatViewComponent implements OnInit {
   ngOnInit() {
     const id: string = sessionStorage.getItem("id");
     const language: string = sessionStorage.getItem("language");
+    const username: string = sessionStorage.getItem(`username`)
+    console.log('username : ', username)
     this.websocketService.ngOnInit().subscribe({
       next: data => {
         if (data && data.outgoingMsg.message != undefined) {
@@ -51,8 +55,10 @@ export class ChatViewComponent implements OnInit {
           this.message = data.outgoingMsg.message;
           this.userLanguage = data.outgoingMsg.language;
           this.target = language;
-          this.provider = `GOOGLE`;
-          this.getTranslation(this.message, this.target, this.provider);
+          // this.provider = `GOOGLE`;
+          console.log('data : ', data)
+          console.log('this.userLanguage : ', this.userLanguage)
+          this.getTranslation(this.message, this.target);
         }
       }
     });
@@ -110,11 +116,15 @@ export class ChatViewComponent implements OnInit {
     }
   }
 
-  public getTranslation(text, target, provider) {
-    this.languageService.getTranslation(text, target, provider).subscribe({
+  public getTranslation(text, target) {
+    console.log('text', text)
+    this.toto = text
+    this.languageService.getTranslation(text, target).subscribe({
       next: data => {
-        this.receivedMsg = data.data.translate[0].text;
-        this.provider = data.data.translate[0].provider;
+        console.log('DATA : ', data)
+        // this.receivedMsg = data.data.translate[0].text;
+        this.receivedMsg = data.text;
+        // this.provider = data.data.translate[0].provider;
         this.messages.push(
           new NewMessage(
             this.receivedMsg,
@@ -126,6 +136,25 @@ export class ChatViewComponent implements OnInit {
       }
     });
   }
+
+  // public getTranslation(text, target, provider) {
+  //   console.log('text', text)
+  //   this.toto = text
+  //   this.languageService.getTranslation(text, target, provider).subscribe({
+  //     next: data => {
+  //       this.receivedMsg = data.data.translate[0].text;
+  //       this.provider = data.data.translate[0].provider;
+  //       this.messages.push(
+  //         new NewMessage(
+  //           this.toto,
+  //           this.provider,
+  //           this.sender,
+  //           this.userLanguage
+  //         )
+  //       );
+  //     }
+  //   });
+  // }
 
   public onSignOut() {
     sessionStorage.removeItem(`id`);

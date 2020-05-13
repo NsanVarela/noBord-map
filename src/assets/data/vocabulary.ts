@@ -10,13 +10,13 @@ import {
 } from './sentences';
 
 export const VOCABULARY_DEFAULT: Vocabulary = {
-  isoCode: `deault`,
+  isoCode: `default`,
   sentences: FRENCH
 }
 
 export const VOCABULARY: Vocabulary[] = [
   {
-    isoCode: `ar-SA`,
+    isoCode: `ar`,
     countryNameNative: `العربية السعودية`,
     countryNameFr: `Arabie Saoudite`,
     languageNameNative: `عربي`,
@@ -25,7 +25,7 @@ export const VOCABULARY: Vocabulary[] = [
     sentences: ARABIC
   },
   {
-    isoCode: `en-AU`,
+    isoCode: `en`,
     countryNameNative: `Australia`,
     countryNameFr: `Australie`,
     languageNameNative: `English`,
@@ -34,7 +34,7 @@ export const VOCABULARY: Vocabulary[] = [
     sentences: ENGLISH
   },
   {
-    isoCode: `ar-BH`,
+    isoCode: `ar`,
     countryNameNative: `البحرين`,
     countryNameFr: `Bahreïn`,
     languageNameNative: `عربي`,
@@ -43,7 +43,7 @@ export const VOCABULARY: Vocabulary[] = [
     sentences: ARABIC
   },
   {
-    isoCode: `pt-BR`,
+    isoCode: `pt`,
     countryNameNative: `Brasil`,
     countryNameFr: `Brésil`,
     languageNameNative: `Portugues`,
@@ -52,7 +52,7 @@ export const VOCABULARY: Vocabulary[] = [
     sentences: PORTUGUESE
   },
   {
-    isoCode: `en-CA`,
+    isoCode: `en`,
     countryNameNative: `Canada`,
     countryNameFr: `Canada`,
     languageNameNative: `English`,
@@ -61,7 +61,7 @@ export const VOCABULARY: Vocabulary[] = [
     sentences: ENGLISH
   },
   {
-    isoCode: `zh-ZH`,
+    isoCode: `zh`,
     countryNameNative: `中国`,
     countryNameFr: `Chine`,
     languageNameNative: `普通话`,
@@ -70,7 +70,7 @@ export const VOCABULARY: Vocabulary[] = [
     sentences: MANDARIN
   },
   {
-    isoCode: `ar-EG`,
+    isoCode: `ar`,
     countryNameNative: `مصر بلد`,
     countryNameFr: `Egypte`,
     languageNameNative: `عربي`,
@@ -79,7 +79,7 @@ export const VOCABULARY: Vocabulary[] = [
     sentences: ARABIC
   },
   {
-    isoCode: `ar-AE`,
+    isoCode: `ar`,
     countryNameNative: `الإمارات العربية المتحدة`,
     countryNameFr: `Emirats Arabes Unis`,
     languageNameNative: `عربي`,
@@ -88,7 +88,7 @@ export const VOCABULARY: Vocabulary[] = [
     sentences: ARABIC
   },
   {
-    isoCode: `es-ES`,
+    isoCode: `es`,
     countryNameNative: `España`,
     countryNameFr: `Espagne`,
     languageNameNative: `Español`,
@@ -97,7 +97,7 @@ export const VOCABULARY: Vocabulary[] = [
     sentences: SPANISH
   },
   {
-    isoCode: `fr-FR`,
+    isoCode: `fr`,
     countryNameNative: `France`,
     countryNameFr: `France`,
     languageNameNative: `Français`,
@@ -106,7 +106,7 @@ export const VOCABULARY: Vocabulary[] = [
     sentences: FRENCH
   },
   {
-    isoCode: `en-GH`,
+    isoCode: `en`,
     countryNameNative: `Ghana`,
     countryNameFr: `Ghana`,
     languageNameNative: `English`,
@@ -115,7 +115,7 @@ export const VOCABULARY: Vocabulary[] = [
     sentences: ENGLISH
   },
   {
-    isoCode: `zh-HK`,
+    isoCode: `zh`,
     countryNameNative: `香港`,
     countryNameFr: `Hong-Kong`,
     languageNameNative: `普通话`,
@@ -124,7 +124,7 @@ export const VOCABULARY: Vocabulary[] = [
     sentences: MANDARIN
   },
   {
-    isoCode: `en-IN`,
+    isoCode: `en`,
     countryNameNative: `India`,
     countryNameFr: `Inde`,
     languageNameNative: `English`,
@@ -133,7 +133,7 @@ export const VOCABULARY: Vocabulary[] = [
     sentences: ENGLISH
   },
   {
-    isoCode: `ar-IQ`,
+    isoCode: `ar`,
     countryNameNative: `العراق`,
     countryNameFr: `Irak`,
     languageNameNative: `عربي`,
@@ -142,7 +142,7 @@ export const VOCABULARY: Vocabulary[] = [
     sentences: ARABIC
   },
   {
-    isoCode: `en-IE`,
+    isoCode: `en`,
     countryNameNative: `Ireland`,
     countryNameFr: `Irlande`,
     languageNameNative: `English`,
@@ -151,7 +151,7 @@ export const VOCABULARY: Vocabulary[] = [
     sentences: ENGLISH
   },
   {
-    isoCode: `ar-JO`,
+    isoCode: `ar`,
     countryNameNative: `الأردن`,
     countryNameFr: `Jordanie`,
     languageNameNative: `عربي`,
@@ -160,7 +160,7 @@ export const VOCABULARY: Vocabulary[] = [
     sentences: ARABIC
   },
   {
-    isoCode: `en-KE`,
+    isoCode: `en`,
     countryNameNative: `Kenya`,
     countryNameFr: `Kenya`,
     languageNameNative: `English`,
@@ -169,7 +169,7 @@ export const VOCABULARY: Vocabulary[] = [
     sentences: ENGLISH
   },
   {
-    isoCode: `ar-KW`,
+    isoCode: `ar`,
     countryNameNative: `الكويت`,
     countryNameFr: `Koweït`,
     languageNameNative: `عربي`,
@@ -178,7 +178,7 @@ export const VOCABULARY: Vocabulary[] = [
     sentences: ARABIC
   },
   {
-    isoCode: `ar-LB`,
+    isoCode: `ar`,
     countryNameNative: `لبنان`,
     countryNameFr: `Liban`,
     languageNameNative: `عربي`,
@@ -187,7 +187,7 @@ export const VOCABULARY: Vocabulary[] = [
     sentences: ARABIC
   },
   {
-    isoCode: `ar-MA`,
+    isoCode: `ar`,
     countryNameNative: `المغرب`,
     countryNameFr: `Maroc`,
     languageNameNative: `عربي`,
@@ -196,7 +196,7 @@ export const VOCABULARY: Vocabulary[] = [
     sentences: ARABIC
   },
   {
-    isoCode: `en-NG`,
+    isoCode: `en`,
     countryNameNative: `Nigeria`,
     countryNameFr: `Nigeria`,
     languageNameNative: `English`,
@@ -205,7 +205,7 @@ export const VOCABULARY: Vocabulary[] = [
     sentences: ENGLISH
   },
   {
-    isoCode: `en-NZ`,
+    isoCode: `en`,
     countryNameNative: `New Zealand`,
     countryNameFr: `Nouvelle-Zélande`,
     languageNameNative: `English`,
@@ -214,7 +214,7 @@ export const VOCABULARY: Vocabulary[] = [
     sentences: ENGLISH
   },
   {
-    isoCode: `ar-OM`,
+    isoCode: `ar`,
     countryNameNative: `عمان`,
     countryNameFr: `Oman`,
     languageNameNative: `عربي`,
@@ -223,7 +223,7 @@ export const VOCABULARY: Vocabulary[] = [
     sentences: ARABIC
   },
   {
-    isoCode: `ar-PS`,
+    isoCode: `ar`,
     countryNameNative: `فلسطين`,
     countryNameFr: `Palestine`,
     languageNameNative: `عربي`,
@@ -232,7 +232,7 @@ export const VOCABULARY: Vocabulary[] = [
     sentences: ARABIC
   },
   {
-    isoCode: `en-PH`,
+    isoCode: `en`,
     countryNameNative: `Philippines`,
     countryNameFr: `Philippines`,
     languageNameNative: `English`,
@@ -241,7 +241,7 @@ export const VOCABULARY: Vocabulary[] = [
     sentences: ENGLISH
   },
   {
-    isoCode: `pt-PT`,
+    isoCode: `pt`,
     countryNameNative: `Portugal`,
     countryNameFr: `Portugal`,
     languageNameNative: `Portugues`,
@@ -250,7 +250,7 @@ export const VOCABULARY: Vocabulary[] = [
     sentences: PORTUGUESE
   },
   {
-    isoCode: `ar-QA`,
+    isoCode: `ar`,
     countryNameNative: `قطر`,
     countryNameFr: `Qatar`,
     languageNameNative: `عربي`,
@@ -259,7 +259,7 @@ export const VOCABULARY: Vocabulary[] = [
     sentences: ARABIC
   },
   {
-    isoCode: `ru-RU`,
+    isoCode: `ru`,
     countryNameNative: `Россия`,
     countryNameFr: `Russie`,
     languageNameNative: `русский`,
@@ -268,7 +268,7 @@ export const VOCABULARY: Vocabulary[] = [
     sentences: RUSSIAN
   },
   {
-    isoCode: `en-SG`,
+    isoCode: `en`,
     countryNameNative: `Singapore`,
     countryNameFr: `Singapour`,
     languageNameNative: `English`,
@@ -277,7 +277,7 @@ export const VOCABULARY: Vocabulary[] = [
     sentences: ENGLISH
   },
   {
-    isoCode: `en-ZA`,
+    isoCode: `en`,
     countryNameNative: `South Africa`,
     countryNameFr: `Afrique du Sud`,
     languageNameNative: `English`,
@@ -286,7 +286,7 @@ export const VOCABULARY: Vocabulary[] = [
     sentences: ENGLISH
   },
   {
-    isoCode: `ar-TN`,
+    isoCode: `ar`,
     countryNameNative: `تونس`,
     countryNameFr: `Tunisie`,
     languageNameNative: `عربي`,
@@ -295,7 +295,7 @@ export const VOCABULARY: Vocabulary[] = [
     sentences: ARABIC
   },
   {
-    isoCode: `en-GB`,
+    isoCode: `en`,
     countryNameNative: `United Kingdom`,
     countryNameFr: `Royaume-Uni`,
     languageNameNative: `English`,
@@ -304,7 +304,7 @@ export const VOCABULARY: Vocabulary[] = [
     sentences: ENGLISH
   },
   {
-    isoCode: `en-US`,
+    isoCode: `en`,
     countryNameNative: `United-States of America`,
     countryNameFr: `États-Unis d'Amérique`,
     languageNameNative: `English`,

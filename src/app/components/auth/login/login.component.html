@@ -1,10 +1,22 @@
-<div class="form-container"> 
+<div class="form-container">
   <h1>{{ loginTitle | uppercase}}</h1>
   <form [formGroup]="loginForm" *ngIf="!isLoggedIn" (ngSubmit)="loginForm.valid && login()" #f="ngForm" novalidate>
     <mat-form-field>
       <mat-label>{{ emailInputTitle }}</mat-label>
       <input id="email" matInput placeholder="{{ emailPlaceholder }}"
       formControlName="email" />
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <mat-label>{{ languageInputTitle }}</mat-label>
+      <input id="language" matInput placeholder="{{ languagePlaceholder }}" value="{{ language }}"
+      formControlName="language" />
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <mat-label>{{ userTypeInputTitle }}</mat-label>
+      <input id="userType" matInput placeholder="{{ userTypePlaceholder }}" value="{{ userType }}"
+      formControlName="userType" [readonly]="true"/>
     </mat-form-field>
     <br>
     <mat-form-field hintLabel="{{ passwordInputControl }}">

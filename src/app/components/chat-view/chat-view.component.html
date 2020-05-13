@@ -8,12 +8,16 @@
             {{ message.username | uppercase }}
           </span>
           <span id="language" style="font-size: 10px; color: rgb(148, 148, 148);">
-            (speaks {{ message.language }}) :
+            (speaks
+            {{ message.language }}
+            ) :
           </span>
           <span class="message-details">{{ date | date: 'short' }}</span>
           <div class="message-text">
             {{ message.text }}
-            <span id="provider">... translate by {{ message.provider }}</span>
+            <span id="provider">... translate by
+              {{ message.provider }}
+            </span>
             <div class="row message-option">
               <span>{{ translationButton }}</span>
               <div class="change-target">

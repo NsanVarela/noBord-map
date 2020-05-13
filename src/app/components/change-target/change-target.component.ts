@@ -37,12 +37,12 @@ export class ChangeTargetComponent implements OnInit {
       }
       console.log(`Language not supported`);
     });
-    this.languageService
-      .getTranslation(this.title, this.newLanguage, "ALL")
-      .subscribe({
-        next: data => {
-          this.changeTrad = data.data.translate[0].text;
-        }
-      });
+    // this.languageService
+    //   .getTranslation(this.title, this.newLanguage, "ALL")
+    //   .subscribe({
+    //     next: data => {
+    //       this.changeTrad = data.data.translate[0].text;
+    //     }
+    //   });
   }
 }

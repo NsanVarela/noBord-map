@@ -14,19 +14,19 @@ import {
 } from "geojson";
 
 export const geoData: FeatureCollection = {
-  type: "FeatureCollection",
+  type: `FeatureCollection`,
   features: [
     {
-      type: "Feature",
-      id: "AFG",
+      type: `Feature`,
+      id: `AFG`,
       properties: {
-        name: "Afghanistan",
+        name: `Afghanistan`,
         language: [
-          {code: "ps", name: "pachto", englishName: "pachto", respectiveName: "پښتو"}
+          {code: `ps`, name: `pachto`, englishName: `pachto`, respectiveName: `پښتو`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [61.210817, 35.650072],
@@ -103,16 +103,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "AGO",
+      type: `Feature`,
+      id: `AGO`,
       properties: {
-        name: "Angola",
+        name: `Angola`,
         language: [
-          { code: "pt", name: "portuguais", englishName: "", respectiveName: "" }
+          {code: `pt`, name: `portugais`, englishName: `portuguese`, respectiveName: `português` }
         ]
       },
       geometry: {
-        type: "MultiPolygon",
+        type: `MultiPolygon`,
         coordinates: [
           [
             [
@@ -201,16 +201,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "ALB",
+      type: `Feature`,
+      id: `ALB`,
       properties: {
-        name: "Albania",
+        name: `Albania`,
         language: [
-          {code: "sq", name: "albanais", englishName: "", respectiveName: "ʃc͡çip"}
+          { code: `sq`, name: `albanais`, englishName: `albanian`, respectiveName: `ʃc͡çip` }
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [20.590247, 41.855404],
@@ -240,19 +240,19 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "ARE",
+      type: `Feature`,
+      id: `ARE`,
       properties: {
-        name: "United Arab Emirates",
+        name: `United Arab Emirates`,
         language: [
-          { code: "ar", name: "arabe", englishName: "", respectiveName: "" },
-          { code: "fa", name: "persan", englishName: "", respectiveName: "" },
-          { code: "en", name: "anglais", englishName: "", respectiveName: "english" },
-          { code: "hi", name: "hindi", englishName: "", respectiveName: "" }
+          { code: `ar`, name: `arabe`, englishName: `arabic`, respectiveName: `عربى` },
+          { code: `fa`, name: `persan`, englishName: `persian`, respectiveName: `فارسی` },
+          { code: `en`, name: `anglais`, englishName: `english`, respectiveName: `english` },
+          { code: `hi`, name: `hindi`, englishName: `hindi`, respectiveName: `हिन्दी` }
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [51.579519, 24.245497],
@@ -282,16 +282,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "ARG",
+      type: `Feature`,
+      id: `ARG`,
       properties: {
-        name: "Argentina",
+        name: `Argentina`,
         language: [
-          { code: "es", name: "espagnol", englishName: "", respectiveName: "" }
+          { code: `es`, name: `espagnol`, englishName: `spanish`, respectiveName: `español` }
         ]
       },
       geometry: {
-        type: "MultiPolygon",
+        type: `MultiPolygon`,
         coordinates: [
           [
             [
@@ -426,16 +426,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "ARM",
+      type: `Feature`,
+      id: `ARM`,
       properties: {
-        name: "Armenia",
+        name: `Armenia`,
         language: [
-          {code: "hy", frenchName: "armenien", englishName: "", respectiveName: ""}
+          {code: `hy`, frenchName: `armenien`, englishName: `armenian`, respectiveName: `Հայերեն`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [43.582746, 41.092143],
@@ -463,20 +463,20 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "ATA",
+      type: `Feature`,
+      id: `ATA`,
       properties: {
-        name: "Antarctica",
+        name: `Antarctica`,
         language: [
-          {code: "en", frenchName: "anglais", englishName: "", respectiveName: ""},
-          {code: "fr", frenchName: "français", englishName: "", respectiveName: "français"},
-          {code: "ru", frenchName: "russe", englishName: "", respectiveName: ""},
-          {code: "es", frenchName: "espagnol", englishName: "", respectiveName: ""},
-          {code: "pt", frenchName: "portuguais", englishName: "", respectiveName: ""}
+          {code: `en`, frenchName: `anglais`, englishName: `english`, respectiveName: `english`},
+          {code: `fr`, frenchName: `français`, englishName: `french`, respectiveName: `français`},
+          {code: `ru`, frenchName: `russe`, englishName: `russian`, respectiveName: `русский`},
+          {code: `es`, frenchName: `espagnol`, englishName: `spanish`, respectiveName: `español`},
+          {code: `pt`, frenchName: `portugais`, englishName: `portuguese`, respectiveName: `português`}
         ]
       },
       geometry: {
-        type: "MultiPolygon",
+        type: `MultiPolygon`,
         coordinates: [
           [
             [
@@ -1172,16 +1172,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "ATF",
+      type: `Feature`,
+      id: `ATF`,
       properties: {
-        name: "French Southern and Antarctic Lands",
+        name: `French Southern and Antarctic Lands`,
         language: [
-          {code: "fr", frenchName: "français", englishName: "french", respectiveName: "français"}
+          {code: `fr`, frenchName: `français`, englishName: `french`, respectiveName: `français`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [68.935, -48.625],
@@ -1198,16 +1198,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "AUS",
+      type: `Feature`,
+      id: `AUS`,
       properties: {
-        name: "Australia",
+        name: `Australia`,
         language: [
-          {code: "en", frenchName: "anglais", englishName: "english", respectiveName: "english"}
+          {code: `en`, frenchName: `anglais`, englishName: `english`, respectiveName: `english`}
         ]
       },
       geometry: {
-        type: "MultiPolygon",
+        type: `MultiPolygon`,
         coordinates: [
           [
             [
@@ -1462,16 +1462,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "AUT",
+      type: `Feature`,
+      id: `AUT`,
       properties: {
-        name: "Austria",
+        name: `Austria`,
         language: [
-          {code: "de", frenchName: "allemand", englishName: "", respectiveName: ""}
+          {code: `de`, frenchName: `allemand`, englishName: `german`, respectiveName: `deutch`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [16.979667, 48.123497],
@@ -1516,16 +1516,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "AZE",
+      type: `Feature`,
+      id: `AZE`,
       properties: {
-        name: "Azerbaijan",
+        name: `Azerbaijan`,
         language: [
-          {code: "az", frenchName: "azéri", englishName: "", respectiveName: "azəri dili"}
+          {code: `az`, frenchName: `azéri`, englishName: `azerbaijani`, respectiveName: `azərbaycan`}
         ]
       },
       geometry: {
-        type: "MultiPolygon",
+        type: `MultiPolygon`,
         coordinates: [
           [
             [
@@ -1583,18 +1583,18 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "BDI",
+      type: `Feature`,
+      id: `BDI`,
       properties: {
-        name: "Burundi",
+        name: `Burundi`,
         language: [
-          {code: "fr", frenchName: "français", englishName: "french", respectiveName: "français"},
-          {code: "en", frenchName: "anglais", englishName: "english", respectiveName: "english"},
-          {code: "sw", frenchName: "swahili", englishName: "swahili", respectiveName: ""}
+          {code: `fr`, frenchName: `français`, englishName: `french`, respectiveName: `français`},
+          {code: `en`, frenchName: `anglais`, englishName: `english`, respectiveName: `english`},
+          {code: `sw`, frenchName: `swahili`, englishName: `swahili`, respectiveName: `kiswahili`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [29.339998, -4.499983],
@@ -1615,18 +1615,18 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "BEL",
+      type: `Feature`,
+      id: `BEL`,
       properties: {
-        name: "Belgium",
+        name: `Belgium`,
         language: [
-          {code: "nl", frenchName: "néerlandais", englishName: "", respectiveName: ""},
-          {code: "fr", frenchName: "français", englishName: "french", respectiveName: "français"},
-          {code: "de", frenchName: "allemand", englishName: "deutch", respectiveName: ""}
+          {code: `nl`, frenchName: `néerlandais`, englishName: `dutch`, respectiveName: `nederlands`},
+          {code: `fr`, frenchName: `français`, englishName: `french`, respectiveName: `français`},
+          {code: `de`, frenchName: `allemand`, englishName: `german`, respectiveName: `deutch`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [3.314971, 51.345781],
@@ -1649,16 +1649,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "BEN",
+      type: `Feature`,
+      id: `BEN`,
       properties: {
-        name: "Benin",
+        name: `Benin`,
         language: [
-          {code: "fr", frenchName: "français", englishName: "french", respectiveName: "français"}
+          {code: `fr`, frenchName: `français`, englishName: `french`, respectiveName: `français`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [2.691702, 6.258817],
@@ -1691,16 +1691,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "BFA",
+      type: `Feature`,
+      id: `BFA`,
       properties: {
-        name: "Burkina Faso",
+        name: `Burkina Faso`,
         language: [
-          {code: "fr", frenchName: "français", englishName: "french", respectiveName: "français"}
+          {code: `fr`, frenchName: `français`, englishName: `french`, respectiveName: `français`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [-2.827496, 9.642461],
@@ -1747,16 +1747,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "BGD",
+      type: `Feature`,
+      id: `BGD`,
       properties: {
-        name: "Bangladesh",
+        name: `Bangladesh`,
         language: [
-          {code: "bn", frenchName: "bengali", englishName: "", respectiveName: ""}
+          {code: `bn`, frenchName: `bengali`, englishName: `bengali`, respectiveName: `বাঙালি`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [92.672721, 22.041239],
@@ -1800,17 +1800,17 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "BGR",
+      type: `Feature`,
+      id: `BGR`,
       properties: {
-        name: "Bulgaria",
+        name: `Bulgaria`,
         language: [
-          {code: "bg", frenchName: "bulgare", englishName: "", respectiveName: ""},
-          {code: "tr", frenchName: "turc", englishName: "", respectiveName: "" }
+          {code: `bg`, frenchName: `bulgare`, englishName: `bulgarian`, respectiveName: `български`},
+          {code: `tr`, frenchName: `turc`, englishName: `turkish`, respectiveName: `türk` }
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [22.65715, 44.234923],
@@ -1846,16 +1846,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "BHS",
+      type: `Feature`,
+      id: `BHS`,
       properties: {
-        name: "The Bahamas",
+        name: `The Bahamas`,
         language: [
-          {code: "en", frenchName: "anglais", englishName: "english", respectiveName: "english"}
+          {code: `en`, frenchName: `anglais`, englishName: `english`, respectiveName: `english`}
         ]
       },
       geometry: {
-        type: "MultiPolygon",
+        type: `MultiPolygon`,
         coordinates: [
           [
             [
@@ -1890,22 +1890,22 @@ export const geoData: FeatureCollection = {
               [-77, 26.59]
             ]
           ]
-        ]
+        ] 
       }
     },
     {
-      type: "Feature",
-      id: "BIH",
+      type: `Feature`,
+      id: `BIH`,
       properties: {
-        name: "Bosnia and Herzegovina",
+        name: `Bosnia and Herzegovina`,
         language: [
-          {code: "bs", frenchName: "bosnien", englishName: "",respectiveName: ""},
-          {code: "hr", frenchName: "croate", englishName: "", respectiveName: ""},
-          {code: "sr", frenchName: "serbe", englishName: "", respectiveName: "" }
+          {code: `bs`, frenchName: `bosniaque`, englishName: `bosnian`, respectiveName: `bosanski`},
+          {code: `hr`, frenchName: `croate`, englishName: `croatian`, respectiveName: `hrvatski`},
+          {code: `sr`, frenchName: `serbe`, englishName: `serbian`, respectiveName: `cрпски` }
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [19.005486, 44.860234],
@@ -1935,17 +1935,17 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "BLR",
+      type: `Feature`,
+      id: `BLR`,
       properties: {
-        name: "Belarus",
+        name: `Belarus`,
         language: [
-          {code: "be", frenchName: "biélorusse", englishName: "", respectiveName: ""},
-          {code: "ru", frenchName: "russe", englishName: "", respectiveName: "" }
+          {code: `be`, frenchName: `biélorusse`, englishName: `belarusian`, respectiveName: `Беларус`},
+          {code: `ru`, frenchName: `russe`, englishName: `russian`, respectiveName: `русский` }
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [23.484128, 53.912498],
@@ -1997,17 +1997,17 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "BLZ",
+      type: `Feature`,
+      id: `BLZ`,
       properties: {
-        name: "Belize",
+        name: `Belize`,
         language: [
-          {code: "es", frenchName: "espagnol", englishName: "spanish", respectiveName: ""},
-          {code: "en", frenchName: "anglais", englishName: "english", respectiveName: ""}
+          {code: `es`, frenchName: `espagnol`, englishName: `spanish`, respectiveName: `español`},
+          {code: `en`, frenchName: `anglais`, englishName: `english`, respectiveName: `english`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [-89.14308, 17.808319],
@@ -2035,16 +2035,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "BMU",
+      type: `Feature`,
+      id: `BMU`,
       properties: {
-        name: "Bermuda",
+        name: `Bermuda`,
         language: [
-          {code: "en", frenchName: "anglais", englishName: "english", respectiveName: "english"}
+          {code: `en`, frenchName: `anglais`, englishName: `english`, respectiveName: `english`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [-64.7799734332998, 32.3072000581802],
@@ -2138,16 +2138,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "BOL",
+      type: `Feature`,
+      id: `BOL`,
       properties: {
-        name: "Bolivia",
+        name: `Bolivia`,
         language: [
-          {code: "es", frenchName: "espagnol", englishName: "spanish", respectiveName: ""}
+          {code: `es`, frenchName: `espagnol`, englishName: `spanish`, respectiveName: `español`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [-62.846468, -22.034985],
@@ -2215,16 +2215,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "BRA",
+      type: `Feature`,
+      id: `BRA`,
       properties: {
-        name: "Brazil",
+        name: `Brazil`,
         language: [
-          {code: "pt", frenchName: "portuguais brésilien", englishName: "", respectiveName: ""}
+          {code: `pt-BR`, frenchName: `portugais brésilien`, englishName: `portuguese`, respectiveName: `português`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [-57.625133, -30.216295],
@@ -2435,19 +2435,19 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "BRN",
+      type: `Feature`,
+      id: `BRN`,
       properties: {
-        name: "Brunei",
+        name: `Brunei`,
         language: [
-          {code: "ms", frenchName: "malais", englishName: "", respectiveName: ""},
-          {code: "en", frenchName: "anglais", englishName: "english", respectiveName: ""},
-          {code: "zh", frenchName: "mandarin", englishName: "", respectiveName: ""},
-          {code: "ar", frenchName: "arabe", englishName: "", respectiveName: "" }
+          {code: `ms`, frenchName: `malais`, englishName: `malay`, respectiveName: `melayu`},
+          {code: `en`, frenchName: `anglais`, englishName: `english`, respectiveName: `english`},
+          {code: `zh`, frenchName: `chinois`, englishName: `chinese`, respectiveName: `中国人`},
+          {code: `ar`, frenchName: `arabe`, englishName: `arabic`, respectiveName: `عربى` }
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [114.204017, 4.525874],
@@ -2463,17 +2463,17 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "BTN",
+      type: `Feature`,
+      id: `BTN`,
       properties: {
-        name: "Bhutan",
+        name: `Bhutan`,
         language: [
-          {code: "en", frenchName: "anglais", englishName: "english", respectiveName: ""},
-          {code: "ne", frenchName: "népalais", englishName: "", respectiveName: ""}
+          {code: `ne`, frenchName: `népalais`, englishName: `nepalese`, respectiveName: `नेपाली`},
+          {code: `en`, frenchName: `anglais`, englishName: `english`, respectiveName: `english`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [91.696657, 27.771742],
@@ -2494,16 +2494,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "BWA",
+      type: `Feature`,
+      id: `BWA`,
       properties: {
-        name: "Botswana",
+        name: `Botswana`,
         language: [
-          {code: "en", frenchName: "anglais", englishName: "english", respectiveName: ""}
+          {code: `en`, frenchName: `anglais`, englishName: `english`, respectiveName: `english`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [25.649163, -18.536026],
@@ -2551,16 +2551,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "CAF",
+      type: `Feature`,
+      id: `CAF`,
       properties: {
-        name: "Central African Republic",
+        name: `Central African Republic`,
         language: [
-          {code: "fr", frenchName: "français", englishName: "french", respectiveName: ""}
+          {code: `fr`, frenchName: `français`, englishName: `french`, respectiveName: `français`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [15.27946, 7.421925],
@@ -2630,17 +2630,17 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "CAN",
+      type: `Feature`,
+      id: `CAN`,
       properties: {
-        name: "Canada",
+        name: `Canada`,
         language: [
-          {code: "en", frenchName: "anglais", englishName: "english", respectiveName: "english"},
-          {code: "fr", frenchName: "français", englishName: "french", respectiveName: "français"}
+          {code: `en`, frenchName: `anglais`, englishName: `english`, respectiveName: `english`},
+          {code: `fr`, frenchName: `français`, englishName: `french`, respectiveName: `français`}
         ]
       },
       geometry: {
-        type: "MultiPolygon",
+        type: `MultiPolygon`,
         coordinates: [
           [
             [
@@ -3561,18 +3561,18 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "CHE",
+      type: `Feature`,
+      id: `CHE`,
       properties: {
-        name: "Switzerland",
+        name: `Switzerland`,
         language: [
-          {code: "de", frenchName: "allemand", englishName: "deutch", respectiveName: "english"},
-          {code: "fr", frenchName: "français", englishName: "french", respectiveName: "français"},
-          {code: "it", frenchName: "italien", englishName: "italian", respectiveName: ""}
+          {code: `de`, frenchName: `allemand`, englishName: `german`, respectiveName: `deutch`},
+          {code: `fr`, frenchName: `français`, englishName: `french`, respectiveName: `français`},
+          {code: `it`, frenchName: `italien`, englishName: `italian`, respectiveName: `italiano`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [9.594226, 47.525058],
@@ -3604,16 +3604,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "CHL",
+      type: `Feature`,
+      id: `CHL`,
       properties: {
-        name: "Chile",
+        name: `Chile`,
         language: [
-          {code: "es", frenchName: "espagnol", englishName: "spanish", respectiveName: ""}
+          {code: `es`, frenchName: `espagnol`, englishName: `spanish`, respectiveName: `español`}
         ]
       },
       geometry: {
-        type: "MultiPolygon",
+        type: `MultiPolygon`,
         coordinates: [
           [
             [
@@ -3741,17 +3741,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "CHN",
+      type: `Feature`,
+      id: `CHN`,
       properties: {
-        name: "China",
+        name: `China`,
         language: [
-          {code: "zh-CN", frenchName: "chinois simplifié", englishName: "", respectiveName: ""},
-          {code: "zh-TW", frenchName: "chinois traditionnel", englishName: "", respectiveName: ""}
+          {code: `zh`, frenchName: `chinois`, englishName: `chinese`, respectiveName: `中国人`}
         ]
       },
       geometry: {
-        type: "MultiPolygon",
+        type: `MultiPolygon`,
         coordinates: [
           [
             [
@@ -4005,16 +4004,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "CIV",
+      type: `Feature`,
+      id: `CIV`,
       properties: {
-        name: "Ivory Coast",
+        name: `Ivory Coast`,
         language: [
-          {code: "fr", frenchName: "français", englishName: "french", respectiveName: "français"}
+          {code: `fr`, frenchName: `français`, englishName: `french`, respectiveName: `français`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [-2.856125, 4.994476],
@@ -4068,17 +4067,17 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "CMR",
+      type: `Feature`,
+      id: `CMR`,
       properties: {
-        name: "Cameroon",
+        name: `Cameroon`,
         language: [
-          {code: "fr", frenchName: "français", englishName: "french", respectiveName: "français"},
-          {code: "en", frenchName: "anglais", englishName: "english", respectiveName: "english"}
+          {code: `fr`, frenchName: `français`, englishName: `french`, respectiveName: `français`},
+          {code: `en`, frenchName: `anglais`, englishName: `english`, respectiveName: `english`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [13.075822, 2.267097],
@@ -4147,16 +4146,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "COD",
-      properties: { 
-        name: "Democratic Republic of the Congo",
+      type: `Feature`,
+      id: `COD`,
+      properties: {
+        name: `Democratic Republic of the Congo`,
         language: [
-          {code: "fr", frenchName: "français", englishName: "french", respectiveName: "français"}
+          {code: `fr`, frenchName: `français`, englishName: `french`, respectiveName: `français`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [30.83386, 3.509166],
@@ -4286,17 +4285,17 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "COG",
+      type: `Feature`,
+      id: `COG`,
       properties: {
-        name: "Republic of the Congo",
+        name: `Republic of the Congo`,
         language: [
-          {code: "", frenchName: "français", englishName: "french", respectiveName: "français"},
-          {code: "sw", frenchName: "swahili", englishName: "", respectiveName: ""}
+          {code: `fr`, frenchName: `français`, englishName: `french`, respectiveName: `français`},
+          {code: `sw`, frenchName: `swahili`, englishName: `swahili`, respectiveName: `kiswahili`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [12.995517, -4.781103],
@@ -4353,16 +4352,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "COL",
+      type: `Feature`,
+      id: `COL`,
       properties: {
-        name: "Colombia",
+        name: `Colombia`,
         language: [
-          {code: "es", frenchName: "espagnol", englishName: "spanish", respectiveName: ""}
+          {code: `es`, frenchName: `espagnol`, englishName: `spanish`, respectiveName: `español`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [-75.373223, -0.152032],
@@ -4470,16 +4469,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "CRI",
+      type: `Feature`,
+      id: `CRI`,
       properties: {
-        name: "Costa Rica",
+        name: `Costa Rica`,
         language: [
-          {code: "es", frenchName: "espagnol", englishName: "spanish", respectiveName: ""}
+          {code: `es`, frenchName: `espagnol`, englishName: `spanish`, respectiveName: `español`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [-82.965783, 8.225028],
@@ -4523,16 +4522,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "CUB",
+      type: `Feature`,
+      id: `CUB`,
       properties: {
-        name: "Cuba",
+        name: `Cuba`,
         language: [
-          {code: "es", frenchName: "espagnol", englishName: "spanish", respectiveName: ""}
+          {code: `es`, frenchName: `espagnol`, englishName: `spanish`, respectiveName: `español`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [-82.268151, 23.188611],
@@ -4582,16 +4581,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "-99",
+      type: `Feature`,
+      id: `-99`,
       properties: {
-        name: "Northern Cyprus",
+        name: `Northern Cyprus`,
         language: [
-          { code: "tr", frenchName: "turc", englishName: "", respectiveName: "" }
+          { code: `tr`, frenchName: `turc`, englishName: `turkish`, respectiveName: `türk` }
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [32.73178, 35.140026],
@@ -4615,17 +4614,17 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "CYP",
+      type: `Feature`,
+      id: `CYP`,
       properties: {
-        name: "Cyprus",
+        name: `Cyprus`,
         language: [
-          { code: "el", frenchName: "grec", englishName: "", respectiveName: "" },
-          { code: "tr", frenchName: "turc", englishName: "", respectiveName: "" }
+          { code: `el`, frenchName: `grec`, englishName: `greek`, respectiveName: `ελληνικα` },
+          { code: `tr`, frenchName: `turc`, englishName: `turkish`, respectiveName: `türk` }
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [33.973617, 35.058506],
@@ -4648,16 +4647,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "CZE",
+      type: `Feature`,
+      id: `CZE`,
       properties: {
-        name: "Czech Republic",
+        name: `Czech Republic`,
         language: [
-          {code: "cs", frenchName: "tchèque", englishName: "", respectiveName: ""}
+          {code: `cs`, frenchName: `tchèque`, englishName: `czech`, respectiveName: `česky`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [16.960288, 48.596982],
@@ -4700,20 +4699,20 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "DEU",
+      type: `Feature`,
+      id: `DEU`,
       properties: {
-        name: "Germany",
+        name: `Germany`,
         language: [
-          {code: "de", frenchName: "allemand", englishName: "deutch", respectiveName: ""},
-          {code: "ru", frenchName: "russe", englishName: "russian", respectiveName: ""},
-          {code: "tr", frenchName: "turc", englishName: "", respectiveName: "" },
-          {code: "pl", frenchName: "polonais", englishName: "", respectiveName: ""},
-          {code: "da", frenchName: "danois", englishName: "danish", respectiveName: ""}
+          {code: `de`, frenchName: `allemand`, englishName: `german`, respectiveName: `deutch`},
+          {code: `ru`, frenchName: `russe`, englishName: `russian`, respectiveName: `русский`},
+          {code: `tr`, frenchName: `turc`, englishName: `turkish`, respectiveName: `türk` },
+          {code: `pl`, frenchName: `polonais`, englishName: `polish`, respectiveName: `polski`},
+          {code: `da`, frenchName: `danois`, englishName: `danish`, respectiveName: `dansk`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [9.921906, 54.983104],
@@ -4779,15 +4778,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "DJI",
-      properties: { name: "Djibouti",
+      type: `Feature`,
+      id: `DJI`,
+      properties: { name: `Djibouti`,
       language: [
-        {code: "", frenchName: "", englishName: "", respectiveName: ""}
+        {code: `fr`, frenchName: `français`, englishName: `french`, respectiveName: `français`},
+        {code: `ar`, frenchName: `arabe`, englishName: `arabic`, respectiveName: `عربى`}
       ]
-     },
+    },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [43.081226, 12.699639],
@@ -4810,15 +4810,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "DNK",
-      properties: { name: "Denmark",
+      type: `Feature`,
+      id: `DNK`,
+      properties: { name: `Denmark`,
       language: [
-        {code: "da", frenchName: "danois", englishName: "danish", respectiveName: ""}
+        {code: `da`, frenchName: `danois`, englishName: `danish`, respectiveName: `dansk`}
       ]
-     },
+    },
       geometry: {
-        type: "MultiPolygon",
+        type: `MultiPolygon`,
         coordinates: [
           [
             [
@@ -4856,15 +4856,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "DOM",
-      properties: { name: "Dominican Republic",
+      type: `Feature`,
+      id: `DOM`,
+      properties: { name: `Dominican Republic`,
       language: [
-        {code: "es", frenchName: "espagnol", englishName: "spanish", respectiveName: ""}
+        {code: `es`, frenchName: `espagnol`, englishName: `spanish`, respectiveName: `español`}
       ]
-     },
+    },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [-71.712361, 19.714456],
@@ -4898,15 +4898,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "DZA",
-      properties: { name: "Algeria",
+      type: `Feature`,
+      id: `DZA`,
+      properties: { name: `Algeria`,
       language: [
-        {code: "ar", frenchName: "arabe", englishName: "arabic", respectiveName: ""}
+        {code: `ar`, frenchName: `arabe`, englishName: `arabic`, respectiveName: `عربى`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [11.999506, 23.471668],
@@ -4976,15 +4976,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "ECU",
-      properties: { name: "Ecuador",
+      type: `Feature`,
+      id: `ECU`,
+      properties: { name: `Ecuador`,
       language: [
-        {code: "es", frenchName: "espagnol", englishName: "spanish", respectiveName: ""}
+        {code: `es`, frenchName: `espagnol`, englishName: `spanish`, respectiveName: `español`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [-80.302561, -3.404856],
@@ -5025,15 +5025,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "EGY",
-      properties: { name: "Egypt",
+      type: `Feature`,
+      id: `EGY`,
+      properties: { name: `Egypt`,
       language: [
-        {code: "ar", frenchName: "arabe", englishName: "arabic", respectiveName: ""}
+        {code: `ar`, frenchName: `arabe`, englishName: `arabic`, respectiveName: `عربى`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [34.9226, 29.50133],
@@ -5083,15 +5083,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "ERI",
-      properties: { name: "Eritrea",
+      type: `Feature`,
+      id: `ERI`,
+      properties: { name: `Eritrea`,
       language: [
-        {code: "", frenchName: "", englishName: "", respectiveName: ""}
+        {code: `en`, frenchName: `anglais`, englishName: `english`, respectiveName: `english`},
+        {code: `ar`, frenchName: `arabe`, englishName: `arabic`, respectiveName: `عربى`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [42.35156, 12.54223],
@@ -5127,16 +5128,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "ESP",
-      properties: { name: "Spain",
+      type: `Feature`,
+      id: `ESP`,
+      properties: { name: `Spain`,
       language: [
-        {code: "es", frenchName: "espagnol", englishName: "spanish", respectiveName: ""},
-        {code: "ca", frenchName: "catalan", englishName: "", respectiveName: ""}
+        {code: `es`, frenchName: `espagnol`, englishName: `spanish`, respectiveName: `español`},
+        {code: `ca`, frenchName: `catalan`, englishName: `catalan`, respectiveName: `català`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [-9.034818, 41.880571],
@@ -5195,15 +5196,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "EST",
-      properties: { name: "Estonia",
+      type: `Feature`,
+      id: `EST`,
+      properties: { name: `Estonia`,
       language: [
-        {code: "et", frenchName: "estonien", englishName: "", respectiveName: ""}
+        {code: `et`, frenchName: `estonien`, englishName: `estonian`, respectiveName: `eestlane`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [24.312863, 57.793424],
@@ -5228,15 +5229,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "ETH",
-      properties: { name: "Ethiopia",
+      type: `Feature`,
+      id: `ETH`,
+      properties: { name: `Ethiopia`,
       language: [
-        {code: "", frenchName: "", englishName: "", respectiveName: ""}
+        {code: `am`, frenchName: `amharique`, englishName: `amharic`, respectiveName: `አማርኛ`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [37.90607, 14.95943],
@@ -5303,15 +5304,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "FIN",
-      properties: { name: "Finland",
+      type: `Feature`,
+      id: `FIN`,
+      properties: { name: `Finland`,
       language: [
-        {code: "fi", frenchName: "finnois", englishName: "", respectiveName: ""}
+        {code: `fi`, frenchName: `finnois`, englishName: `finnish`, respectiveName: `suomalainen`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [28.59193, 69.064777],
@@ -5357,15 +5358,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "FJI",
-      properties: { name: "Fiji",
+      type: `Feature`,
+      id: `FJI`,
+      properties: { name: `Fiji`,
       language: [
-        {code: "", frenchName: "", englishName: "", respectiveName: ""}
+        {code: `en`, frenchName: `anglais`, englishName: `english`, respectiveName: `english`}
       ]
      },
       geometry: {
-        type: "MultiPolygon",
+        type: `MultiPolygon`,
         coordinates: [
           [
             [
@@ -5405,15 +5406,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "FLK",
-      properties: { name: "Falkland Islands",
+      type: `Feature`,
+      id: `FLK`,
+      properties: { name: `Falkland Islands`,
       language: [
-        {code: "", frenchName: "", englishName: "", respectiveName: ""}
+        {code: `en`, frenchName: `anglais`, englishName: `english`, respectiveName: `english`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [-61.2, -51.85],
@@ -5431,16 +5432,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "FRA",
-      properties: { name: "France",
+      type: `Feature`,
+      id: `FRA`,
+      properties: { name: `France`,
       language: [
-        {code: "fr", frenchName: "français", englishName: "french", respectiveName: "français"},
-        {code: "co", frenchName: "corse", englishName: "", respectiveName: ""}
+        {code: `fr`, frenchName: `français`, englishName: `french`, respectiveName: `français`},
+        {code: `co`, frenchName: `corse`, englishName: `corsica`, respectiveName: `corsu`}
       ]
      },
       geometry: {
-        type: "MultiPolygon",
+        type: `MultiPolygon`,
         coordinates: [
           [
             [
@@ -5509,15 +5510,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "GAB",
-      properties: { name: "Gabon",
+      type: `Feature`,
+      id: `GAB`,
+      properties: { name: `Gabon`,
       language: [
-        {code: "", frenchName: "", englishName: "", respectiveName: ""}
+        {code: `fr`, frenchName: `français`, englishName: `french`, respectiveName: `french`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [11.093773, -3.978827],
@@ -5556,15 +5557,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "GBR",
-      properties: { name: "United Kingdom",
+      type: `Feature`,
+      id: `GBR`,
+      properties: { name: `United Kingdom`,
       language: [
-        {code: "en", frenchName: "anglais", englishName: "english", respectiveName: "english"}
+        {code: `en`, frenchName: `anglais`, englishName: `english`, respectiveName: `english`}
       ]
      },
       geometry: {
-        type: "MultiPolygon",
+        type: `MultiPolygon`,
         coordinates: [
           [
             [
@@ -5634,15 +5635,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "GEO",
-      properties: { name: "Georgia",
+      type: `Feature`,
+      id: `GEO`,
+      properties: { name: `Georgia`,
       language: [
-        {code: "ka", frenchName: "géorgien", englishName: "", respectiveName: ""}
+        {code: `ka`, frenchName: `géorgien`, englishName: `georgian`, respectiveName: `ქართული`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [41.554084, 41.535656],
@@ -5674,15 +5675,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "GHA",
-      properties: { name: "Ghana",
+      type: `Feature`,
+      id: `GHA`,
+      properties: { name: `Ghana`,
       language: [
-        {code: "en", frenchName: "anglais", englishName: "english", respectiveName: "english"}
+        {code: `en`, frenchName: `anglais`, englishName: `english`, respectiveName: `english`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [1.060122, 5.928837],
@@ -5715,15 +5716,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "GIN",
-      properties: { name: "Guinea",
+      type: `Feature`,
+      id: `GIN`,
+      properties: { name: `Guinea`,
       language: [
-        {code: "", frenchName: "", englishName: "", respectiveName: ""}
+        {code: `fr`, frenchName: `français`, englishName: `french`, respectiveName: `français`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [-8.439298, 7.686043],
@@ -5801,15 +5802,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "GMB",
-      properties: { name: "Gambia",
+      type: `Feature`,
+      id: `GMB`,
+      properties: { name: `Gambia`,
       language: [
-        {code: "", frenchName: "", englishName: "", respectiveName: ""}
+        {code: `en`, frenchName: `anglais`, englishName: `english`, respectiveName: `english`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [-16.841525, 13.151394],
@@ -5833,15 +5834,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "GNB",
-      properties: { name: "Guinea Bissau",
+      type: `Feature`,
+      id: `GNB`,
+      properties: { name: `Guinea Bissau`,
       language: [
-        {code: "pt", frenchName: "portugais", englishName: "", respectiveName: ""}
+        {code: `pt`, frenchName: `portugais`, englishName: `portuguese`, respectiveName: `português`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [-15.130311, 11.040412],
@@ -5868,15 +5869,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "GNQ",
-      properties: { name: "Equatorial Guinea",
+      type: `Feature`,
+      id: `GNQ`,
+      properties: { name: `Equatorial Guinea`,
       language: [
-        {code: "es", frenchName: "espagnol", englishName: "spanish", respectiveName: ""}
+        {code: `es`, frenchName: `espagnol`, englishName: `spanish`, respectiveName: `español`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [9.492889, 1.01012],
@@ -5891,15 +5892,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "GRC",
-      properties: { name: "Greece",
+      type: `Feature`,
+      id: `GRC`,
+      properties: { name: `Greece`,
       language: [
-        {code: "el", frenchName: "grec", englishName: "", respectiveName: ""}
+        {code: `el`, frenchName: `grec`, englishName: `greek`, respectiveName: `ελληνικα`}
       ]
      },
       geometry: {
-        type: "MultiPolygon",
+        type: `MultiPolygon`,
         coordinates: [
           [
             [
@@ -5967,15 +5968,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "GRL",
-      properties: { name: "Greenland",
+      type: `Feature`,
+      id: `GRL`,
+      properties: { name: `Greenland`,
       language: [
-        {code: "", frenchName: "", englishName: "", respectiveName: ""}
+        {code: `da`, frenchName: `danois`, englishName: `danish`, respectiveName: `dansk`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [-46.76379, 82.62796],
@@ -6115,15 +6116,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "GTM",
-      properties: { name: "Guatemala",
+      type: `Feature`,
+      id: `GTM`,
+      properties: { name: `Guatemala`,
       language: [
-        {code: "es", frenchName: "espagnol", englishName: "spanish", respectiveName: ""}
+        {code: `es`, frenchName: `espagnol`, englishName: `spanish`, respectiveName: `español`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [-90.095555, 13.735338],
@@ -6166,15 +6167,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "GUF",
-      properties: { name: "French Guiana",
+      type: `Feature`,
+      id: `GUF`,
+      properties: { name: `French Guiana`,
       language: [
-        {code: "fr", frenchName: "français", englishName: "french", respectiveName: "français"}
+        {code: `fr`, frenchName: `français`, englishName: `french`, respectiveName: `français`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [-52.556425, 2.504705],
@@ -6201,15 +6202,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "GUY",
-      properties: { name: "Guyana",
+      type: `Feature`,
+      id: `GUY`,
+      properties: { name: `Guyana`,
       language: [
-        {code: "", frenchName: "", englishName: "", respectiveName: ""}
+        {code: `en`, frenchName: `anglais`, englishName: `english`, respectiveName: `english`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [-59.758285, 8.367035],
@@ -6257,15 +6258,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "HND",
-      properties: { name: "Honduras",
+      type: `Feature`,
+      id: `HND`,
+      properties: { name: `Honduras`,
       language: [
-        {code: "es", frenchName: "espagnol", englishName: "spanish", respectiveName: ""}
+        {code: `es`, frenchName: `espagnol`, englishName: `spanish`, respectiveName: `español`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [-87.316654, 12.984686],
@@ -6330,15 +6331,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "HRV",
-      properties: { name: "Croatia",
+      type: `Feature`,
+      id: `HRV`,
+      properties: { name: `Croatia`,
       language: [
-        {code: "hr", frenchName: "croate", englishName: "", respectiveName: ""}
+        {code: `hr`, frenchName: `croate`, englishName: `croatian`, respectiveName: `hrvatski`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [18.829838, 45.908878],
@@ -6388,15 +6389,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "HTI",
-      properties: { name: "Haiti",
+      type: `Feature`,
+      id: `HTI`,
+      properties: { name: `Haiti`,
       language: [
-        {code: "fr", frenchName: "français", englishName: "french", respectiveName: "français"}
+        {code: `fr`, frenchName: `français`, englishName: `french`, respectiveName: `français`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [-73.189791, 19.915684],
@@ -6425,15 +6426,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "HUN",
-      properties: { name: "Hungary",
+      type: `Feature`,
+      id: `HUN`,
+      properties: { name: `Hungary`,
       language: [
-        {code: "hu", frenchName: "hongrois", englishName: "", respectiveName: ""}
+        {code: `hu`, frenchName: `hongrois`, englishName: `hungarian`, respectiveName: `magyar`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [16.202298, 46.852386],
@@ -6472,15 +6473,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "IDN",
-      properties: { name: "Indonesia",
+      type: `Feature`,
+      id: `IDN`,
+      properties: { name: `Indonesia`,
       language: [
-        {code: "id", frenchName: "indonésien", englishName: "", respectiveName: ""}
+        {code: `id`, frenchName: `indonésien`, englishName: `indonesian`, respectiveName: `orang indonesia`}
       ]
      },
       geometry: {
-        type: "MultiPolygon",
+        type: `MultiPolygon`,
         coordinates: [
           [
             [
@@ -6788,15 +6789,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "IND",
-      properties: { name: "India",
+      type: `Feature`,
+      id: `IND`,
+      properties: { name: `India`,
       language: [
-        {code: "hi", frenchName: "hindi", englishName: "", respectiveName: ""}
+        {code: `hi`, frenchName: `hindi`, englishName: `hindi`, respectiveName: `हिन्दी`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [77.837451, 35.49401],
@@ -6940,15 +6941,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "IRL",
-      properties: { name: "Ireland",
+      type: `Feature`,
+      id: `IRL`,
+      properties: { name: `Ireland`,
       language: [
-        {code: "en", frenchName: "anglais", englishName: "english", respectiveName: "english"}
+        {code: `en`, frenchName: `anglais`, englishName: `english`, respectiveName: `english`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [-6.197885, 53.867565],
@@ -6969,15 +6970,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "IRN",
-      properties: { name: "Iran",
+      type: `Feature`,
+      id: `IRN`,
+      properties: { name: `Iran`,
       language: [
-        {code: "fa", frenchName: "perse", englishName: "", respectiveName: ""}
+        {code: `fa`, frenchName: `perse`, englishName: `persan`, respectiveName: `فارسی`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [53.921598, 37.198918],
@@ -7060,15 +7061,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "IRQ",
-      properties: { name: "Iraq",
+      type: `Feature`,
+      id: `IRQ`,
+      properties: { name: `Iraq`,
       language: [
-        {code: "ar", frenchName: "arabe", englishName: "arabic", respectiveName: ""}
+        {code: `ar`, frenchName: `arabe`, englishName: `arabic`, respectiveName: `عربى`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [45.420618, 35.977546],
@@ -7106,15 +7107,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "ISL",
-      properties: { name: "Iceland",
+      type: `Feature`,
+      id: `ISL`,
+      properties: { name: `Iceland`,
       language: [
-        {code: "is", frenchName: "islandais", englishName: "", respectiveName: ""}
+        {code: `is`, frenchName: `islandais`, englishName: `icelandic`, respectiveName: `íslensku`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [-14.508695, 66.455892],
@@ -7142,15 +7143,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "ISR",
-      properties: { name: "Israel",
+      type: `Feature`,
+      id: `ISR`,
+      properties: { name: `Israel`,
       language: [
-        {code: "he", frenchName: "hebreu", englishName: "", respectiveName: ""}
+        {code: `he`, frenchName: `hebreu`, englishName: `hebrew`, respectiveName: `עברית`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [35.719918, 32.709192],
@@ -7181,15 +7182,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "ITA",
-      properties: { name: "Italy",
+      type: `Feature`,
+      id: `ITA`,
+      properties: { name: `Italy`,
       language: [
-        {code: "it", frenchName: "italien", englishName: "italian", respectiveName: ""}
+        {code: `it`, frenchName: `italien`, englishName: `italian`, respectiveName: `italiano`}
       ]
      },
       geometry: {
-        type: "MultiPolygon",
+        type: `MultiPolygon`,
         coordinates: [
           [
             [
@@ -7294,15 +7295,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "JAM",
-      properties: { name: "Jamaica",
+      type: `Feature`,
+      id: `JAM`,
+      properties: { name: `Jamaica`,
       language: [
-        {code: "en", frenchName: "anglais", englishName: "english", respectiveName: ""}
+        {code: `en`, frenchName: `anglais`, englishName: `english`, respectiveName: `english`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [-77.569601, 18.490525],
@@ -7321,15 +7322,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "JOR",
-      properties: { name: "Jordan",
+      type: `Feature`,
+      id: `JOR`,
+      properties: { name: `Jordan`,
       language: [
-        {code: "ar", frenchName: "arabe", englishName: "arabic", respectiveName: ""}
+        {code: `ar`, frenchName: `arabe`, englishName: `arabic`, respectiveName: `عربى`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [35.545665, 32.393992],
@@ -7356,15 +7357,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "JPN",
-      properties: { name: "Japan",
+      type: `Feature`,
+      id: `JPN`,
+      properties: { name: `Japan`,
       language: [
-        {code: "ja", frenchName: "japonais", englishName: "japanese", respectiveName: ""}
+        {code: `ja`, frenchName: `japonais`, englishName: `japanese`, respectiveName: `日本人`}
       ]
      },
       geometry: {
-        type: "MultiPolygon",
+        type: `MultiPolygon`,
         coordinates: [
           [
             [
@@ -7447,15 +7448,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "KAZ",
-      properties: { name: "Kazakhstan",
+      type: `Feature`,
+      id: `KAZ`,
+      properties: { name: `Kazakhstan`,
       language: [
-        {code: "kk", frenchName: "kazakh", englishName: "", respectiveName: ""}
+        {code: `kk`, frenchName: `kazakh`, englishName: `kazakh`, respectiveName: `қазақ`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [70.962315, 42.266154],
@@ -7575,15 +7576,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "KEN",
-      properties: { name: "Kenya",
+      type: `Feature`,
+      id: `KEN`,
+      properties: { name: `Kenya`,
       language: [
-        {code: "", frenchName: "", englishName: "", respectiveName: ""}
+        {code: `en`, frenchName: `anglais`, englishName: `english`, respectiveName: `english`},
+        {code: `sw`, frenchName: `swahili`, englishName: `swahili`, respectiveName: `kiswahili`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [40.993, -0.85829],
@@ -7628,15 +7630,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "KGZ",
-      properties: { name: "Kyrgyzstan",
+      type: `Feature`,
+      id: `KGZ`,
+      properties: { name: `Kyrgyzstan`,
       language: [
-        {code: "ki", frenchName: "kirghyz", englishName: "", respectiveName: ""}
+        {code: `ki`, frenchName: `kirghyz`, englishName: `kyrgyz`, respectiveName: `kirghyz`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [70.962315, 42.266154],
@@ -7679,15 +7681,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "KHM",
-      properties: { name: "Cambodia",
+      type: `Feature`,
+      id: `KHM`,
+      properties: { name: `Cambodia`,
       language: [
-        {code: "", frenchName: "", englishName: "", respectiveName: ""}
+        {code: `km`, frenchName: `khmer`, englishName: `khmer`, respectiveName: `ខ្មែរ`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [103.49728, 10.632555],
@@ -7712,15 +7714,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "KOR",
-      properties: { name: "South Korea",
+      type: `Feature`,
+      id: `KOR`,
+      properties: { name: `South Korea`,
       language: [
-        {code: "ko", frenchName: "coréen", englishName: "", respectiveName: ""}
+        {code: `ko`, frenchName: `coréen`, englishName: `korean`, respectiveName: `한국인`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [128.349716, 38.612243],
@@ -7747,20 +7749,20 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "CS-KM",
+      type: `Feature`,
+      id: `CS-KM`,
       properties: {
-        name: "Kosovo",
+        name: `Kosovo`,
         language: [
-          {code: "sq", name: "albanais", respectiveName: "ʃc͡çip" },
-          {code: "sr", name: "serbe", respectiveName: "" },
-          {code: "tr", name: "turc", respectiveName: "" },
-          {code: "bs", name: "bosnien", respectiveName: "" },
-          {code: "hr", name: "croate", respectiveName: "" }
+          {code: `sq`, name: `albanais`, englishName: `albanian`, respectiveName: `ʃc͡çip` },
+          {code: `sr`, name: `serbe`, englishName: `serbian`, respectiveName: `cрпски` },
+          {code: `tr`, name: `turc`, englishName: `turkish`, respectiveName: `türk` },
+          {code: `bs`, name: `bosniaque`, englishName: `bosnian`, respectiveName: `bosanski` },
+          {code: `hr`, name: `croate`, englishName: `croatian`, respectiveName: `hrvatski` }
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [20.76216, 42.05186],
@@ -7789,15 +7791,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "KWT",
-      properties: { name: "Kuwait",
+      type: `Feature`,
+      id: `KWT`,
+      properties: { name: `Kuwait`,
       language: [
-        {code: "ar", frenchName: "arabe", englishName: "arabic", respectiveName: ""}
+        {code: `ar`, frenchName: `arabe`, englishName: `arabic`, respectiveName: `عربى`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [47.974519, 29.975819],
@@ -7814,15 +7816,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "LAO",
-      properties: { name: "Laos",
+      type: `Feature`,
+      id: `LAO`,
+      properties: { name: `Laos`,
       language: [
-        {code: "lo", frenchName: "laotien", englishName: "", respectiveName: ""}
+        {code: `lo`, frenchName: `laotien`, englishName: `laotian`, respectiveName: `ຄົນລາວ`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [105.218777, 14.273212],
@@ -7867,16 +7869,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "LBN",
-      properties: { name: "Lebanon",
+      type: `Feature`,
+      id: `LBN`,
+      properties: { name: `Lebanon`,
       language: [
-        {code: "ar", frenchName: "arabe", englishName: "arabic", respectiveName: ""},
-        {code: "fr", frenchName: "français", englishName: "french", respectiveName: "français"}
+        {code: `ar`, frenchName: `arabe`, englishName: `arabic`, respectiveName: `عربى`},
+        {code: `fr`, frenchName: `français`, englishName: `french`, respectiveName: `français`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [35.821101, 33.277426],
@@ -7895,15 +7897,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "LBR",
-      properties: { name: "Liberia",
+      type: `Feature`,
+      id: `LBR`,
+      properties: { name: `Liberia`,
       language: [
-        {code: "", frenchName: "", englishName: "", respectiveName: ""}
+        {code: `en`, frenchName: `anglais`, englishName: `english`, respectiveName: `english`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [-7.712159, 4.364566],
@@ -7938,15 +7940,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "LBY",
-      properties: { name: "Libya",
+      type: `Feature`,
+      id: `LBY`,
+      properties: { name: `Libya`,
       language: [
-        {code: "ar", frenchName: "arabe", englishName: "arabic", respectiveName: ""}
+        {code: `ar`, frenchName: `arabe`, englishName: `arabic`, respectiveName: `عربى`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [14.8513, 22.86295],
@@ -8010,15 +8012,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "LKA",
-      properties: { name: "Sri Lanka",
+      type: `Feature`,
+      id: `LKA`,
+      properties: { name: `Sri Lanka`,
       language: [
-        {code: "ta", frenchName: "tamoul", englishName: "", respectiveName: ""}
+        {code: `ta`, frenchName: `tamoul`, englishName: `tamil`, respectiveName: `தமிழ்`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [81.787959, 7.523055],
@@ -8036,15 +8038,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "LSO",
-      properties: { name: "Lesotho",
+      type: `Feature`,
+      id: `LSO`,
+      properties: { name: `Lesotho`,
       language: [
-        {code: "", frenchName: "", englishName: "", respectiveName: ""}
+        {code: `en`, frenchName: `anglais`, englishName: `english`, respectiveName: `english`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [28.978263, -28.955597],
@@ -8064,15 +8066,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "LTU",
-      properties: { name: "Lithuania",
+      type: `Feature`,
+      id: `LTU`,
+      properties: { name: `Lithuania`,
       language: [
-        {code: "lt", frenchName: "lituanien", englishName: "", respectiveName: ""}
+        {code: `lt`, frenchName: `lituanien`, englishName: `lithuanian`, respectiveName: `Lietuvis`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [22.731099, 54.327537],
@@ -8099,16 +8101,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "LUX",
-      properties: { name: "Luxembourg",
+      type: `Feature`,
+      id: `LUX`,
+      properties: { name: `Luxembourg`,
       language: [
-        {code: "fr", frenchName: "français", englishName: "french", respectiveName: "français"},
-        {code: "de", frenchName: "allemant", englishName: "deutch", respectiveName: ""}
+        {code: `fr`, frenchName: `français`, englishName: `french`, respectiveName: `français`},
+        {code: `de`, frenchName: `allemand`, englishName: `german`, respectiveName: `deutch`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [6.043073, 50.128052],
@@ -8123,15 +8125,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "LVA",
-      properties: { name: "Latvia",
+      type: `Feature`,
+      id: `LVA`,
+      properties: { name: `Latvia`,
       language: [
-        {code: "lv", frenchName: "letton", englishName: "", respectiveName: ""}
+        {code: `lv`, frenchName: `letton`, englishName: `latvian`, respectiveName: `latvietis`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [21.0558, 56.031076],
@@ -8161,15 +8163,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "MAR",
-      properties: { name: "Morocco",
+      type: `Feature`,
+      id: `MAR`,
+      properties: { name: `Morocco`,
       language: [
-        {code: "ar", frenchName: "arabe", englishName: "arabic", respectiveName: ""}
+        {code: `ar`, frenchName: `arabe`, englishName: `arabic`, respectiveName: `عربى`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [-5.193863, 35.755182],
@@ -8241,15 +8243,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "MDA",
-      properties: { name: "Moldova",
+      type: `Feature`,
+      id: `MDA`,
+      properties: { name: `Moldova`,
       language: [
-        {code: "", frenchName: "", englishName: "", respectiveName: ""}
+        {code: `ro`, frenchName: `roumain`, englishName: `romanian`, respectiveName: `românesc`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [26.619337, 48.220726],
@@ -8284,15 +8286,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "MDG",
-      properties: { name: "Madagascar",
+      type: `Feature`,
+      id: `MDG`,
+      properties: { name: `Madagascar`,
       language: [
-        {code: "mg", frenchName: "malgache", englishName: "", respectiveName: ""}
+        {code: `mg`, frenchName: `malgache`, englishName: `malagasy`, respectiveName: `malagasy`}
       ]
      },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [49.543519, -12.469833],
@@ -8349,16 +8351,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "MEX",
-      properties: { 
-        name: "Mexico",
+      type: `Feature`,
+      id: `MEX`,
+      properties: {
+        name: `Mexico`,
         language: [
-          {code: "es", frenchName: "espagnol", englishName: "spanish", respectiveName: ""}
+          {code: `es`, frenchName: `espagnol`, englishName: `spanish`, respectiveName: `español`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [-97.140008, 25.869997],
@@ -8536,15 +8538,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "MKD",
+      type: `Feature`,
+      id: `MKD`,
       properties: {
-        name: "Macedonia",
+        name: `Macedonia`,
         language: [
-          {code: "sq", name: "albanais", respectiveName: "ʃc͡çip" }]
+          {code: `sq`, name: `albanais`, englishName: `albanian`, respectiveName: `shqiptar` }]
         },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [20.59023, 41.85541],
@@ -8569,16 +8571,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "MLI",
+      type: `Feature`,
+      id: `MLI`,
       properties: {
-        name: "Mali",
+        name: `Mali`,
         language: [
-          {code: "fr", frenchName: "français", englishName: "french", respectiveName: ""}
+          {code: `fr`, frenchName: `français`, englishName: `french`, respectiveName: `french`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [-12.17075, 14.616834],
@@ -8662,16 +8664,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "MLT",
-      properties: { 
-        name: "Malta",
+      type: `Feature`,
+      id: `MLT`,
+      properties: {
+        name: `Malta`,
         language: [
-          {code: "ms", frenchName: "maltais", englishName: "", respectiveName: ""}
+          {code: `ms`, frenchName: `maltais`, englishName: `maltese`, respectiveName: `maltin`}
         ]
       },
       geometry: {
-        type: "MultiPolygon",
+        type: `MultiPolygon`,
         coordinates: [
           [
             [
@@ -8701,16 +8703,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "MMR",
-      properties: { 
-        name: "Myanmar",
+      type: `Feature`,
+      id: `MMR`,
+      properties: {
+        name: `Myanmar`,
         language: [
-          {code: "my", frenchName: "birman", englishName: "", respectiveName: ""}
+          {code: `my`, frenchName: `birman`, englishName: `burmese`, respectiveName: `ဗမာ`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [99.543309, 20.186598],
@@ -8788,16 +8790,19 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "MNE",
-      properties: { 
-        name: "Montenegro",
+      type: `Feature`,
+      id: `MNE`,
+      properties: {
+        name: `Montenegro`,
         language: [
-          {code: "", frenchName: "", englishName: "", respectiveName: ""}
+          {code: `sr`, frenchName: `serbe`, englishName: `serbian`, respectiveName: `cрпски`},
+          {code: `hr`, frenchName: `croate`, englishName: `croatian`, respectiveName: `hrvatski`},
+          {code: `bs`, frenchName: `bosnien`, englishName: `bosnian`, respectiveName: `bosanski`},
+          {code: `sq`, name: `albanais`, englishName: `albanian`, respectiveName: `ʃc͡çip`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [19.801613, 42.500093],
@@ -8823,16 +8828,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "MNG",
-      properties: { 
-        name: "Mongolia",
+      type: `Feature`,
+      id: `MNG`,
+      properties: {
+        name: `Mongolia`,
         language: [
-          {code: "mn", frenchName: "mongol", englishName: "", respectiveName: ""}
+          {code: `mn`, frenchName: `mongol`, englishName: `mongolian`, respectiveName: `монгол`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [87.751264, 49.297198],
@@ -8915,16 +8920,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "MOZ",
-      properties: { 
-        name: "Mozambique",
+      type: `Feature`,
+      id: `MOZ`,
+      properties: {
+        name: `Mozambique`,
         language: [
-          {code: "pt", frenchName: "portugais", englishName: "portuguese", respectiveName: ""}
+          {code: `pt-PT`, frenchName: `portugais`, englishName: `portuguese`, respectiveName: `português`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [34.559989, -11.52002],
@@ -9009,16 +9014,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "MRT",
-      properties: { 
-        name: "Mauritania",
+      type: `Feature`,
+      id: `MRT`,
+      properties: {
+        name: `Mauritania`,
         language: [
-          {code: "fr", frenchName: "français", englishName: "french", respectiveName: "français"}
+          {code: `fr`, frenchName: `français`, englishName: `french`, respectiveName: `français`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [-12.17075, 14.616834],
@@ -9065,16 +9070,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "MWI",
-      properties: { 
-        name: "Malawi",
+      type: `Feature`,
+      id: `MWI`,
+      properties: {
+        name: `Malawi`,
         language: [
-          {code: "en", frenchName: "anglais", englishName: "english", respectiveName: ""}
+          {code: `en`, frenchName: `anglais`, englishName: `english`, respectiveName: `english`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [34.559989, -11.52002],
@@ -9110,16 +9115,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "MYS",
-      properties: { 
-        name: "Malaysia",
+      type: `Feature`,
+      id: `MYS`,
+      properties: {
+        name: `Malaysia`,
         language: [
-          {code: "ms", frenchName: "malais", englishName: "", respectiveName: ""}
+          {code: `ms`, frenchName: `malais`, englishName: `malay`, respectiveName: `melayu`}
         ]
       },
       geometry: {
-        type: "MultiPolygon",
+        type: `MultiPolygon`,
         coordinates: [
           [
             [
@@ -9195,17 +9200,17 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "NAM",
-      properties: { 
-        name: "Namibia",
+      type: `Feature`,
+      id: `NAM`,
+      properties: {
+        name: `Namibia`,
         language: [
-          {code: "en", frenchName: "anglais", englishName: "english", respectiveName: "english"},
-          {code: "de", frenchName: "deutch", englishName: "", respectiveName: ""}
+          {code: `en`, frenchName: `anglais`, englishName: `english`, respectiveName: `english`},
+          {code: `de`, frenchName: `allemand`, englishName: `german`, respectiveName: `deutch`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [16.344977, -28.576705],
@@ -9257,16 +9262,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "NCL",
-      properties: { 
-        name: "New Caledonia",
+      type: `Feature`,
+      id: `NCL`,
+      properties: {
+        name: `New Caledonia`,
         language: [
-          {code: "fr", frenchName: "français", englishName: "french", respectiveName: "français"}
+          {code: `fr`, frenchName: `français`, englishName: `french`, respectiveName: `français`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [165.77999, -21.080005],
@@ -9287,16 +9292,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "NER",
-      properties: { 
-        name: "Niger",
+      type: `Feature`,
+      id: `NER`,
+      properties: {
+        name: `Niger`,
         language: [
-          {code: "", frenchName: "", englishName: "", respectiveName: ""}
+          {code: `fr`, frenchName: `français`, englishName: `french`, respectiveName: `français`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [2.154474, 11.94015],
@@ -9362,17 +9367,17 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "NGA",
-      properties: { 
-        name: "Nigeria",
+      type: `Feature`,
+      id: `NGA`,
+      properties: {
+        name: `Nigeria`,
         language: [
-          {code: "en", frenchName: "anglais", englishName: "english", respectiveName: "english"}
+          {code: `en`, frenchName: `anglais`, englishName: `english`, respectiveName: `english`}
         ]
-      
+
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [8.500288, 4.771983],
@@ -9438,16 +9443,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "NIC",
-      properties: { 
-        name: "Nicaragua",
+      type: `Feature`,
+      id: `NIC`,
+      properties: {
+        name: `Nicaragua`,
         language: [
-          {code: "es", frenchName: "espagnol", englishName: "spanish", respectiveName: ""}
+          {code: `es`, frenchName: `espagnol`, englishName: `spanish`, respectiveName: `español`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [-85.71254, 11.088445],
@@ -9507,16 +9512,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "NLD",
-      properties: { 
-        name: "Netherlands",
+      type: `Feature`,
+      id: `NLD`,
+      properties: {
+        name: `Netherlands`,
         language: [
-          {code: "nl", frenchName: "néerlandais", englishName: "", respectiveName: ""}
+          {code: `nl`, frenchName: `néerlandais`, englishName: `dutch`, respectiveName: `nederlands`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [6.074183, 53.510403],
@@ -9538,16 +9543,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "NOR",
-      properties: { 
-        name: "Norway",
+      type: `Feature`,
+      id: `NOR`,
+      properties: {
+        name: `Norway`,
         language: [
-          {code: "no", frenchName: "norvégien", englishName: "", respectiveName: ""}
+          {code: `no`, frenchName: `norvégien`, englishName: `norwegian`, respectiveName: `norsk`}
         ]
       },
       geometry: {
-        type: "MultiPolygon",
+        type: `MultiPolygon`,
         coordinates: [
           [
             [
@@ -9657,16 +9662,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "NPL",
-      properties: { 
-        name: "Nepal",
+      type: `Feature`,
+      id: `NPL`,
+      properties: {
+        name: `Nepal`,
         language: [
-          {code: "ne", frenchName: "népalais", englishName: "", respectiveName: ""}
+          {code: `ne`, frenchName: `népalais`, englishName: `nepalese`, respectiveName: `नेपाली`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [88.120441, 27.876542],
@@ -9697,16 +9702,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "NZL",
+      type: `Feature`,
+      id: `NZL`,
       properties: {
-        name: "New Zealand",
+        name: `New Zealand`,
         language: [
-          {code: "en", frenchName: "anglais", englishName: "english", respectiveName: "english"}
+          {code: `en`, frenchName: `anglais`, englishName: `english`, respectiveName: `english`}
         ]
       },
       geometry: {
-        type: "MultiPolygon",
+        type: `MultiPolygon`,
         coordinates: [
           [
             [
@@ -9786,15 +9791,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "OMN",
-      properties: {name: "Oman",
+      type: `Feature`,
+      id: `OMN`,
+      properties: {name: `Oman`,
       language: [
-        {code: "ar", frenchName: "arabe", englishName: "arabic", respectiveName: ""}
+        {code: `ar`, frenchName: `arabe`, englishName: `arabic`, respectiveName: `عربى`}
       ]
     },
       geometry: {
-        type: "MultiPolygon",
+        type: `MultiPolygon`,
         coordinates: [
           [
             [
@@ -9855,16 +9860,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "PAK",
+      type: `Feature`,
+      id: `PAK`,
       properties: {
-        name: "Pakistan",
+        name: `Pakistan`,
         language: [
-          {code: "ps", frenchName: "pachto", englishName: "", respectiveName: ""}
+          {code: `ps-AF`, frenchName: `pachto`, englishName: `pachto`, respectiveName: `پښتو`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [75.158028, 37.133031],
@@ -9938,16 +9943,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "PAN",
+      type: `Feature`,
+      id: `PAN`,
       properties: {
-        name: "Panama",
+        name: `Panama`,
         language: [
-          {code: "es", frenchName: "espagnol", englishName: "spanish", respectiveName: ""}
+          {code: `es`, frenchName: `espagnol`, englishName: `spanish`, respectiveName: `español`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [-77.881571, 7.223771],
@@ -10007,16 +10012,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "PER",
+      type: `Feature`,
+      id: `PER`,
       properties: {
-        name: "Peru",
+        name: `Peru`,
         language: [
-          {code: "es", frenchName: "espagnol", englishName: "spanish", respectiveName: ""}
+          {code: `es`, frenchName: `espagnol`, englishName: `spanish`, respectiveName: `español`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [-69.590424, -17.580012],
@@ -10100,16 +10105,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "PHL",
+      type: `Feature`,
+      id: `PHL`,
       properties: {
-        name: "Philippines",
+        name: `Philippines`,
         language: [
-          {code: "tl", frenchName: "tagalog (philippin)", englishName: "", respectiveName: ""}
+          {code: `tl`, frenchName: `tagalog (philippin)`, englishName: `tagalog`, respectiveName: `tagalog`}
         ]
       },
       geometry: {
-        type: "MultiPolygon",
+        type: `MultiPolygon`,
         coordinates: [
           [
             [
@@ -10253,16 +10258,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "PNG",
+      type: `Feature`,
+      id: `PNG`,
       properties: {
-        name: "Papua New Guinea",
+        name: `Papua New Guinea`,
         language: [
-          {code: "", frenchName: "", englishName: "", respectiveName: ""}
+          {code: `en`, frenchName: `anglais`, englishName: `english`, respectiveName: `english`}
         ]
       },
       geometry: {
-        type: "MultiPolygon",
+        type: `MultiPolygon`,
         coordinates: [
           [
             [
@@ -10365,16 +10370,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "POL",
+      type: `Feature`,
+      id: `POL`,
       properties: {
-        name: "Poland",
+        name: `Poland`,
         language: [
-          {code: "pl", frenchName: "polonais", englishName: "", respectiveName: ""}
+          {code: `pl`, frenchName: `polonais`, englishName: `polish`, respectiveName: `polski`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [15.016996, 51.106674],
@@ -10427,16 +10432,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "PRI",
+      type: `Feature`,
+      id: `PRI`,
       properties: {
-        name: "Puerto Rico",
+        name: `Puerto Rico`,
         language: [
-          {code: "es", frenchName: "espagnol", englishName: "spanish", respectiveName: ""}
+          {code: `es`, frenchName: `espagnol`, englishName: `spanish`, respectiveName: `español`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [-66.282434, 18.514762],
@@ -10453,16 +10458,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "PRK",
+      type: `Feature`,
+      id: `PRK`,
       properties: {
-        name: "North Korea",
+        name: `North Korea`,
         language: [
-          {code: "ko", frenchName: "coréen", englishName: "", respectiveName: ""}
+          {code: `ko`, frenchName: `coréen`, englishName: `korean`, respectiveName: `한국인`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [130.640016, 42.395009],
@@ -10513,16 +10518,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "PRT",
+      type: `Feature`,
+      id: `PRT`,
       properties: {
-        name: "Portugal",
+        name: `Portugal`,
         language: [
-          {code: "pt", frenchName: "portugais", englishName: "", respectiveName: ""}
+          {code: `pt-PT`, frenchName: `portugais`, englishName: `portuguese`, respectiveName: `português`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [-9.034818, 41.880571],
@@ -10563,16 +10568,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "PRY",
+      type: `Feature`,
+      id: `PRY`,
       properties: {
-        name: "Paraguay",
+        name: `Paraguay`,
         language: [
-          {code: "es", frenchName: "espagnol", englishName: "spanish", respectiveName: ""}
+          {code: `es`, frenchName: `espagnol`, englishName: `spanish`, respectiveName: `español`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [-62.685057, -22.249029],
@@ -10613,16 +10618,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "QAT",
+      type: `Feature`,
+      id: `QAT`,
       properties: {
-        name: "Qatar",
+        name: `Qatar`,
         language: [
-          {code: "ar", frenchName: "arabe", englishName: "arabic", respectiveName: ""}
+          {code: `ar`, frenchName: `arabe`, englishName: `arabic`, respectiveName: `عربى`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [50.810108, 24.754743],
@@ -10639,16 +10644,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "ROU",
+      type: `Feature`,
+      id: `ROU`,
       properties: {
-        name: "Romania",
+        name: `Romania`,
         language: [
-          {code: "ro", frenchName: "roumain", englishName: "", respectiveName: ""}
+          {code: `ro`, frenchName: `roumain`, englishName: `romanian`, respectiveName: `românesc`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [22.710531, 47.882194],
@@ -10700,16 +10705,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "RUS",
+      type: `Feature`,
+      id: `RUS`,
       properties: {
-        name: "Russia",
+        name: `Russia`,
         language: [
-          {code: "ru", frenchName: "russe", englishName: "", respectiveName: ""}
+          {code: `ru`, frenchName: `russe`, englishName: `russian`, respectiveName: `русский`}
         ]
       },
       geometry: {
-        type: "MultiPolygon",
+        type: `MultiPolygon`,
         coordinates: [
           [
             [
@@ -11365,16 +11370,18 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "RWA",
+      type: `Feature`,
+      id: `RWA`,
       properties: {
-        name: "Rwanda",
+        name: `Rwanda`,
         language: [
-          {code: "", frenchName: "", englishName: "", respectiveName: ""}
+          {code: `sw`, frenchName: `swahili`, englishName: `swahili`, respectiveName: `kiswahili`},
+          {code: `fr`, frenchName: `français`, englishName: `french`, respectiveName: `french`},
+          {code: `en`, frenchName: `anglais`, englishName: `english`, respectiveName: `english`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [30.419105, -1.134659],
@@ -11395,16 +11402,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "ESH",
+      type: `Feature`,
+      id: `ESH`,
       properties: {
-        name: "Western Sahara",
+        name: `Western Sahara`,
         language: [
-          {code: "", frenchName: "", englishName: "", respectiveName: ""}
+          {code: `ar`, frenchName: `arabe`, englishName: `arabic`, respectiveName: `عربى`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [-8.794884, 27.120696],
@@ -11440,16 +11447,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "SAU",
+      type: `Feature`,
+      id: `SAU`,
       properties: {
-        name: "Saudi Arabia",
+        name: `Saudi Arabia`,
         language: [
-          {code: "ar", frenchName: "arabe", englishName: "arabic", respectiveName: ""}
+          {code: `ar`, frenchName: `arabe`, englishName: `arabic`, respectiveName: `عربى`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [42.779332, 16.347891],
@@ -11533,16 +11540,17 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "SDN",
+      type: `Feature`,
+      id: `SDN`,
       properties: {
-        name: "Sudan",
+        name: `Sudan`,
         language: [
-          {code: "", frenchName: "", englishName: "", respectiveName: ""}
+          {code: `ar`, frenchName: `arabe`, englishName: `arabic`, respectiveName: `عربى`},
+          {code: `en`, frenchName: `anglais`, englishName: `english`, respectiveName: `english`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [33.963393, 9.464285],
@@ -11629,16 +11637,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "SDS",
+      type: `Feature`,
+      id: `SDS`,
       properties: {
-        name: "South Sudan",
+        name: `South Sudan`,
         language: [
-          {code: "", frenchName: "", englishName: "", respectiveName: ""}
+          {code: `en`, frenchName: `anglais`, englishName: `english`, respectiveName: `english`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [33.963393, 9.464285],
@@ -11709,16 +11717,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "SEN",
+      type: `Feature`,
+      id: `SEN`,
       properties: {
-        name: "Senegal",
+        name: `Senegal`,
         language: [
-          {code: "fr", frenchName: "français", englishName: "french", respectiveName: "français"}
+          {code: `fr`, frenchName: `français`, englishName: `french`, respectiveName: `français`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [-16.713729, 13.594959],
@@ -11770,16 +11778,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "SLB",
+      type: `Feature`,
+      id: `SLB`,
       properties: {
-        name: "Solomon Islands",
+        name: `Solomon Islands`,
         language: [
-          {code: "", frenchName: "", englishName: "", respectiveName: ""}
+          {code: `en`, frenchName: `anglais`, englishName: `english`, respectiveName: `english`}
         ]
       },
       geometry: {
-        type: "MultiPolygon",
+        type: `MultiPolygon`,
         coordinates: [
           [
             [
@@ -11842,16 +11850,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "SLE",
+      type: `Feature`,
+      id: `SLE`,
       properties: {
-        name: "Sierra Leone",
+        name: `Sierra Leone`,
         language: [
-          {code: "", frenchName: "", englishName: "", respectiveName: ""}
+          {code: `en`, frenchName: `anglais`, englishName: `english`, respectiveName: `english`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [-11.438779, 6.785917],
@@ -11881,16 +11889,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "SLV",
+      type: `Feature`,
+      id: `SLV`,
       properties: {
-        name: "El Salvador",
+        name: `El Salvador`,
         language: [
-          {code: "es", frenchName: "espagnol", englishName: "spanish", respectiveName: ""}
+          {code: `es`, frenchName: `espagnol`, englishName: `spanish`, respectiveName: `español`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [-87.793111, 13.38448],
@@ -11918,16 +11926,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "-99",
+      type: `Feature`,
+      id: `-99`,
       properties: {
-        name: "Somaliland",
+        name: `Somaliland`,
         language: [
-          {code: "so", frenchName: "somali", englishName: "", respectiveName: ""}
+          {code: `so`, frenchName: `somali`, englishName: `somali`, respectiveName: `somali`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [48.93813, 9.451749],
@@ -11959,16 +11967,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "SOM",
+      type: `Feature`,
+      id: `SOM`,
       properties: {
-        name: "Somalia",
+        name: `Somalia`,
         language: [
-          {code: "so", frenchName: "somali", englishName: "", respectiveName: ""}
+          {code: `so`, frenchName: `somali`, englishName: `somali`, respectiveName: `somali`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [49.72862, 11.5789],
@@ -12012,16 +12020,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "SRB",
+      type: `Feature`,
+      id: `SRB`,
       properties: {
-        name: "Republic of Serbia",
+        name: `Republic of Serbia`,
         language: [
-          {code: "sr", frenchName: "serbe", englishName: "", respectiveName: ""}
+          {code: `sr`, frenchName: `serbe`, englishName: `serbian`, respectiveName: `cрпски`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [20.874313, 45.416375],
@@ -12075,16 +12083,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "SUR",
+      type: `Feature`,
+      id: `SUR`,
       properties: {
-        name: "Suriname",
+        name: `Suriname`,
         language: [
-          {code: "es", frenchName: "espagnol", englishName: "spanish", respectiveName: ""}
+          {code: `es`, frenchName: `espagnol`, englishName: `spanish`, respectiveName: `español`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [-57.147436, 5.97315],
@@ -12118,16 +12126,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "SVK",
+      type: `Feature`,
+      id: `SVK`,
       properties: {
-        name: "Slovakia",
+        name: `Slovakia`,
         language: [
-          {code: "sk", frenchName: "slovaque", englishName: "", respectiveName: ""}
+          {code: `sk`, frenchName: `slovaque`, englishName: `slovak`, respectiveName: `slovenský`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [18.853144, 49.49623],
@@ -12168,16 +12176,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "SVN",
+      type: `Feature`,
+      id: `SVN`,
       properties: {
-        name: "Slovenia",
+        name: `Slovenia`,
         language: [
-          {code: "sl", frenchName: "slovène", englishName: "", respectiveName: ""}
+          {code: `sl`, frenchName: `slovène`, englishName: `slovenian`, respectiveName: `slovensko`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [13.806475, 46.509306],
@@ -12203,16 +12211,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "SWE",
+      type: `Feature`,
+      id: `SWE`,
       properties: {
-        name: "Sweden",
+        name: `Sweden`,
         language: [
-          {code: "sv", frenchName: "suédois", englishName: "", respectiveName: ""}
+          {code: `sv`, frenchName: `suédois`, englishName: `swedish`, respectiveName: `svenska`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [22.183173, 65.723741],
@@ -12260,16 +12268,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "SWZ",
+      type: `Feature`,
+      id: `SWZ`,
       properties: {
-        name: "Swaziland",
+        name: `Swaziland`,
         language: [
-          {code: "", frenchName: "", englishName: "", respectiveName: ""}
+          {code: `en`, frenchName: `anglais`, englishName: `english`, respectiveName: `english`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [32.071665, -26.73382],
@@ -12288,16 +12296,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "SYR",
+      type: `Feature`,
+      id: `SYR`,
       properties: {
-        name: "Syria",
+        name: `Syria`,
         language: [
-          {code: "ar", frenchName: "arabe", englishName: "arabic", respectiveName: ""}
+          {code: `ar`, frenchName: `arabe`, englishName: `arabic`, respectiveName: `عربى`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [38.792341, 33.378686],
@@ -12332,16 +12340,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "TCD",
+      type: `Feature`,
+      id: `TCD`,
       properties: {
-        name: "Chad",
+        name: `Chad`,
         language: [
-          {code: "fr", frenchName: "français", englishName: "french", respectiveName: "français"}
+          {code: `fr`, frenchName: `français`, englishName: `french`, respectiveName: `français`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [14.495787, 12.859396],
@@ -12407,16 +12415,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "TGO",
+      type: `Feature`,
+      id: `TGO`,
       properties: {
-        name: "Togo",
+        name: `Togo`,
         language: [
-          {code: "fr", frenchName: "français", englishName: "french", respectiveName: "français"}
+          {code: `fr`, frenchName: `français`, englishName: `french`, respectiveName: `français`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [1.865241, 6.142158],
@@ -12443,16 +12451,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "THA",
+      type: `Feature`,
+      id: `THA`,
       properties: {
-        name: "Thailand",
+        name: `Thailand`,
         language: [
-          {code: "th", frenchName: "thaï", englishName: "", respectiveName: ""}
+          {code: `th`, frenchName: `thaï`, englishName: `thai`, respectiveName: `ไทย`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [102.584932, 12.186595],
@@ -12524,16 +12532,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "TJK",
+      type: `Feature`,
+      id: `TJK`,
       properties: {
-        name: "Tajikistan",
+        name: `Tajikistan`,
         language: [
-          {code: "tg", frenchName: "tadjik", englishName: "", respectiveName: ""}
+          {code: `tg`, frenchName: `tadjik`, englishName: `tajik`, respectiveName: `tочик`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [71.014198, 40.244366],
@@ -12582,16 +12590,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "TKM",
+      type: `Feature`,
+      id: `TKM`,
       properties: {
-        name: "Turkmenistan",
+        name: `Turkmenistan`,
         language: [
-          {code: "", frenchName: "", englishName: "", respectiveName: ""}
+          {code: `tk`, frenchName: `turkmène`, englishName: `turkmen`, respectiveName: `türkmenler`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [61.210817, 35.650072],
@@ -12653,16 +12661,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "TLS",
+      type: `Feature`,
+      id: `TLS`,
       properties: {
-        name: "East Timor",
+        name: `East Timor`,
         language: [
-          {code: "", frenchName: "", englishName: "", respectiveName: ""}
+          {code: `pt`, frenchName: `portugais`, englishName: `portuguese`, respectiveName: `português`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [124.968682, -8.89279],
@@ -12681,17 +12689,17 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "TTO",
+      type: `Feature`,
+      id: `TTO`,
       properties: {
-        name: "Trinidad and Tobago",
+        name: `Trinidad and Tobago`,
         language: [
-          {code: "en", frenchName: "anglais", englishName: "english", respectiveName: ""},
-          {code: "es", frenchName: "espagnol", englishName: "spanish", respectiveName: ""}
+          {code: `en`, frenchName: `anglais`, englishName: `english`, respectiveName: `english`},
+          {code: `es`, frenchName: `espagnol`, englishName: `spanish`, respectiveName: `español`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [-61.68, 10.76],
@@ -12707,15 +12715,15 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "TUN",
-      properties: {name: "Tunisia",
+      type: `Feature`,
+      id: `TUN`,
+      properties: {name: `Tunisia`,
       language: [
-        {code: "ar", frenchName: "arabe", englishName: "arabic", respectiveName: ""}
+        {code: `ar`, frenchName: `arabe`, englishName: `arabic`, respectiveName: `عربى`}
       ]
     },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [9.48214, 30.307556],
@@ -12754,16 +12762,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "TUR",
+      type: `Feature`,
+      id: `TUR`,
       properties: {
-        name: "Turkey",
+        name: `Turkey`,
         language: [
-          {code: "tr", frenchName: "turc", englishName: "", respectiveName: ""}
+          {code: `tr`, frenchName: `turc`, englishName: `turkish`, respectiveName: `türk`}
         ]
       },
       geometry: {
-        type: "MultiPolygon",
+        type: `MultiPolygon`,
         coordinates: [
           [
             [
@@ -12844,16 +12852,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "TWN",
+      type: `Feature`,
+      id: `TWN`,
       properties: {
-        name: "Taiwan",
+        name: `Taiwan`,
         language: [
-          {code: "", frenchName: "", englishName: "", respectiveName: ""}
+          {code: `zh`, frenchName: `chinois`, englishName: `chinese`, respectiveName: `中国人`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [121.777818, 24.394274],
@@ -12870,16 +12878,17 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "TZA",
+      type: `Feature`,
+      id: `TZA`,
       properties: {
-        name: "United Republic of Tanzania",
+        name: `United Republic of Tanzania`,
         language: [
-          {code: "", frenchName: "", englishName: "", respectiveName: ""}
+          {code: `sw`, frenchName: `swahili`, englishName: `swahili`, respectiveName: `kiswahili`},
+          {code: `en`, frenchName: `anglais`, englishName: `english`, respectiveName: `english`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [33.903711, -0.95],
@@ -12936,16 +12945,17 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "UGA",
+      type: `Feature`,
+      id: `UGA`,
       properties: {
-        name: "Uganda",
+        name: `Uganda`,
         language: [
-          {code: "", frenchName: "", englishName: "", respectiveName: ""}
+          {code: `sw`, frenchName: `swahili`, englishName: `swahili`, respectiveName: `kiswahili`},
+          {code: `en`, frenchName: `anglais`, englishName: `english`, respectiveName: `english`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [31.86617, -1.02736],
@@ -12980,16 +12990,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "UKR",
+      type: `Feature`,
+      id: `UKR`,
       properties: {
-        name: "Ukraine",
+        name: `Ukraine`,
         language: [
-          {code: "uk", frenchName: "ukrainien", englishName: "", respectiveName: ""}
+          {code: `uk`, frenchName: `ukrainien`, englishName: `ukrainian`, respectiveName: `Українська`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [31.785998, 52.101678],
@@ -13095,16 +13105,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "URY",
+      type: `Feature`,
+      id: `URY`,
       properties: {
-        name: "Uruguay",
+        name: `Uruguay`,
         language: [
-          {code: "es", frenchName: "espagnol", englishName: "spanish", respectiveName: ""}
+          {code: `es`, frenchName: `espagnol`, englishName: `spanish`, respectiveName: `español`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [-57.625133, -30.216295],
@@ -13133,17 +13143,17 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "USA",
+      type: `Feature`,
+      id: `USA`,
       properties: {
-        name: "United States of America",
+        name: `United States of America`,
         language: [
-          {code: "en", frenchName: "anglais", englishName: "english", respectiveName: "english"},
-          {code: "es", frenchName: "espagnol", englishName: "spanish", respectiveName: ""}
+          {code: `en`, frenchName: `anglais`, englishName: `english`, respectiveName: `english`},
+          {code: `es`, frenchName: `espagnol`, englishName: `spanish`, respectiveName: `español`}
         ]
       },
       geometry: {
-        type: "MultiPolygon",
+        type: `MultiPolygon`,
         coordinates: [
           [
             [
@@ -13633,16 +13643,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "UZB",
+      type: `Feature`,
+      id: `UZB`,
       properties: {
-        name: "Uzbekistan",
+        name: `Uzbekistan`,
         language: [
-          {code: "uz", frenchName: "ouzbek", englishName: "", respectiveName: ""}
+          {code: `uz`, frenchName: `ouzbek`, englishName: `uzbek`, respectiveName: `uzbek`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [66.518607, 37.362784],
@@ -13704,16 +13714,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "VEN",
+      type: `Feature`,
+      id: `VEN`,
       properties: {
-        name: "Venezuela",
+        name: `Venezuela`,
         language: [
-          {code: "es", frenchName: "espagnol", englishName: "spanish", respectiveName: ""}
+          {code: `es`, frenchName: `espagnol`, englishName: `spanish`, respectiveName: `español`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [-71.331584, 11.776284],
@@ -13813,16 +13823,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "VNM",
+      type: `Feature`,
+      id: `VNM`,
       properties: {
-        name: "Vietnam",
+        name: `Vietnam`,
         language: [
-          {code: "vi", frenchName: "vietnamien", englishName: "", respectiveName: ""}
+          {code: `vi`, frenchName: `vietnamien`, englishName: `vietnamese`, respectiveName: `tiếng việt`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [108.05018, 21.55238],
@@ -13874,16 +13884,17 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "VUT",
+      type: `Feature`,
+      id: `VUT`,
       properties: {
-        name: "Vanuatu",
+        name: `Vanuatu`,
         language: [
-          {code: "", frenchName: "", englishName: "", respectiveName: ""}
+          {code: `fr`, frenchName: `français`, englishName: `french`, respectiveName: `français`},
+          {code: `en`, frenchName: `anglais`, englishName: `english`, respectiveName: `english`}
         ]
       },
       geometry: {
-        type: "MultiPolygon",
+        type: `MultiPolygon`,
         coordinates: [
           [
             [
@@ -13909,16 +13920,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "PSE",
+      type: `Feature`,
+      id: `PSE`,
       properties: {
-        name: "West Bank",
+        name: `West Bank`,
         language: [
-          {code: "", frenchName: "", englishName: "", respectiveName: ""}
+          {code: `ar`, frenchName: `arabe`, englishName: `arabic`, respectiveName: `عربى`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [35.545665, 32.393992],
@@ -13935,16 +13946,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "YEM",
+      type: `Feature`,
+      id: `YEM`,
       properties: {
-        name: "Yemen",
+        name: `Yemen`,
         language: [
-          {code: "", frenchName: "", englishName: "", respectiveName: ""}
+          {code: `ar`, frenchName: `arabe`, englishName: `arabic`, respectiveName: `عربى`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [53.108573, 16.651051],
@@ -13996,16 +14007,17 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "ZAF",
+      type: `Feature`,
+      id: `ZAF`,
       properties: {
-        name: "South Africa",
+        name: `South Africa`,
         language: [
-          {code: "zu", frenchName: "zulu", englishName: "", respectiveName: ""}
+          {code: `zu`, frenchName: `zoulou`, englishName: `zulu`, respectiveName: `zulu`},
+          {code: `af`, frenchName: `afrikaans`, englishName: `afrikaans`, respectiveName: `afrikaans`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [31.521001, -29.257387],
@@ -14109,16 +14121,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "ZMB",
+      type: `Feature`,
+      id: `ZMB`,
       properties: {
-        name: "Zambia",
+        name: `Zambia`,
         language: [
-          {code: "", frenchName: "", englishName: "", respectiveName: ""}
+          {code: `en`, frenchName: `anglais`, englishName: `english`, respectiveName: `english`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [32.759375, -9.230599],
@@ -14187,16 +14199,16 @@ export const geoData: FeatureCollection = {
       }
     },
     {
-      type: "Feature",
-      id: "ZWE",
+      type: `Feature`,
+      id: `ZWE`,
       properties: {
-        name: "Zimbabwe",
+        name: `Zimbabwe`,
         language: [
-          {code: "", frenchName: "", englishName: "", respectiveName: ""}
+          {code: `en`, frenchName: `anglais`, englishName: `english`, respectiveName: `english`}
         ]
       },
       geometry: {
-        type: "Polygon",
+        type: `Polygon`,
         coordinates: [
           [
             [31.191409, -22.25151],

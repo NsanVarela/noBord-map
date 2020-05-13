@@ -9,6 +9,8 @@ import { AppRoutingModule } from "./app-routing.module";
 
 import { AuthenticationService } from "./_services/authentication.service";
 import { AuthGuardService } from "./_services/auth-guard.service";
+import { WorkflowService } from './_services/workflow.service';
+import { SharedService } from './shared/common/shared-service';
 
 import { AppComponent } from "./app.component";
 import { MapComponent } from "./components/map/map.component";
@@ -23,7 +25,6 @@ import { RegisterComponent } from "./components/auth/register/register.component
 import { ChatViewComponent } from "./components/chat-view/chat-view.component";
 import { ChangeTargetComponent } from "./components/change-target/change-target.component";
 import { MessageSenderComponent } from "./components/message-sender/message-sender.component";
-import { SharedService } from './shared/common/shared-service';
 
 
 @NgModule({
@@ -55,7 +56,7 @@ import { SharedService } from './shared/common/shared-service';
     ReactiveFormsModule,
     MaterialModule
   ],
-  providers: [AuthenticationService, AuthGuardService, SharedService],
+  providers: [AuthenticationService, AuthGuardService, SharedService, WorkflowService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -4,6 +4,7 @@ import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
+import * as jwt_decode from 'jwt-decode';
 
 export interface UserDetails {
   id: number
@@ -40,15 +41,21 @@ export interface TokenPayload {
 export class AuthenticationService {
   private token: string
   private DB_URL = environment.noBordBddUrl
+  private loggedInStatus = JSON.parse(localStorage.getItem('loggedIn') || 'false')
 
   constructor(private http: HttpClient, private router: Router) {}
+
+  setLoggedIn(value: boolean) {
+    this.loggedInStatus = value
+    localStorage.setItem('loggedIn', 'true')
+  }
 
   private saveToken(token: string): void {
     localStorage.setItem(`userToken`, token)
     this.token = token
   }
 
-  private getToken(): string {
+  public getToken(): string {
     if(!this.token) {
       this.token = localStorage.getItem(`userToken`)
     }
@@ -63,7 +70,7 @@ export class AuthenticationService {
     })
   }
 
-  public getUserDetails(): UserDetails {
+  public getUserDetails() {
     const token = this.getToken()
     let payload
     if(token) {
@@ -76,15 +83,11 @@ export class AuthenticationService {
   }
 
   public isLoggedIn(): boolean {
-    const user = this.getUserDetails()
-    if(user) {
-      return user.exp > Date.now() / 1000
-    } else {
-      return false
-    }
+    return JSON.parse(localStorage.getItem('loggedIn') || this.loggedInStatus.toString())
   }
 
   public register(user: TokenPayload): Observable<any> {
+    console.log('user : ', user)
     const base = this.http.post(this.DB_URL + `api/users`, user, this.httpOptions)
 
     const request = base.pipe(
@@ -92,6 +95,7 @@ export class AuthenticationService {
         if(data.token) {
           this.saveToken(data.token)
         }
+        console.log('data', data)
         return data
       })
     )
@@ -104,6 +108,7 @@ export class AuthenticationService {
     const request = base.pipe(
       map((data: TokenResponse) => {
         if(data.token) {
+          console.log('data token : ', data.token)
           this.saveToken(data.token)
         }
         return data
@@ -128,6 +133,7 @@ export class AuthenticationService {
   }
 
   public profile(user): Observable<any> {
+    console.log('user profile : ', user)
     const id = user.result.id;
     const base = this.http.get(this.DB_URL + `api/users/${id}`)
 
