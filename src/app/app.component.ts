@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core'
-import { HttpClient } from '@angular/common/http'
+import { Component, OnInit } from '@angular/core';
 
 
 @Component({
@@ -8,14 +7,12 @@ import { HttpClient } from '@angular/common/http'
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'translatorMap'
+  title = 'translatorMap';
 
-  constructor(){
+  constructor() {
   }
 
   ngOnInit() {
-
-
   }
 
 }

@@ -1,5 +1,6 @@
 {
   "name": "translator-map",
+  "homepage": "reactive-map.nicolas-sanches-varela.com",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
